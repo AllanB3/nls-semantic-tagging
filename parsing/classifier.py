@@ -1,21 +1,20 @@
 #!/usr/bin/python
 
-import collections
-import re
+import sys
 
 MAXIMUM_EDIT_DISTANCE = 2
 
-class SpellChecker:
+class Classifier:
 
-	def __init__(self,trainingFile):
-		self.trainingFile = trainingFile
+	def __init__(self, dictionaryFile):
+		self.dictionary = {}
 
-	def train(self):
-		trainingData = open(self.trainingData, "r").read().lower()
-		model = collections.defaultdict(lambda: 1)
-		for t in trainingData:
-			model[t] += 1
-		self.model = model
+		dictionaryInput = open(dictionaryFile, "r").read()
+		entries = dictionaryInput.split("\n")
+
+		for e in entries:
+			key, value = dictionaryInput.split("\t")
+			self.dictionary[key] = value
 
 	def getWordsOfEditDistance(self, word, editDistance):
 		edits = edits(word)
@@ -38,14 +37,16 @@ class SpellChecker:
 		return set(deletes + transposes + replaces + inserts)
 
 	def known(self, words):
-		return set(w for w in words if w in self.model)
+		return set(w for w in words if w in self.dictionary)
 
-	def correct(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
-		word = re.sub(r'(?!([a-z]|\d))', '', word.lower())
+	def classify(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
+		word = word.lower()
 		candidates = self.known([word]) or [word]
 
 		while maximumEditDistance > 0:
 			candidates.union(self.known(self.getWordsOfEditDistance(word, maximumEditDistance)))
 			maximumEditDistance -= 1
 
-		return max(candidates, key=self.model.get)
+		possibleTags = [tag for value, tag in self.dictionary for value in candidates]
+
+		return max(possibleTags, key=possibleTags.count)
