@@ -4,6 +4,7 @@ import urllib2
 import json
 import sys
 import re
+import string
 
 trainingFile = open(sys.argv[1], "w")
 trainingMode = sys.argv[2]
@@ -15,9 +16,10 @@ trainingData = trainingData.replace("\\n", "")
 trainingData = trainingData.replace("\\", "")
 trainingDict = json.loads(trainingData)
 
+punctuation = re.compile("[%s]" % re.escape(string.punctuation))
 for record in trainingDict["results"]:
 	for attr in record["properties"]:
-		record["properties"][attr] = re.sub(r"(?!([a-z]|[A-Z]))", "", record["properties"][attr])
+		record["properties"][attr] = punctuation.sub("", record["properties"][attr])
 
 for record in trainingDict["results"]:
 	forename = record["properties"]["forename"]
@@ -34,8 +36,8 @@ for record in trainingDict["results"]:
 		else:
 			trainingFile.write(surname.lower() + "\tsurname\n")
 
-	address = record["properties"]["address"]
-	if address.strip(",").isalpha():
+	address = re.sub(r"\d", "", record["properties"]["address"])
+	if address.replace(" ", "").isalpha():
 		if trainingMode == "spelling":
 			for word in address.split():
 				trainingFile.write(word.lower() + "\n")

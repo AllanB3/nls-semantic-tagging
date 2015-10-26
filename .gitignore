@@ -57,4 +57,7 @@ docs/_build/
 target/
 
 spellcheck.py
+classify.py
 *.txt
+!spellcheckTraining.txt
+!classifierTraining.txt

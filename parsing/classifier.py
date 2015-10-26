@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+import re
+
 MAXIMUM_EDIT_DISTANCE = 2
 
 class Classifier:
@@ -8,11 +10,14 @@ class Classifier:
 		self.dictionary = {}
 
 		dictionaryInput = open(dictionaryFile, "r").read()
-		entries = dictionaryInput.split("\n")
+		entries = dictionaryInput.splitlines()
 
 		for e in entries:
-			key, value = dictionaryInput.split("\t")
-			self.dictionary[key] = value
+			key, value = e.split("\t")
+			if key in self.dictionary:
+				self.dictionary[key].append(value)
+			else:
+				self.dictionary[key] = [value]
 
 	def getWordsOfEditDistance(self, word, editDistance):
 		edits = self.edits(word)
@@ -20,8 +25,9 @@ class Classifier:
 		while editDistance > 1:
 			newEdits = []
 			for edit in edits:
-				newEdits += edits(edit)
+				newEdits += self.edits(edit)
 			edits = set(newEdits)
+			editDistance -= 1
 
 		return edits
 
@@ -38,13 +44,14 @@ class Classifier:
 		return set(w for w in words if w in self.dictionary)
 
 	def classify(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
-		word = word.lower()
-		candidates = self.known([word]) or [word]
+		cleanedWord = re.sub(r"[^a-zA-Z\s]", "", word)
 
-		while maximumEditDistance > 0:
-			candidates.union(self.known(self.getWordsOfEditDistance(word, maximumEditDistance)))
-			maximumEditDistance -= 1
+		possibleTags = []
+		for value, tag in self.dictionary.iteritems():
+			if value == cleanedWord:
+				possibleTags = possibleTags + self.dictionary[value]
 
-		possibleTags = [tag for value, tag in self.dictionary for value in candidates]
-
-		return max(possibleTags, key=possibleTags.count)
+		try:
+			return max(possibleTags, key=possibleTags.count)
+		except:
+			return ""

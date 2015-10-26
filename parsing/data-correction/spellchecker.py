@@ -57,6 +57,9 @@ class SpellChecker:
 		outputFile = open(outputPath, "w")
 
 		for line in words:
-			for word in line.split():
-				outputFile.write(self.correct(word) + " ")
+			for word in line.split(" "):
+				if "," in word:
+					outputFile.write(self.correct(word) + ", ")
+				else:
+					outputFile.write(self.correct(word) + " ")
 			outputFile.write("\n")
