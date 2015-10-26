@@ -56,8 +56,4 @@ docs/_build/
 # PyBuilder
 target/
 
-spellcheck.py
-classify.py
-*.txt
-!spellcheckTraining.txt
-!classifierTraining.txt
+testing/*

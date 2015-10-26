@@ -55,3 +55,11 @@ class Classifier:
 			return max(possibleTags, key=possibleTags.count)
 		except:
 			return ""
+
+	def classifyDocument(self, inputPath, outputPath):
+		words = open(inputPath, "r").read().splitlines()
+		outputFile = open(outputPath, "w")
+
+		for line in words:
+			for term in line.split(","):
+				outputFile.write(term + "\t" + self.classify(term) + "\n")
