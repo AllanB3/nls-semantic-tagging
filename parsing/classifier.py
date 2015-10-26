@@ -48,13 +48,13 @@ class Classifier:
 
 		possibleTags = []
 		for value, tag in self.dictionary.iteritems():
-			if value == cleanedWord:
+			if value.replace(" ", "") == cleanedWord.replace(" ", ""):
 				possibleTags = possibleTags + self.dictionary[value]
 
 		try:
 			return max(possibleTags, key=possibleTags.count)
 		except:
-			return ""
+			return None
 
 	def classifyDocument(self, inputPath, outputPath):
 		words = open(inputPath, "r").read().splitlines()
@@ -62,4 +62,11 @@ class Classifier:
 
 		for line in words:
 			for term in line.split(","):
-				outputFile.write(term + "\t" + self.classify(term) + "\n")
+				classification = self.classify(term.strip())
+
+				if classification:
+					outputFile.write(term.strip() + " [" + classification + "] ")
+				else:
+					outputFile.write(term.strip() + " [?] ")
+
+			outputFile.write("\n")

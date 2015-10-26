@@ -36,10 +36,10 @@ for record in trainingDict["results"]:
 		else:
 			trainingFile.write(surname.lower() + "\tsurname\n")
 
-	address = re.sub(r"\d", "", record["properties"]["address"])
-	if address.replace(" ", "").isalpha():
-		if trainingMode == "spelling":
-			for word in address.split():
-				trainingFile.write(word.lower() + "\n")
-		else:
-			trainingFile.write(address.lower() + "\taddress\n")
+addresses = open("streets.txt", "r").read().splitlines()
+for address in addresses:
+	if trainingMode == "spelling":
+		for word in address.lower().split():
+			trainingFile.write(word)
+	else:
+		trainingFile.write(address.lower() + "\taddress\n")
