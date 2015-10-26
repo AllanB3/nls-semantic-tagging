@@ -13,7 +13,7 @@ class SpellChecker:
 	def train(self):
 		trainingData = open(self.trainingFile, "r").read().lower()
 		model = collections.defaultdict(lambda: 1)
-		for t in trainingData:
+		for t in trainingData.splitlines():
 			model[t] += 1
 		self.model = model
 
@@ -23,8 +23,9 @@ class SpellChecker:
 		while editDistance > 1:
 			newEdits = []
 			for edit in edits:
-				newEdits += edits(edit)
-			edits = set(newEdits)
+				newEdits += self.edits(edit)
+			edits = edits.union(set(newEdits))
+			editDistance -= 1
 
 		return edits
 
@@ -41,11 +42,21 @@ class SpellChecker:
 		return set(w for w in words if w in self.model)
 
 	def correct(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
-		word = re.sub(r'(?!([a-z]|\d))', '', word.lower())
-		candidates = self.known([word]) or [word]
+		cleanedWord = re.sub(r'[^0-9a-zA-Z]', '', word.lower())
 
-		while maximumEditDistance > 0:
-			candidates.union(self.known(self.getWordsOfEditDistance(word, maximumEditDistance)))
-			maximumEditDistance -= 1
+		if (cleanedWord.isdigit()):
+			return cleanedWord
 
+		candidates = set([cleanedWord])
+
+		candidates = candidates.union(self.known(self.getWordsOfEditDistance(cleanedWord, maximumEditDistance)))
 		return max(candidates, key=self.model.get)
+
+	def spellcheck(self, inputPath, outputPath):
+		words = open(inputPath, "r").read().splitlines()
+		outputFile = open(outputPath, "w")
+
+		for line in words:
+			for word in line.split():
+				outputFile.write(self.correct(word) + " ")
+			outputFile.write("\n")
