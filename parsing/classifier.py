@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-import sys
-
 MAXIMUM_EDIT_DISTANCE = 2
 
 class Classifier:
@@ -17,7 +15,7 @@ class Classifier:
 			self.dictionary[key] = value
 
 	def getWordsOfEditDistance(self, word, editDistance):
-		edits = edits(word)
+		edits = self.edits(word)
 
 		while editDistance > 1:
 			newEdits = []

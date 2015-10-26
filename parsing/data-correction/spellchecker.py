@@ -11,14 +11,14 @@ class SpellChecker:
 		self.trainingFile = trainingFile
 
 	def train(self):
-		trainingData = open(self.trainingData, "r").read().lower()
+		trainingData = open(self.trainingFile, "r").read().lower()
 		model = collections.defaultdict(lambda: 1)
 		for t in trainingData:
 			model[t] += 1
 		self.model = model
 
 	def getWordsOfEditDistance(self, word, editDistance):
-		edits = edits(word)
+		edits = self.edits(word)
 
 		while editDistance > 1:
 			newEdits = []
