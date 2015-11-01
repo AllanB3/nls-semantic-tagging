@@ -1,0 +1,148 @@
+Abbey	surname
+David Y.	forename
+Crghall road	address
+Mrs	forename
+10 Trinity crescent	address
+Abbott	surname
+Abernethy	surname
+Robert	forename
+10 St Colme street	address
+Abinet	surname
+Mrs Nickolas	forename
+112 Leith street	address
+Abrams	surname
+H.	forename
+54 Hanover st.	address
+13 Wester Coates terrace	address
+Absolon	surname	
+Miss	forename
+6 N. St David street	address
+24 Bruntsfield orardens	address
+48 Henderson row	address
+Portgower place	address
+66 Frederick street	address
+2 York place	address
+Agnew	surname
+Lieut.~Col. Gerald	forename
+Warriston road	address
+Ao'new	surname
+Captain John De 0.	forename
+I2 Oxford: terrace	address
+Sir Stair	forename
+Adamson	surname
+R.W.	forename
+11 Clerk st.	address
+18 Viewforth ter.	address
+Restalrig road	address
+William	forename
+46 Dalmeny street	address
+22 Greenside p'lace	address
+'William F.	forename
+37 Roseburn terrace	address
+Wm. L.	forename
+4 Bernard terrace	address
+W.	forename
+14 Leven street	address
+26 Montpeli'er park	address
+A.	forename
+27 Comely Ban'k road	address
+.Isabel	forename
+33 Saughtonhall drive	address
+Robert	forename
+59 Ladysmith road	address
+31 Park'road	address
+Aonew	surname
+Thomas	forename
+26 Eyre crescent	address
+Aghew	surname
+\Villiam	forename
+104 St Stephen street	address
+Agn eW	surname
+Mrs H.B.	forename
+2 Bcllevue terrace	address
+Miss 0.	forename
+'6 Norbh Charlottea street	address
+Aikman	surname
+Alexander	forename
+38 Waver'ley place	address
+Addison	surname
+George S.	forename
+94 Lothian road	address
+John	forename
+107 Brouo'hton street	address
+40 Bano'or road	address
+Addly	surname
+43 Georo'c street	address
+Adi'e	surname
+239 'Great Junction street	address
+Adie	surname
+Alexander	surname
+Hugh T.	forename
+1 Roseneath terrace	address
+lames	forename
+1 Fountainhall rd.	address
+Major James	forename
+10 Shandwick place	address
+Alcoran	surname
+Wm.	forename
+Alcorn	surname
+12 Millazc crescent	address
+Jamcs	forename
+35 Bowling-green street	address
+15 Plewlands terrace	address
+Robert	forename
+15 Quality .street	address
+50 South Br-id 0e.	address
+Allan	surname
+W. F.	forename
+51 Hiah street	address
+W. Steele	forename
+J ames F.	forename
+21 Barony street	address
+Anderson	surname
+Alex.	forename
+16 Comiston terrace	address
+32 Hay terrace	address
+31 Dalhousie terrace	address
+Alexander F.	forename
+Archibald	surname
+George	forename
+29 Bellevue road	address
+Archi'bald	surname
+Archibafld	surname
+Anthony	surname
+'7 Cl'aiollall crescent	address
+Anton	surname
+Antonio	surname
+Joseph	forename
+Archi-bald	surname
+1 Dalhousie ter.	address
+34 Cal'edon'ian crescent	address
+Appleyanl	surname
+Arbuckle	surname
+Arbuthnot	surname
+Armour	surname
+Andrew	forename
+E. F.	forename
+Harry	forename
+9'2 Granton road	address
+Elizabeth	forename
+Armstrong	surname
+43 Grindlay street	address
+Francis Joseph	forename
+48 Polwarth terrace	address
+13 Ryehill avenue	address
+Arras	surname
+Misses	forename
+Arrighi	surname
+Alexander	forename
+Alfred	forename
+Arthur	surname
+Frederick	forename
+Atkinson	surname
+J. H.	forename
+54 Cockburn street	address
+Arthur	surname
+J ames	forename
+7 Granville terrace	address
+Atkiuson	surname

@@ -42,7 +42,7 @@ class SpellChecker:
 		return set(w for w in words if w in self.model)
 
 	def correct(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
-		cleanedWord = re.sub(r'[^0-9a-zA-Z]', '', word.lower())
+		cleanedWord = re.sub(r'[^0-9a-zA-Z\s]', '', word.lower())
 
 		if (cleanedWord.isdigit()):
 			return cleanedWord
