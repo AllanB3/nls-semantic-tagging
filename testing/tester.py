@@ -8,7 +8,8 @@ gold_standards = open("gold_standards.txt", "r").readlines()
 results = {
 	"forename": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
 	"surname": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
-	"address": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0}
+	"address": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
+	"occupation": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0}
 	}
 
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "../parsing/training")))
@@ -47,6 +48,8 @@ for g in gold_standards:
 	else:
 		results[actual_tag]["false_negative"] += 1
 		print("Classified tag: None\n")
+
+print("RESULTS:")
 
 for key in results:
 	print(key + ":")

@@ -146,3 +146,67 @@ Arthur	surname
 J ames	forename
 7 Granville terrace	address
 Atkiuson	surname
+117 George street	address
+teacher of music	occupation
+Atwell	surname
+Auchie	surname
+Auchinachie	surname
+A11stin	surname
+Austin	surname
+milliner and outfitter	occupation
+butchers	occupation
+Baikie	surname
+stationer	occupation
+5 Dublin street	address
+18 Hart street	address
+hotel manao'er	occupation
+Christina	forename
+Baildon	surname
+26 Shand wick place	address
+Colonel Frederick	forename
+photographer	occupation
+Bailey	surname
+Wellesley C.	forename
+Walter	forename
+134 Lauriston lace	address
+Ayer	surname
+photoo'rapher	occupation
+Ayton	surname
+Alex.	forename
+10 Grosvenor street	address
+Aytoun	surname
+Liet.-Col. A.	forename
+amsay	forename
+Baillie	surname
+Andrew	forename
+51 Bonninaton road	address
+‘Auo'ustus Charles	forename
+notary public	occupation
+David	forename
+wine and spirit merchant	occupation
+teacher	occupation
+George H.	forename
+Henry	forename
+blacksmith	occupation
+J ames Mitchell	forename
+printer	occupation
+.architect	occupation
+ironmonger	occupation
+Babinaton	surname
+‘Bach	surname
+professor of smglng	occupation
+.author of books	occupation
+lecturer	occupation
+importer	occupation
+dealer in cycles	occupation
+Baddiley	surname
+Badenoch	surname
+newsagent	occupation
+813 Fountainhall road	address
+John G.	forename
+John Thomas	forename
+grocer and wine merchant	occupation
+Robert	forename
+surgeon-dentist	occupation
+Baglioni	surname
+Baoot	surname

@@ -6,8 +6,8 @@ import sys
 import re
 import string
 
-trainingFile = open(sys.argv[1], "w")
-trainingMode = sys.argv[2]
+trainingFile = open(sys.argv[2], "w")
+trainingMode = sys.argv[1]
 trainingData = urllib2.urlopen("http://addressinghistory.edina.ac.uk/ws/search?boundingBox=-3.417,55.867,-2.947,56.021&format=json&maxRows=10000&directory=1905").read()
 trainingData = trainingData.replace("\\\'", "")
 trainingData = trainingData.replace("\\\"", "")
@@ -35,6 +35,14 @@ for record in trainingDict["results"]:
 			trainingFile.write(surname.lower() + "\n")
 		else:
 			trainingFile.write(surname.lower() + "\tsurname\n")
+
+	occupation = record["properties"]["profession"]
+	if occupation.isalpha():
+		if trainingMode == "spelling":
+			for word in occupation.lower().split():
+				trainingFile.write(word)
+		else:
+			trainingFile.write(occupation.lower() + "\toccupation\n")
 
 addresses = open("streets.txt", "r").read().splitlines()
 for address in addresses:
