@@ -9,8 +9,6 @@ class SpellChecker:
 
 	def __init__(self,trainingFile):
 		self.trainingFile = trainingFile
-
-	def train(self):
 		trainingData = open(self.trainingFile, "r").read().lower()
 		model = collections.defaultdict(lambda: 1)
 		for t in trainingData.splitlines():

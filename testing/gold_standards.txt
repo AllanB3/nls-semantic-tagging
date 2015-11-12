@@ -210,3 +210,41 @@ Robert	forename
 surgeon-dentist	occupation
 Baglioni	surname
 Baoot	surname
+teacher of piano-forte	occupation
+dairykeeper	occupation
+plasterers	occupation
+slaters	occupation
+fishcurer and forwardsing agent	occupation
+caretaker	occupation
+supervisor of Customs and Excise	occupation
+scientific instru-ment maker and chemical dealer	occupation
+veterinary suraeon (0. 0. B. 4: Son)	occupation
+warehouseman	occupation
+joiner	occupation
+restaurant	occupation
+draper and newsagent	occupation
+grocers	occupation
+wine and spirit merchants	occupation
+shoemaker	occupation
+butchers' outfitter	occupation
+plasterer and modeller	occupation
+Professor of Botany	occupation
+grocer	occupation
+writer	occupation
+stockbroker	occupation
+provision merchant	occupation
+mason and chimney sweep	occupation
+fishmonger	occupation
+rocer	occupation
+chimney sweeper	occupation
+confectioner	occupation
+F.R.C.P.E. (Lect'm‘er on Gymccology, University of Edz’nbwgh)	occupation
+bedding manufacturer	occupation
+dairy and confectioner	occupation
+watchmaker and jeweller	occupation
+solicitor	occupation
+hatter	occupation
+house painter	occupation
+seWing mistress	occupation
+dressmaker	occupation
+window blind maker	occupation
