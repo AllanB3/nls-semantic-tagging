@@ -1,0 +1,23 @@
+@relation Post Office Data
+@attribute attr0 integer
+@attribute attr1 integer
+@attribute attr2 integer
+@attribute attr3 integer
+@attribute attr4 integer
+@attribute attr5 integer
+@attribute attr6 integer
+@attribute attr7 integer
+@attribute attr8 integer
+@attribute attr9 integer
+@attribute attr10 string
+@data
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''
+0,0,0,0,0,0,0,0,0,0,''

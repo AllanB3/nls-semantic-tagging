@@ -6,67 +6,67 @@ MAXIMUM_EDIT_DISTANCE = 2
 
 class Classifier:
 
-	def __init__(self, dictionaryFile):
-		self.dictionary = {}
+    def __init__(self, dictionaryFile):
+        self.dictionary = {}
 
-		dictionaryInput = open(dictionaryFile, "r").read()
-		entries = dictionaryInput.splitlines()
+        dictionaryInput = open(dictionaryFile, "r").read()
+        entries = dictionaryInput.splitlines()
 
-		for e in entries:
-			key, value = e.split("\t")
-			if key in self.dictionary:
-				self.dictionary[key].append(value)
-			else:
-				self.dictionary[key] = [value]
+        for e in entries:
+            key, value = e.split("\t")
+            if key in self.dictionary:
+                self.dictionary[key].append(value)
+            else:
+                self.dictionary[key] = [value]
 
-	def getWordsOfEditDistance(self, word, editDistance):
-		edits = self.edits(word)
+    def getWordsOfEditDistance(self, word, editDistance):
+        edits = self.edits(word)
 
-		while editDistance > 1:
-			newEdits = []
-			for edit in edits:
-				newEdits += self.edits(edit)
-			edits = set(newEdits)
-			editDistance -= 1
+        while editDistance > 1:
+            newEdits = []
+            for edit in edits:
+                newEdits += self.edits(edit)
+            edits = set(newEdits)
+            editDistance -= 1
 
-		return edits
+        return edits
 
-	def edits(self, word):
-		alphabet = 'abcdefghijklmnopqrstuvwxyz'
-		s = [(word[:i], word[i:]) for i in range(len(word) + 1)]
-		deletes = [a + b[1:] for a, b in s if b]
-		transposes = [a + b[1] + b[0] + b[2:] for a, b in s if len(b) > 1]
-		replaces = [a + c + b[1:] for a,b in s for c in alphabet if b]
-		inserts = [a + c + b for a,b in s for c in alphabet]
-		return set(deletes + transposes + replaces + inserts)
+    def edits(self, word):
+        alphabet = 'abcdefghijklmnopqrstuvwxyz'
+        s = [(word[:i], word[i:]) for i in range(len(word) + 1)]
+        deletes = [a + b[1:] for a, b in s if b]
+        transposes = [a + b[1] + b[0] + b[2:] for a, b in s if len(b) > 1]
+        replaces = [a + c + b[1:] for a,b in s for c in alphabet if b]
+        inserts = [a + c + b for a,b in s for c in alphabet]
+        return set(deletes + transposes + replaces + inserts)
 
-	def known(self, words):
-		return set(w for w in words if w in self.dictionary)
+    def known(self, words):
+        return set(w for w in words if w in self.dictionary)
 
-	def classify(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
-		cleanedWord = re.sub(r"[^a-zA-Z\s]", "", word)
+    def classify(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
+        cleanedWord = re.sub(r"[^a-zA-Z\s]", "", word)
 
-		possibleTags = []
-		for value, tag in self.dictionary.iteritems():
-			if value.replace(" ", "") == cleanedWord.replace(" ", ""):
-				possibleTags = possibleTags + self.dictionary[value]
+        possibleTags = []
+        for value, tag in self.dictionary.iteritems():
+            if value.replace(" ", "") == cleanedWord.replace(" ", ""):
+                possibleTags = possibleTags + self.dictionary[value]
 
-		try:
-			return max(possibleTags, key=possibleTags.count)
-		except:
-			return None
+        try:
+            return max(possibleTags, key=possibleTags.count)
+        except:
+            return None
 
-	def classifyDocument(self, inputPath, outputPath):
-		words = open(inputPath, "r").read().splitlines()
-		outputFile = open(outputPath, "w")
+    def classifyDocument(self, inputPath, outputPath):
+        words = open(inputPath, "r").read().splitlines()
+        outputFile = open(outputPath, "w")
 
-		for line in words:
-			for term in line.split(","):
-				classification = self.classify(term.strip())
+        for line in words:
+            for term in line.split(","):
+                classification = self.classify(term.strip())
 
-				if classification:
-					outputFile.write(term.strip() + " [" + classification + "] ")
-				else:
-					outputFile.write(term.strip() + " [?] ")
+                if classification:
+                    outputFile.write(term.strip() + " [" + classification + "] ")
+                else:
+                    outputFile.write(term.strip() + " [?] ")
 
-			outputFile.write("\n")
+            outputFile.write("\n")
