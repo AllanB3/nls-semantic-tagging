@@ -47,7 +47,7 @@ class Classifier:
         cleanedWord = re.sub(r"[^a-zA-Z\s]", "", word)
 
         possibleTags = []
-        for value, tag in self.dictionary.iteritems():
+        for value, tag in self.dictionary.items():
             if value.replace(" ", "") == cleanedWord.replace(" ", ""):
                 possibleTags = possibleTags + self.dictionary[value]
 

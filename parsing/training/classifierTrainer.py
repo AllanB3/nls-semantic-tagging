@@ -4,15 +4,24 @@ import sys
 import os
 import arff
 
+path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(1, path)
+
+from xmlparser import *
+
 trainingFolder = os.path.abspath(os.path.join(os.path.dirname(__file__), sys.argv[1]))
 trainingOutputPath = os.path.abspath(os.path.join(os.path.dirname(__file__), sys.argv[2]))
 trainingOutputFile = open(trainingOutputPath, "w")
 
+xmlparser = xmlparser()
+
 for fileName in os.listdir(trainingFolder):
+    print(fileName)
     tagsAndVectors = []
 
-    # TODO: replace this with xmlparser
-    trainingValues = open(os.path.abspath(os.path.join(trainingFolder, fileName)), "r").read()
+
+    filePath = os.path.abspath(os.path.join(trainingFolder, fileName))
+    trainingValues = xmlparser.parse(filePath)
 
     currentValue = ""
     currentTag = ""
@@ -24,14 +33,17 @@ for fileName in os.listdir(trainingFolder):
     digits = 0
     dictionaryTags = []
 
-    featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ""]
+    featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
+    #TODO: figure out some way to deal with nested brackets (perhaps a regex)
     for c in trainingValues:
         if c == "(":
             addingValue = True
 
             if not len(tagsAndVectors) == 0:
                 previousValue = tagsAndVectors[len(tagsAndVectors) - 1][10]
+
+            continue
 
         if addingValue:
             if not c == "[":
@@ -41,6 +53,7 @@ for fileName in os.listdir(trainingFolder):
                 if c.isdigit():
                     digits += 1
             else:
+                print(currentValue)
                 addingValue = False
                 addingTag = True
 
@@ -53,9 +66,13 @@ for fileName in os.listdir(trainingFolder):
             if not c == "]":
                 currentTag += c
             else:
+                print(currentTag + "\n")
+                featureVector.append(currentTag)
                 tagsAndVectors.append(featureVector)
                 currentTag = ""
+                featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
                 addingTag = False
+
 
 
 arff.dump(trainingOutputPath, tagsAndVectors, relation="Post Office Data")
