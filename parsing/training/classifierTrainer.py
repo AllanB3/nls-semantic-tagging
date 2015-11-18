@@ -10,7 +10,10 @@ trainingOutputFile = open(trainingOutputPath, "w")
 
 for fileName in os.listdir(trainingFolder):
     tagsAndVectors = []
+
+    # TODO: replace this with xmlparser
     trainingValues = open(os.path.abspath(os.path.join(trainingFolder, fileName)), "r").read()
+
     currentValue = ""
     currentTag = ""
     addingValue = False
