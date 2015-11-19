@@ -3,15 +3,16 @@
 from __future__ import division
 import os
 import sys
+from tabulate import tabulate
 
 gold_standards = open("gold_standards.txt", "r").readlines()
 resultsFile = open("results.txt", "w")
 results = {
-	"forename": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
-	"surname": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
-	"address": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
-	"occupation": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0}
-	}
+    "forename": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
+    "surname": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
+    "address": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0},
+    "occupation": {"true_positive": 0, "true_negative": 0, "false_positive": 0, "false_negative": 0}
+    }
 
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "../parsing/training")))
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "../parsing")))
@@ -24,51 +25,74 @@ os.chdir(os.path.join(os.path.dirname(__file__), "../parsing/training"))
 spellchecker = SpellChecker("spellcheckerTraining.txt")
 classifier = Classifier("classifierTraining.txt")
 
+confusionMatrix = {"surname": {"surname": 0, "forename": 0, "occupation": 0, "address": 0},
+                   "forename": {"surname": 0, "forename": 0, "occupation": 0, "address": 0},
+                   "occupation": {"surname": 0, "forename": 0, "occupation": 0, "address": 0},
+                   "address": {"surname": 0, "forename": 0, "occupation": 0, "address": 0}}
+
 for g in gold_standards:
-	g = g.strip()
-	word, actual_tag = g.split("\t", 1)
-	corrected_word = spellchecker.correct(word)
-	classified_tag = classifier.classify(corrected_word)
-	print("Word: " + word)
-	print("Expected tag: " + actual_tag)
-	print("Corrected word: " + corrected_word)
+    g = g.strip()
+    word, actual_tag = g.split("\t", 1)
+    corrected_word = spellchecker.correct(word)
+    classified_tag = classifier.classify(corrected_word)
+    print("Word: " + word)
+    print("Expected tag: " + actual_tag)
+    print("Corrected word: " + corrected_word)
 
-	resultsFile.write("Word: " + word + "\n")
-	resultsFile.write("Expected tag: " + actual_tag + "\n")
-	resultsFile.write("Corrected word: " + corrected_word + "\n")
+    resultsFile.write("Word: " + word + "\n")
+    resultsFile.write("Expected tag: " + actual_tag + "\n")
+    resultsFile.write("Corrected word: " + corrected_word + "\n")
 
-	if classified_tag:
-		if classified_tag == actual_tag:
-			results[actual_tag]["true_positive"] += 1
+    if classified_tag != "?":
+        try:
+            confusionMatrix[actual_tag][classified_tag] += 1
+        except:
+            continue
 
-			for key in results:
-				if key != actual_tag:
-					results[key]["true_negative"] += 1
-		else:
-			results[actual_tag]["false_negative"] += 1
-			results[classified_tag]["false_positive"] += 1
+    if classified_tag:
+        if classified_tag == actual_tag:
+            results[actual_tag]["true_positive"] += 1
 
-		print("Classified tag: " + classified_tag + "\n")
-		resultsFile.write("Classified tag: " + classified_tag + "\n\n")
-	else:
-		results[actual_tag]["false_negative"] += 1
-		print("Classified tag: None\n")
-		resultsFile.write("Classified tag: None\n\n")
+            for key in results:
+                if key != actual_tag:
+                    results[key]["true_negative"] += 1
+        else:
+            results[actual_tag]["false_negative"] += 1
+            results[classified_tag]["false_positive"] += 1
+
+        print("Classified tag: " + classified_tag + "\n")
+        resultsFile.write("Classified tag: " + classified_tag + "\n\n")
+    else:
+        results[actual_tag]["false_negative"] += 1
+        print("Classified tag: None\n")
+        resultsFile.write("Classified tag: None\n\n")
 
 print("RESULTS:")
 resultsFile.write("RESULTS:\n")
 
 for key in results:
-	print(key + ":")
-	resultsFile.write(key + ":\n")
-	precision = results[key]["true_positive"] / (results[key]["true_positive"] + results[key]["false_positive"]) * 100
-	recall = results[key]["true_positive"] / (results[key]["true_positive"] + results[key]["false_negative"]) * 100
-	fscore = (2 * precision * recall) / (precision + recall)
+    print(key + ":")
+    resultsFile.write(key + ":\n")
+    precision = results[key]["true_positive"] / (results[key]["true_positive"] + results[key]["false_positive"]) * 100
+    recall = results[key]["true_positive"] / (results[key]["true_positive"] + results[key]["false_negative"]) * 100
+    fscore = (2 * precision * recall) / (precision + recall)
 
-	print("Precision: " + str(precision))
-	print("Recall: " + str(recall))
-	print("F-score: " + str(fscore) + "\n")
+    print("Precision: " + str(precision))
+    print("Recall: " + str(recall))
+    print("F-score: " + str(fscore) + "\n")
 
-	resultsFile.write("Precision: " + str(precision) + "\n")
-	resultsFile.write("Recall: " + str(recall) + "\n")
-	resultsFile.write("F-score: " + str(fscore) + "\n\n")
+    resultsFile.write("Precision: " + str(precision) + "\n")
+    resultsFile.write("Recall: " + str(recall) + "\n")
+    resultsFile.write("F-score: " + str(fscore) + "\n\n")
+
+table = [["", "surname", "forename", "occupation", "address"],
+         ["surname", confusionMatrix["surname"]["surname"], confusionMatrix["surname"]["forename"],
+          confusionMatrix["surname"]["occupation"], confusionMatrix["surname"]["address"]],
+         ["forename", confusionMatrix["forename"]["surname"], confusionMatrix["forename"]["forename"],
+          confusionMatrix["forename"]["occupation"], confusionMatrix["forename"]["address"]],
+         ["occupation", confusionMatrix["occupation"]["surname"], confusionMatrix["occupation"]["forename"],
+          confusionMatrix["occupation"]["occupation"], confusionMatrix["occupation"]["address"]],
+         ["address", confusionMatrix["address"]["surname"], confusionMatrix["address"]["forename"],
+          confusionMatrix["address"]["occupation"], confusionMatrix["address"]["address"]]]
+
+resultsFile.write(tabulate(table))

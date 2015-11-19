@@ -921,7 +921,7 @@
             <Point x="110" y="847"/>
           </Coords>
         </Line>
-        <Line text="street [ADDRESS])" id="327" boldness="2.66667" boldnessReliability="7.71732" color="#2D291C" colorReliability="18.4639" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="4" baseline="884" meanline="863" xHeight="22" dHeight="-1" aHeight="30" charWidth="15" textConfidence="88.5468">
+        <Line text="street [HOME_ADDRESS])" id="327" boldness="2.66667" boldnessReliability="7.71732" color="#2D291C" colorReliability="18.4639" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="4" baseline="884" meanline="863" xHeight="22" dHeight="-1" aHeight="30" charWidth="15" textConfidence="88.5468">
           <Coords>
             <Point x="111" y="855"/>
             <Point x="217" y="855"/>
@@ -1280,7 +1280,7 @@
             <Point x="113" y="973"/>
           </Coords>
         </Line>
-        <Line text="(Adam [SURNAME]), (James [FORENAME]), (advocate [OCCUPATION]), (16 India street [ADDRESS])" id="399" boldness="3.13333" boldnessReliability="19.8229" color="#231F13" colorReliability="9.07138" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1015" meanline="991" xHeight="25" dHeight="-10" aHeight="34" charWidth="18" textConfidence="86.4135">
+        <Line text="(Adam [SURNAME]), (James [FORENAME]), (advocate [OCCUPATION]), (16 India street [HOME_ADDRESS])" id="399" boldness="3.13333" boldnessReliability="19.8229" color="#231F13" colorReliability="9.07138" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1015" meanline="991" xHeight="25" dHeight="-10" aHeight="34" charWidth="18" textConfidence="86.4135">
           <Coords>
             <Point x="67" y="982"/>
             <Point x="834" y="982"/>
@@ -1296,7 +1296,7 @@
             <Point x="67" y="1070"/>
           </Coords>
         </Line>
-        <Line text="crescent [ADDRESS])" id="434" boldness="3.125" boldnessReliability="10.4249" color="#221F14" colorReliability="12.1957" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1105" meanline="1085" xHeight="21" dHeight="0" aHeight="30" charWidth="16" textConfidence="85.1009">
+        <Line text="crescent [HOME_ADDRESS])" id="434" boldness="3.125" boldnessReliability="10.4249" color="#221F14" colorReliability="12.1957" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1105" meanline="1085" xHeight="21" dHeight="0" aHeight="30" charWidth="16" textConfidence="85.1009">
           <Coords>
             <Point x="112" y="1076"/>
             <Point x="262" y="1076"/>
@@ -2499,7 +2499,7 @@
             <Point x="109" y="1549"/>
           </Coords>
         </Line>
-        <Line text="(Adam [SURNAME]), (Peter [FORENAME]), (7 Glenogle place [ADDRESS])" id="648" boldness="3.17391" boldnessReliability="17.0609" color="#2D2919" colorReliability="11.435" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1590" meanline="1565" xHeight="26" dHeight="-12" aHeight="35" charWidth="17" textConfidence="86.2742">
+        <Line text="(Adam [SURNAME]), (Peter [FORENAME]), (7 Glenogle place [HOME_ADDRESS])" id="648" boldness="3.17391" boldnessReliability="17.0609" color="#2D2919" colorReliability="11.435" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1590" meanline="1565" xHeight="26" dHeight="-12" aHeight="35" charWidth="17" textConfidence="86.2742">
           <Coords>
             <Point x="65" y="1556"/>
             <Point x="650" y="1556"/>

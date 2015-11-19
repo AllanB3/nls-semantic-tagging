@@ -11,8 +11,6 @@ Classified tag: forename
 Word: Crghall road
 Expected tag: address
 Corrected word: crghall road
-Classified tag: None
-
 Word: Mrs
 Expected tag: forename
 Corrected word: mrs
@@ -51,8 +49,6 @@ Classified tag: surname
 Word: Mrs Nickolas
 Expected tag: forename
 Corrected word: mrs nickolas
-Classified tag: None
-
 Word: 112 Leith street
 Expected tag: address
 Corrected word: 112 leith street
@@ -71,13 +67,9 @@ Classified tag: forename
 Word: 54 Hanover st.
 Expected tag: address
 Corrected word: 54 hanover st
-Classified tag: None
-
 Word: 13 Wester Coates terrace
 Expected tag: address
 Corrected word: 13 wester coates terrace
-Classified tag: None
-
 Word: Absolon
 Expected tag: surname
 Corrected word: absolon
@@ -91,13 +83,9 @@ Classified tag: forename
 Word: 6 N. St David street
 Expected tag: address
 Corrected word: 6 n st david street
-Classified tag: None
-
 Word: 24 Bruntsfield orardens
 Expected tag: address
 Corrected word: 24 bruntsfield orardens
-Classified tag: None
-
 Word: 48 Henderson row
 Expected tag: address
 Corrected word: 48 henderson row
@@ -126,8 +114,6 @@ Classified tag: surname
 Word: Lieut.~Col. Gerald
 Expected tag: forename
 Corrected word: lieutcol gerald
-Classified tag: None
-
 Word: Warriston road
 Expected tag: address
 Corrected word: warriston road
@@ -141,18 +127,12 @@ Classified tag: forename
 Word: Captain John De 0.
 Expected tag: forename
 Corrected word: captain john de 0
-Classified tag: None
-
 Word: I2 Oxford: terrace
 Expected tag: address
 Corrected word: i2 oxford terrace
-Classified tag: None
-
 Word: Sir Stair
 Expected tag: forename
 Corrected word: sir stair
-Classified tag: None
-
 Word: Adamson
 Expected tag: surname
 Corrected word: adamson
@@ -166,13 +146,9 @@ Classified tag: forename
 Word: 11 Clerk st.
 Expected tag: address
 Corrected word: 11 clerk st
-Classified tag: None
-
 Word: 18 Viewforth ter.
 Expected tag: address
 Corrected word: 18 viewforth ter
-Classified tag: None
-
 Word: Restalrig road
 Expected tag: address
 Corrected word: restalrig road
@@ -226,8 +202,6 @@ Classified tag: address
 Word: 26 Montpeli'er park
 Expected tag: address
 Corrected word: 26 montpelier park
-Classified tag: None
-
 Word: A.
 Expected tag: forename
 Corrected word: j
@@ -301,13 +275,9 @@ Classified tag: surname
 Word: Mrs H.B.
 Expected tag: forename
 Corrected word: mrs hb
-Classified tag: None
-
 Word: 2 Bcllevue terrace
 Expected tag: address
 Corrected word: 2 bcllevue terrace
-Classified tag: None
-
 Word: Miss 0.
 Expected tag: forename
 Corrected word: miss
@@ -316,8 +286,6 @@ Classified tag: forename
 Word: '6 Norbh Charlottea street
 Expected tag: address
 Corrected word: 6 norbh charlottea street
-Classified tag: None
-
 Word: Aikman
 Expected tag: surname
 Corrected word: aikman
@@ -331,8 +299,6 @@ Classified tag: forename
 Word: 38 Waver'ley place
 Expected tag: address
 Corrected word: 38 waverley place
-Classified tag: None
-
 Word: Addison
 Expected tag: surname
 Corrected word: adamson
@@ -356,13 +322,9 @@ Classified tag: forename
 Word: 107 Brouo'hton street
 Expected tag: address
 Corrected word: 107 brouohton street
-Classified tag: None
-
 Word: 40 Bano'or road
 Expected tag: address
 Corrected word: 40 banoor road
-Classified tag: None
-
 Word: Addly
 Expected tag: surname
 Corrected word: addis
@@ -371,8 +333,6 @@ Classified tag: surname
 Word: 43 Georo'c street
 Expected tag: address
 Corrected word: 43 georoc street
-Classified tag: None
-
 Word: Adi'e
 Expected tag: surname
 Corrected word: adam
@@ -401,8 +361,6 @@ Classified tag: forename
 Word: 1 Roseneath terrace
 Expected tag: address
 Corrected word: 1 roseneath terrace
-Classified tag: None
-
 Word: lames
 Expected tag: forename
 Corrected word: james
@@ -411,13 +369,9 @@ Classified tag: forename
 Word: 1 Fountainhall rd.
 Expected tag: address
 Corrected word: 1 fountainhall rd
-Classified tag: None
-
 Word: Major James
 Expected tag: forename
 Corrected word: major james
-Classified tag: None
-
 Word: 10 Shandwick place
 Expected tag: address
 Corrected word: 10 shandwick place
@@ -441,8 +395,6 @@ Classified tag: surname
 Word: 12 Millazc crescent
 Expected tag: address
 Corrected word: 12 millazc crescent
-Classified tag: None
-
 Word: Jamcs
 Expected tag: forename
 Corrected word: james
@@ -451,13 +403,9 @@ Classified tag: forename
 Word: 35 Bowling-green street
 Expected tag: address
 Corrected word: 35 bowlinggreen street
-Classified tag: None
-
 Word: 15 Plewlands terrace
 Expected tag: address
 Corrected word: 15 plewlands terrace
-Classified tag: None
-
 Word: Robert
 Expected tag: forename
 Corrected word: robert
@@ -471,8 +419,6 @@ Classified tag: address
 Word: 50 South Br-id 0e.
 Expected tag: address
 Corrected word: 50 south brid 0e
-Classified tag: None
-
 Word: Allan
 Expected tag: surname
 Corrected word: allan
@@ -486,18 +432,12 @@ Classified tag: forename
 Word: 51 Hiah street
 Expected tag: address
 Corrected word: 51 hiah street
-Classified tag: None
-
 Word: W. Steele
 Expected tag: forename
 Corrected word: w steele
-Classified tag: None
-
 Word: J ames F.
 Expected tag: forename
 Corrected word: j ames f
-Classified tag: None
-
 Word: 21 Barony street
 Expected tag: address
 Corrected word: 21 barony street
@@ -516,18 +456,12 @@ Classified tag: forename
 Word: 16 Comiston terrace
 Expected tag: address
 Corrected word: 16 comiston terrace
-Classified tag: None
-
 Word: 32 Hay terrace
 Expected tag: address
 Corrected word: 32 hay terrace
-Classified tag: None
-
 Word: 31 Dalhousie terrace
 Expected tag: address
 Corrected word: 31 dalhousie terrace
-Classified tag: None
-
 Word: Alexander F.
 Expected tag: forename
 Corrected word: alexander
@@ -566,8 +500,6 @@ Classified tag: forename
 Word: '7 Cl'aiollall crescent
 Expected tag: address
 Corrected word: 7 claiollall crescent
-Classified tag: None
-
 Word: Anton
 Expected tag: surname
 Corrected word: easton
@@ -591,8 +523,6 @@ Classified tag: forename
 Word: 1 Dalhousie ter.
 Expected tag: address
 Corrected word: 1 dalhousie ter
-Classified tag: None
-
 Word: 34 Cal'edon'ian crescent
 Expected tag: address
 Corrected word: 34 caledonian crescent
@@ -656,8 +586,6 @@ Classified tag: address
 Word: Francis Joseph
 Expected tag: forename
 Corrected word: francis joseph
-Classified tag: None
-
 Word: 48 Polwarth terrace
 Expected tag: address
 Corrected word: 48 polwarth terrace
@@ -746,8 +674,6 @@ Classified tag: address
 Word: teacher of music
 Expected tag: occupation
 Corrected word: teacher of music
-Classified tag: None
-
 Word: Atwell
 Expected tag: surname
 Corrected word: dowell
@@ -776,8 +702,6 @@ Classified tag: surname
 Word: milliner and outfitter
 Expected tag: occupation
 Corrected word: milliner and outfitter
-Classified tag: None
-
 Word: butchers
 Expected tag: occupation
 Corrected word: butters
@@ -806,8 +730,6 @@ Classified tag: address
 Word: hotel manao'er
 Expected tag: occupation
 Corrected word: hotel manaoer
-Classified tag: None
-
 Word: Christina
 Expected tag: forename
 Corrected word: christie
@@ -826,8 +748,6 @@ Classified tag: address
 Word: Colonel Frederick
 Expected tag: forename
 Corrected word: colonel frederick
-Classified tag: None
-
 Word: photographer
 Expected tag: occupation
 Corrected word: photographer
@@ -841,8 +761,6 @@ Classified tag: surname
 Word: Wellesley C.
 Expected tag: forename
 Corrected word: wellesley c
-Classified tag: None
-
 Word: Walter
 Expected tag: forename
 Corrected word: baxter
@@ -851,8 +769,6 @@ Classified tag: surname
 Word: 134 Lauriston lace
 Expected tag: address
 Corrected word: 134 lauriston lace
-Classified tag: None
-
 Word: Ayer
 Expected tag: surname
 Corrected word: alex
@@ -886,8 +802,6 @@ Classified tag: surname
 Word: Liet.-Col. A.
 Expected tag: forename
 Corrected word: lietcol a
-Classified tag: None
-
 Word: amsay
 Expected tag: forename
 Corrected word: assay
@@ -906,18 +820,12 @@ Classified tag: forename
 Word: 51 Bonninaton road
 Expected tag: address
 Corrected word: 51 bonninaton road
-Classified tag: None
-
 Word: ‘Auo'ustus Charles
 Expected tag: forename
 Corrected word: auoustus charles
-Classified tag: None
-
 Word: notary public
 Expected tag: occupation
 Corrected word: notary public
-Classified tag: None
-
 Word: David
 Expected tag: forename
 Corrected word: david
@@ -926,13 +834,9 @@ Classified tag: forename
 Word: wine and spirit merchant
 Expected tag: occupation
 Corrected word: wine and spirit merchant
-Classified tag: None
-
 Word: teacher
 Expected tag: occupation
 Corrected word: teacherm
-Classified tag: None
-
 Word: George H.
 Expected tag: forename
 Corrected word: george
@@ -951,18 +855,12 @@ Classified tag: forename
 Word: J ames Mitchell
 Expected tag: forename
 Corrected word: j ames mitchell
-Classified tag: None
-
 Word: printer
 Expected tag: occupation
 Corrected word: printersw
-Classified tag: None
-
 Word: .architect
 Expected tag: occupation
 Corrected word: architectsr
-Classified tag: None
-
 Word: ironmonger
 Expected tag: occupation
 Corrected word: ironmonger
@@ -971,8 +869,6 @@ Classified tag: occupation
 Word: Babinaton
 Expected tag: surname
 Corrected word: babinaton
-Classified tag: None
-
 Word: ‘Bach
 Expected tag: surname
 Corrected word: black
@@ -981,28 +877,18 @@ Classified tag: surname
 Word: professor of smglng
 Expected tag: occupation
 Corrected word: professor of smglng
-Classified tag: None
-
 Word: .author of books
 Expected tag: occupation
 Corrected word: author of books
-Classified tag: None
-
 Word: lecturer
 Expected tag: occupation
 Corrected word: lecturer
-Classified tag: None
-
 Word: importer
 Expected tag: occupation
 Corrected word: importer
-Classified tag: None
-
 Word: dealer in cycles
 Expected tag: occupation
 Corrected word: dealer in cycles
-Classified tag: None
-
 Word: Baddiley
 Expected tag: surname
 Corrected word: bailey
@@ -1031,13 +917,9 @@ Classified tag: forename
 Word: John Thomas
 Expected tag: forename
 Corrected word: john thomas
-Classified tag: None
-
 Word: grocer and wine merchant
 Expected tag: occupation
 Corrected word: grocer and wine merchant
-Classified tag: None
-
 Word: Robert
 Expected tag: forename
 Corrected word: robert
@@ -1061,8 +943,6 @@ Classified tag: surname
 Word: teacher of piano-forte
 Expected tag: occupation
 Corrected word: teacher of pianoforte
-Classified tag: None
-
 Word: dairykeeper
 Expected tag: occupation
 Corrected word: dairykeeper
@@ -1071,43 +951,27 @@ Classified tag: occupation
 Word: plasterers
 Expected tag: occupation
 Corrected word: plastererd
-Classified tag: None
-
 Word: slaters
 Expected tag: occupation
 Corrected word: slaters
-Classified tag: None
-
 Word: fishcurer and forwardsing agent
 Expected tag: occupation
 Corrected word: fishcurer and forwardsing agent
-Classified tag: None
-
 Word: caretaker
 Expected tag: occupation
 Corrected word: caretakera
-Classified tag: None
-
 Word: supervisor of Customs and Excise
 Expected tag: occupation
 Corrected word: supervisor of customs and excise
-Classified tag: None
-
 Word: scientific instru-ment maker and chemical dealer
 Expected tag: occupation
 Corrected word: scientific instrument maker and chemical dealer
-Classified tag: None
-
 Word: veterinary suraeon (0. 0. B. 4: Son)
 Expected tag: occupation
 Corrected word: veterinary suraeon 0 0 b 4 son
-Classified tag: None
-
 Word: warehouseman
 Expected tag: occupation
 Corrected word: warehousemanr
-Classified tag: None
-
 Word: joiner
 Expected tag: occupation
 Corrected word: corner
@@ -1121,8 +985,6 @@ Classified tag: occupation
 Word: draper and newsagent
 Expected tag: occupation
 Corrected word: draper and newsagent
-Classified tag: None
-
 Word: grocers
 Expected tag: occupation
 Corrected word: grocers
@@ -1131,8 +993,6 @@ Classified tag: occupation
 Word: wine and spirit merchants
 Expected tag: occupation
 Corrected word: wine and spirit merchants
-Classified tag: None
-
 Word: shoemaker
 Expected tag: occupation
 Corrected word: shoemaker
@@ -1141,18 +1001,12 @@ Classified tag: occupation
 Word: butchers' outfitter
 Expected tag: occupation
 Corrected word: butchers outfitter
-Classified tag: None
-
 Word: plasterer and modeller
 Expected tag: occupation
 Corrected word: plasterer and modeller
-Classified tag: None
-
 Word: Professor of Botany
 Expected tag: occupation
 Corrected word: professor of botany
-Classified tag: None
-
 Word: grocer
 Expected tag: occupation
 Corrected word: grocers
@@ -1166,18 +1020,12 @@ Classified tag: forename
 Word: stockbroker
 Expected tag: occupation
 Corrected word: stockbrokersj
-Classified tag: None
-
 Word: provision merchant
 Expected tag: occupation
 Corrected word: provision merchant
-Classified tag: None
-
 Word: mason and chimney sweep
 Expected tag: occupation
 Corrected word: mason and chimney sweep
-Classified tag: None
-
 Word: fishmonger
 Expected tag: occupation
 Corrected word: fishmonger
@@ -1191,38 +1039,24 @@ Classified tag: forename
 Word: chimney sweeper
 Expected tag: occupation
 Corrected word: chimney sweeper
-Classified tag: None
-
 Word: confectioner
 Expected tag: occupation
 Corrected word: confectionerj
-Classified tag: None
-
 Word: F.R.C.P.E. (Lect'm‘er on Gymccology, University of Edz’nbwgh)
 Expected tag: occupation
 Corrected word: frcpe lectmer on gymccology university of edznbwgh
-Classified tag: None
-
 Word: bedding manufacturer
 Expected tag: occupation
 Corrected word: bedding manufacturer
-Classified tag: None
-
 Word: dairy and confectioner
 Expected tag: occupation
 Corrected word: dairy and confectioner
-Classified tag: None
-
 Word: watchmaker and jeweller
 Expected tag: occupation
 Corrected word: watchmaker and jeweller
-Classified tag: None
-
 Word: solicitor
 Expected tag: occupation
 Corrected word: solicitorw
-Classified tag: None
-
 Word: hatter
 Expected tag: occupation
 Corrected word: baxter
@@ -1231,41 +1065,40 @@ Classified tag: surname
 Word: house painter
 Expected tag: occupation
 Corrected word: house painter
-Classified tag: None
-
 Word: seWing mistress
 Expected tag: occupation
 Corrected word: sewing mistress
-Classified tag: None
-
 Word: dressmaker
 Expected tag: occupation
 Corrected word: dressmakersw
-Classified tag: None
-
 Word: window blind maker
 Expected tag: occupation
 Corrected word: window blind maker
-Classified tag: None
-
 RESULTS:
 occupation:
 Precision: 100.0
-Recall: 20.0
-F-score: 33.3333333333
+Recall: 66.6666666667
+F-score: 80.0
 
 address:
 Precision: 100.0
-Recall: 57.3529411765
-F-score: 72.8971962617
+Recall: 100.0
+F-score: 100.0
 
 surname:
 Precision: 88.4615384615
-Recall: 79.3103448276
-F-score: 83.6363636364
+Recall: 80.701754386
+F-score: 84.4036697248
 
 forename:
 Precision: 76.6666666667
-Recall: 71.875
-F-score: 74.1935483871
+Recall: 93.8775510204
+F-score: 84.4036697248
 
+----------  -------  --------  ----------  -------
+            surname  forename  occupation  address
+surname     46       11        0           0
+forename    3        46        0           0
+occupation  3        3         12          0
+address     0        0         0           39
+----------  -------  --------  ----------  -------

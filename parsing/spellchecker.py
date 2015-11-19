@@ -42,10 +42,10 @@ class SpellChecker:
 	def correct(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
 		cleanedWord = re.sub(r'[^0-9a-zA-Z\s]', '', word.lower())
 
-		if (cleanedWord.isdigit()):
+		if cleanedWord.isdigit():
 			return cleanedWord
 
-		candidates = set([cleanedWord])
+		candidates = {cleanedWord}
 
 		candidates = candidates.union(self.known(self.getWordsOfEditDistance(cleanedWord, maximumEditDistance)))
 		return max(candidates, key=self.model.get)

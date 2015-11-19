@@ -3,6 +3,7 @@
 import sys
 import os
 import arff
+import re
 
 path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(1, path)
@@ -13,66 +14,90 @@ trainingFolder = os.path.abspath(os.path.join(os.path.dirname(__file__), sys.arg
 trainingOutputPath = os.path.abspath(os.path.join(os.path.dirname(__file__), sys.argv[2]))
 trainingOutputFile = open(trainingOutputPath, "w")
 
+tagsAndVectors = []
+
 xmlparser = xmlparser()
 
 for fileName in os.listdir(trainingFolder):
-    print(fileName)
-    tagsAndVectors = []
-
-
     filePath = os.path.abspath(os.path.join(trainingFolder, fileName))
     trainingValues = xmlparser.parse(filePath)
+    print(trainingValues + "\n")
 
-    currentValue = ""
-    currentTag = ""
-    addingValue = False
-    addingTag = False
+    matches = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
 
-    previousValue = ""
-    tokenLength = 0
-    digits = 0
-    dictionaryTags = []
+    for match in matches:
+        token = match.group()
+        print(token)
+        previousValue = ""
+        tokenLength = 0
+        digits = 0
+        dictionaryTags = []
 
-    featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-    #TODO: figure out some way to deal with nested brackets (perhaps a regex)
-    for c in trainingValues:
-        if c == "(":
-            addingValue = True
+        if len(tagsAndVectors) > 0:
+            previousValue = tagsAndVectors[len(tagsAndVectors) - 1][12]
 
-            if not len(tagsAndVectors) == 0:
-                previousValue = tagsAndVectors[len(tagsAndVectors) - 1][10]
+            if previousValue == "SURNAME":
+                featureVector[0] = 1
+            elif previousValue == "FORENAME":
+                featureVector[1] = 1
+            elif previousValue == "OCCUPATION":
+                featureVector[2] = 1
+            elif previousValue == "WORK_ADDRESS":
+                featureVector[3] = 1
+            elif previousValue == "HOME_ADDRESS":
+                featureVector[4] = 1
 
-            continue
+        featureVector[6] = len(re.findall("\d", token))
 
-        if addingValue:
-            if not c == "[":
-                currentValue += c
+        tag = re.search(r"\[[A-Z|_]*\]", token).group()
+        tag = tag[1 : len(tag) - 1]
 
-                tokenLength += 1
-                if c.isdigit():
-                    digits += 1
-            else:
-                print(currentValue)
-                addingValue = False
-                addingTag = True
+        re.sub(r"\[(\s|\n)*[A-Z|_]*\]\)", "", token)
+        re.sub(r"^\(", "", token)
+        featureVector[5] = len(token)
 
-                #TODO: lexicon lookup here and build feature vector
+        lexicon = open("classifierTraining.txt", "r").read()
+        entries = lexicon.splitlines()
 
-                currentValue = ""
-                continue
+        for e in entries:
+            entry, dictTag = e.split("\t")
+            dictTag = dictTag.upper()
 
-        if addingTag:
-            if not c == "]":
-                currentTag += c
-            else:
-                print(currentTag + "\n")
-                featureVector.append(currentTag)
-                tagsAndVectors.append(featureVector)
-                currentTag = ""
-                featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-                addingTag = False
+            if entry == token:
+                if dictTag == "SURNAME":
+                    featureVector[7] = 1
+                elif dictTag == "FORENAME":
+                    featureVector[8] = 1
+                elif dictTag == "OCCUPATION":
+                    featureVector[9] = 1
+                elif dictTag == "WORK_ADDRESS":
+                    featureVector[10] = 1
+                elif dictTag == "HOME_ADDRESS":
+                    featureVector[11] = 1
+
+        featureVector.append(tag)
+        print("feature vector: " + str(featureVector) + "\n")
+
+        tagsAndVectors.append(featureVector)
+
+arffWriter = arff.Writer(trainingOutputPath, relation="postOfficeData", names=['previousSurname',
+                                                                                  'previousForename',
+                                                                                  'previousOccupation',
+                                                                                  'previousWorkAddress',
+                                                                                  'previousHomeAddress',
+                                                                                  'tokenLength',
+                                                                                  'digits',
+                                                                                  'dictionarySurname',
+                                                                                  'dictionaryForename',
+                                                                                  'dictionaryOccupation',
+                                                                                  'dictionaryWorkAddress',
+                                                                                  'dictionaryHomeAddress',
+                                                                                  'class'])
+
+arffWriter.pytypes[str] = '{SURNAME, FORENAME, OCCUPATION, WORK_ADDRESS, HOME_ADDRESS}'
 
 
-
-arff.dump(trainingOutputPath, tagsAndVectors, relation="Post Office Data")
+for data in tagsAndVectors:
+    arffWriter.write(data)
