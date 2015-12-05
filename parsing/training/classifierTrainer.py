@@ -21,7 +21,6 @@ xmlparser = xmlparser()
 for fileName in os.listdir(trainingFolder):
     filePath = os.path.abspath(os.path.join(trainingFolder, fileName))
     trainingValues = xmlparser.parse(filePath)
-    print(trainingValues + "\n")
 
     matches = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
 
@@ -33,10 +32,10 @@ for fileName in os.listdir(trainingFolder):
         digits = 0
         dictionaryTags = []
 
-        featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
         if len(tagsAndVectors) > 0:
-            previousValue = tagsAndVectors[len(tagsAndVectors) - 1][12]
+            previousValue = tagsAndVectors[len(tagsAndVectors) - 1][11]
 
             if previousValue == "SURNAME":
                 featureVector[0] = 1
@@ -54,47 +53,46 @@ for fileName in os.listdir(trainingFolder):
         tag = re.search(r"\[[A-Z|_]*\]", token).group()
         tag = tag[1 : len(tag) - 1]
 
-        re.sub(r"\[(\s|\n)*[A-Z|_]*\]\)", "", token)
-        re.sub(r"^\(", "", token)
+        token = re.sub(r"\[(\s|\n)*[A-Z|_]*\]\)", "", token)
+        token = re.sub(r"^\(", "", token)
+        token = re.sub(r"\d+\s*", "", token)
+        print(token)
         featureVector[5] = len(token)
 
         lexicon = open("classifierTraining.txt", "r").read()
         entries = lexicon.splitlines()
 
         for e in entries:
-            entry, dictTag = e.split("\t")
-            dictTag = dictTag.upper()
+            entry, dictTag = e.strip().split("\t")
 
-            if entry == token:
-                if dictTag == "SURNAME":
+            if entry == token.lower().strip():
+                if dictTag == "surname":
                     featureVector[7] = 1
-                elif dictTag == "FORENAME":
+                elif dictTag == "forename":
                     featureVector[8] = 1
-                elif dictTag == "OCCUPATION":
+                elif dictTag == "occupation":
                     featureVector[9] = 1
-                elif dictTag == "WORK_ADDRESS":
+                elif dictTag == "address":
                     featureVector[10] = 1
-                elif dictTag == "HOME_ADDRESS":
-                    featureVector[11] = 1
 
         featureVector.append(tag)
-        print("feature vector: " + str(featureVector) + "\n")
+        print(featureVector)
+        print("")
 
         tagsAndVectors.append(featureVector)
 
 arffWriter = arff.Writer(trainingOutputPath, relation="postOfficeData", names=['previousSurname',
-                                                                                  'previousForename',
-                                                                                  'previousOccupation',
-                                                                                  'previousWorkAddress',
-                                                                                  'previousHomeAddress',
-                                                                                  'tokenLength',
-                                                                                  'digits',
-                                                                                  'dictionarySurname',
-                                                                                  'dictionaryForename',
-                                                                                  'dictionaryOccupation',
-                                                                                  'dictionaryWorkAddress',
-                                                                                  'dictionaryHomeAddress',
-                                                                                  'class'])
+                                                                               'previousForename',
+                                                                               'previousOccupation',
+                                                                               'previousWorkAddress',
+                                                                               'previousHomeAddress',
+                                                                               'tokenLength',
+                                                                               'digits',
+                                                                               'dictionarySurname',
+                                                                               'dictionaryForename',
+                                                                               'dictionaryOccupation',
+                                                                               'dictionaryAddress',
+                                                                               'class'])
 
 arffWriter.pytypes[str] = '{SURNAME, FORENAME, OCCUPATION, WORK_ADDRESS, HOME_ADDRESS}'
 
