@@ -12,6 +12,7 @@ from xmlparser import *
 
 trainingFolder = os.path.abspath(os.path.join(os.path.dirname(__file__), sys.argv[1]))
 trainingOutputPath = os.path.abspath(os.path.join(os.path.dirname(__file__), sys.argv[2]))
+nlsdata = eval(sys.argv[3])
 trainingOutputFile = open(trainingOutputPath, "w")
 
 tagsAndVectors = []
@@ -20,7 +21,11 @@ xmlparser = xmlparser()
 
 for fileName in os.listdir(trainingFolder):
     filePath = os.path.abspath(os.path.join(trainingFolder, fileName))
-    trainingValues = xmlparser.parse(filePath)
+
+    if nlsdata:
+        trainingValues = xmlparser.parsenls(filePath)
+    else:
+        trainingValues = xmlparser.parseocr(filePath)
 
     matches = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
 
