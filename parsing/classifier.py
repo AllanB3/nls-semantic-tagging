@@ -1,72 +1,66 @@
 #!/usr/bin/python
 
-import re
+import numpy
+from sklearn.naive_bayes import GaussianNB
+import os
 
-MAXIMUM_EDIT_DISTANCE = 2
+TRAININGFOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "training"))
 
 class Classifier:
 
-    def __init__(self, dictionaryFile):
-        self.dictionary = {}
+    def __init__(self, dictionaryFile, trainingFile):
+        self.dictionaryFile = open(dictionaryFile, "r")
+        self.trainingFile = open(trainingFile, "r")
+        self.gnb = GaussianNB()
 
-        dictionaryInput = open(dictionaryFile, "r").read()
-        entries = dictionaryInput.splitlines()
+    def train(self):
+        trainingData = self.trainingFile.read().splitlines()
+        dataStart = trainingData.index("@data") + 1
 
-        for e in entries:
-            key, value = e.split("\t")
-            if key in self.dictionary:
-                self.dictionary[key].append(value)
+        data = []
+
+        for t in trainingData[dataStart:]:
+            data.append(t.split(","))
+
+        dataset = numpy.asanyarray(data)
+        trainingValues = dataset[:,:11]
+        trainingClasses = dataset[:,11]
+
+        i = 0
+        for t in trainingClasses:
+            t = t.replace("\'", "")
+            if t == "SURNAME":
+                trainingClasses[i] = 1
+            elif t == "FORENAME":
+                trainingClasses[i] = 2
+            elif t == "OCCUPATION":
+                trainingClasses[i] = 3
+            elif t == "WORK_ADDRESS" or t == "HOME_ADDRESS":
+                trainingClasses[i] = 4
             else:
-                self.dictionary[key] = [value]
+                raise ValueError(t + " is not a valid class")
+            i += 1
 
-    def getWordsOfEditDistance(self, word, editDistance):
-        edits = self.edits(word)
+        trainingValues = numpy.array(trainingValues).astype(numpy.int)
+        trainingClasses = numpy.array(trainingClasses).astype(numpy.int)
+        self.gnb.fit(trainingValues, trainingClasses)
 
-        while editDistance > 1:
-            newEdits = []
-            for edit in edits:
-                newEdits += self.edits(edit)
-            edits = set(newEdits)
-            editDistance -= 1
+    def classifiy(self, vector):
+        vectorArray = numpy.array(vector).astype(numpy.int)
+        predictedClass = self.gnb.predict(vectorArray.reshape(1, -1))
 
-        return edits
+        if predictedClass == 1:
+            return "SURNAME"
+        elif predictedClass == 2:
+            return "FORENAME"
+        elif predictedClass == 3:
+            return "OCCUPATION"
+        elif predictedClass == 4:
+            return "ADDRESS"
 
-    def edits(self, word):
-        alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        s = [(word[:i], word[i:]) for i in range(len(word) + 1)]
-        deletes = [a + b[1:] for a, b in s if b]
-        transposes = [a + b[1] + b[0] + b[2:] for a, b in s if len(b) > 1]
-        replaces = [a + c + b[1:] for a,b in s for c in alphabet if b]
-        inserts = [a + c + b for a,b in s for c in alphabet]
-        return set(deletes + transposes + replaces + inserts)
-
-    def known(self, words):
-        return set(w for w in words if w in self.dictionary)
-
-    def classify(self, word, maximumEditDistance=MAXIMUM_EDIT_DISTANCE):
-        cleanedWord = re.sub(r"[^a-zA-Z\s]", "", word)
-
-        possibleTags = []
-        for value, tag in self.dictionary.items():
-            if value.replace(" ", "") == cleanedWord.replace(" ", ""):
-                possibleTags = possibleTags + self.dictionary[value]
-
-        try:
-            return max(possibleTags, key=possibleTags.count)
-        except:
-            return None
-
-    def classifyDocument(self, inputPath, outputPath):
-        words = open(inputPath, "r").read().splitlines()
-        outputFile = open(outputPath, "w")
-
-        for line in words:
-            for term in line.split(","):
-                classification = self.classify(term.strip())
-
-                if classification:
-                    outputFile.write(term.strip() + " [" + classification + "] ")
-                else:
-                    outputFile.write(term.strip() + " [?] ")
-
-            outputFile.write("\n")
+if __name__ == "__main__":
+    dictionary = os.path.abspath(os.path.join(TRAININGFOLDER, "classifierTraining.txt"))
+    training = os.path.abspath(os.path.join(TRAININGFOLDER, "training.arff"))
+    c = Classifier(dictionary, training)
+    c.train()
+    print(c.classifiy([0,0,0,0,0,7,0,1,0,0,0]))
