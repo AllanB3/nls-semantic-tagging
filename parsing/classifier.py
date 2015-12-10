@@ -8,8 +8,7 @@ TRAININGFOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "traini
 
 class Classifier:
 
-    def __init__(self, dictionaryFile, trainingFile):
-        self.dictionaryFile = open(dictionaryFile, "r")
+    def __init__(self, trainingFile):
         self.trainingFile = open(trainingFile, "r")
         self.gnb = GaussianNB()
 
@@ -45,7 +44,7 @@ class Classifier:
         trainingClasses = numpy.array(trainingClasses).astype(numpy.int)
         self.gnb.fit(trainingValues, trainingClasses)
 
-    def classifiy(self, vector):
+    def classify(self, vector):
         vectorArray = numpy.array(vector).astype(numpy.int)
         predictedClass = self.gnb.predict(vectorArray.reshape(1, -1))
 
@@ -59,8 +58,7 @@ class Classifier:
             return "ADDRESS"
 
 if __name__ == "__main__":
-    dictionary = os.path.abspath(os.path.join(TRAININGFOLDER, "classifierTraining.txt"))
     training = os.path.abspath(os.path.join(TRAININGFOLDER, "training.arff"))
-    c = Classifier(dictionary, training)
+    c = Classifier(training)
     c.train()
     print(c.classifiy([0,0,0,0,0,7,0,1,0,0,0]))
