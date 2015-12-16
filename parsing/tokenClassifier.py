@@ -6,7 +6,7 @@ import os
 
 TRAININGFOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "training"))
 
-class Classifier:
+class tokenClassifier:
 
     def __init__(self, trainingFile):
         self.trainingFile = open(trainingFile, "r")
@@ -59,6 +59,6 @@ class Classifier:
 
 if __name__ == "__main__":
     training = os.path.abspath(os.path.join(TRAININGFOLDER, "training.arff"))
-    c = Classifier(training)
+    c = tokenClassifier(training)
     c.train()
     print(c.classifiy([0,0,0,0,0,7,0,1,0,0,0]))
