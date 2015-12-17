@@ -3,25 +3,22 @@
 import numpy
 from sklearn.naive_bayes import GaussianNB
 import os
+import sys
 
 TRAININGFOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), "training"))
+sys.path.append(TRAININGFOLDER)
+
+from arffParser import *
 
 class tokenClassifier:
 
     def __init__(self, trainingFile):
-        self.trainingFile = open(trainingFile, "r")
+        self.trainingFile = trainingFile
         self.gnb = GaussianNB()
 
     def train(self):
-        trainingData = self.trainingFile.read().splitlines()
-        dataStart = trainingData.index("@data") + 1
+        dataset = arffParser.parseFile(self.trainingFile)
 
-        data = []
-
-        for t in trainingData[dataStart:]:
-            data.append(t.split(","))
-
-        dataset = numpy.asanyarray(data)
         trainingValues = dataset[:,:12]
         trainingClasses = dataset[:,12]
 
