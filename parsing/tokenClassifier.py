@@ -22,8 +22,8 @@ class tokenClassifier:
             data.append(t.split(","))
 
         dataset = numpy.asanyarray(data)
-        trainingValues = dataset[:,:11]
-        trainingClasses = dataset[:,11]
+        trainingValues = dataset[:,:12]
+        trainingClasses = dataset[:,12]
 
         i = 0
         for t in trainingClasses:
@@ -32,10 +32,12 @@ class tokenClassifier:
                 trainingClasses[i] = 1
             elif t == "FORENAME":
                 trainingClasses[i] = 2
-            elif t == "OCCUPATION":
+            elif t == "TITLE":
                 trainingClasses[i] = 3
-            elif t == "WORK_ADDRESS" or t == "HOME_ADDRESS":
+            elif t == "OCCUPATION":
                 trainingClasses[i] = 4
+            elif t == "WORK_ADDRESS" or t == "HOME_ADDRESS" or t == "ADDRESS":
+                trainingClasses[i] = 5
             else:
                 raise ValueError(t + " is not a valid class")
             i += 1
@@ -53,8 +55,10 @@ class tokenClassifier:
         elif predictedClass == 2:
             return "FORENAME"
         elif predictedClass == 3:
-            return "OCCUPATION"
+            return "TITLE"
         elif predictedClass == 4:
+            return "OCCUPATION"
+        elif predictedClass == 5:
             return "ADDRESS"
 
 if __name__ == "__main__":
