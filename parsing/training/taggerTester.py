@@ -4,6 +4,7 @@ import sys
 import os
 import numpy
 from tabulate import tabulate
+from arffParser import *
 
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from tokenClassifier import *
@@ -22,15 +23,7 @@ tagger.train()
 
 os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
-testingData = open("testing.arff", "r").read().splitlines()
-dataStart = testingData.index("@data")
-
-data = []
-
-for t in testingData[dataStart + 1:]:
-    data.append(t.split(","))
-
-dataset = numpy.asanyarray(data)
+dataset = arffParser.parseFile("testing.arff")
 testingValues = dataset[:,:12]
 testingClasses = dataset[:,12]
 
