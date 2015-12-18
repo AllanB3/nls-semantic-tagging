@@ -10,7 +10,7 @@ sys.path.insert(1, path)
 
 from xmlParser import *
 
-class featureExtractor():
+class featureExtractor:
 
     def __init__(self, trainingFolder, outputPath):
         self.trainingFolder = trainingFolder

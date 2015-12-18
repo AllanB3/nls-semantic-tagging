@@ -108,7 +108,3 @@ confusion = [["", "SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"],
 print(tabulate(table))
 print("")
 print(tabulate(confusion))
-print("")
-print(tabulate(tagger.gnb.theta_))
-print("")
-print(tabulate(tagger.gnb.sigma_))

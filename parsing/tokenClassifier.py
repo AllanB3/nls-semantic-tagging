@@ -10,6 +10,7 @@ sys.path.append(TRAININGFOLDER)
 
 from arffParser import *
 
+# TODO: figure out why this classifer's results are so drastically different form WEKA's.
 class tokenClassifier:
 
     def __init__(self, trainingFile):
