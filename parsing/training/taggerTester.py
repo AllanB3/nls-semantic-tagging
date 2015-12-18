@@ -2,7 +2,6 @@
 
 import sys
 import os
-import numpy
 from tabulate import tabulate
 from arffParser import *
 
@@ -15,6 +14,14 @@ results = {
     "TITLE": {"TP": 0, "FP": 0, "TN": 0, "FN": 0},
     "OCCUPATION": {"TP": 0, "FP": 0, "TN": 0, "FN": 0},
     "ADDRESS": {"TP": 0, "FP": 0, "TN": 0, "FN": 0}
+}
+
+confusionMatrix = {
+    "SURNAME": {"SURNAME": 0, "FORENAME": 0, "TITLE": 0, "OCCUPATION": 0, "ADDRESS": 0},
+    "FORENAME": {"SURNAME": 0, "FORENAME": 0, "TITLE": 0, "OCCUPATION": 0, "ADDRESS": 0},
+    "TITLE": {"SURNAME": 0, "FORENAME": 0, "TITLE": 0, "OCCUPATION": 0, "ADDRESS": 0},
+    "OCCUPATION": {"SURNAME": 0, "FORENAME": 0, "TITLE": 0, "OCCUPATION": 0, "ADDRESS": 0},
+    "ADDRESS": {"SURNAME": 0, "FORENAME": 0, "TITLE": 0, "OCCUPATION": 0, "ADDRESS": 0}
 }
 
 os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../training")))
@@ -36,6 +43,8 @@ i = 0
 while i < len(testingValues):
     classifiedTag = tagger.classify(testingValues[i])
     actualTag = testingClasses[i]
+
+    confusionMatrix[actualTag][classifiedTag] += 1
 
     if classifiedTag == actualTag:
         results[actualTag]["TP"] += 1
@@ -79,4 +88,27 @@ table = [["", "SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"],
           scores["TITLE"]["F-score"], scores["OCCUPATION"]["F-score"],
           scores["ADDRESS"]["F-score"]]]
 
+confusion = [["", "SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"],
+             ["SURNAME", confusionMatrix["SURNAME"]["SURNAME"], confusionMatrix["SURNAME"]["FORENAME"],
+              confusionMatrix["SURNAME"]["TITLE"], confusionMatrix["SURNAME"]["OCCUPATION"],
+              confusionMatrix["SURNAME"]["ADDRESS"]],
+             ["FORENAME", confusionMatrix["FORENAME"]["SURNAME"], confusionMatrix["FORENAME"]["FORENAME"],
+              confusionMatrix["FORENAME"]["TITLE"], confusionMatrix["FORENAME"]["OCCUPATION"],
+              confusionMatrix["FORENAME"]["ADDRESS"]],
+             ["TITLE", confusionMatrix["TITLE"]["SURNAME"], confusionMatrix["TITLE"]["FORENAME"],
+              confusionMatrix["TITLE"]["TITLE"], confusionMatrix["TITLE"]["OCCUPATION"],
+              confusionMatrix["TITLE"]["ADDRESS"]],
+             ["OCCUPATION", confusionMatrix["OCCUPATION"]["SURNAME"], confusionMatrix["OCCUPATION"]["FORENAME"],
+              confusionMatrix["OCCUPATION"]["TITLE"], confusionMatrix["OCCUPATION"]["OCCUPATION"],
+              confusionMatrix["OCCUPATION"]["ADDRESS"]],
+             ["ADDRESS", confusionMatrix["ADDRESS"]["SURNAME"], confusionMatrix["ADDRESS"]["FORENAME"],
+              confusionMatrix["ADDRESS"]["TITLE"], confusionMatrix["ADDRESS"]["OCCUPATION"],
+              confusionMatrix["ADDRESS"]["ADDRESS"]]]
+
 print(tabulate(table))
+print("")
+print(tabulate(confusion))
+print("")
+print(tabulate(tagger.gnb.theta_))
+print("")
+print(tabulate(tagger.gnb.sigma_))
