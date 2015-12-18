@@ -1,0 +1,315 @@
+T1	surname 63 69	Abbott
+T2	forename 71 78	Francis
+T3	occupation 80 130	Secretary of the General Fvst- Office for Scotland
+T4	address 132 146	25 Moray Place
+T5	surname 147 158	Abererombie
+T6	title 160 166	Misses
+T7	address 168 181	19 York place
+T8	address 234 260	27 Princes street, Granton
+T9	address 266 286	10 Dock Place, Leith
+T10	forename 288 290	G.
+T11	surname 291 300	Mathieson
+T12	occupation 302 307	agent
+T13	forename 371 379	James M.
+T14	surname 380 391	Macan- drew
+T15	occupation 393 398	agent
+T16	address 400 417	65 Princes street
+T17	address 502 528	27 Princes street, Granton
+T18	address 534 554	10 Dock Place, Leith
+T19	forename 557 559	G.
+T20	surname 560 569	Mathieson
+T21	occupation 571 576	agent
+T22	surname 577 586	Abernethy
+T23	forename 588 593	Scott
+T24	occupation 595 605	watchmaker
+T25	address 607 618	90 Kirkgate
+T26	surname 619 628	Abernethy
+T27	title 630 633	Mrs
+T28	occupation 635 642	midwife
+T29	address 644 660	9 Jamaica street
+T30	surname 661 670	Abernethy
+T31	forename 672 676	Miss
+T32	address 678 697	110 Lauriston place
+T33	forename 786 791	D. O.
+T34	surname 792 796	Hill
+T35	occupation 798 807	secretary
+T36	address 828 841	Henderson row
+T37	address 861 876	5 George square
+T38	surname 877 884	Acaster
+T39	forename 886 890	John
+T40	occupation 892 906	civil engineer
+T41	address 908 921	11 Dock place
+T42	surname 922 930	Acquroff
+T43	forename 932 936	John
+T44	occupation 938 950	hair-dfesser
+T45	address 952 966	20 Rose street
+T46	surname 967 972	Adair
+T47	surname 977 986	Robertson
+T48	occupation 988 995	tailors
+T49	address 997 1012	227 High street
+T50	surname 1013 1017	Adam
+T51	surname 1022 1026	Kirk
+T52	occupation 1028 1032	W.S.
+T53	address 1033 1057	9 South Charlotte street
+T54	surname 1058 1062	Adam
+T55	forename 1064 1073	Alexander
+T56	occupation 1084 1098	wool-merchants
+T57	address 1100 1120	1 Bank street, Leith
+T58	surname 1121 1125	Adam
+T59	forename 1127 1136	Alexander
+T60	occupation 1138 1145	teacher
+T61	address 1147 1166	Swinton row — house
+T62	address 1168 1186	20 Barony stret-t.
+T63	surname 1198 1202	Adam
+T64	forename 1204 1208	Alex
+T65	address 1210 1226	Bonnington Haugh
+T66	surname 1227 1231	Adam
+T67	forename 1233 1241	Alex. F.
+T68	occupation 1243 1247	W.S.
+T69	address 1248 1269	19 Claremont crescent
+T70	surname 1270 1274	Adam
+T71	forename 1276 1281	David
+T72	occupation 1283 1319	publisher and wholesale book- seller
+T73	address 1321 1335	13 Bank street
+T74	address 1342 1355	25 York place
+T75	surname 1357 1362	Ad"""
+T76	forename 1364 1370	George
+T77	address 1388 1403	6 St Vincent st
+T79	POD_entry 147 158	Abererombie
+E2	POD_entry:T79 title:T6 address:T7
+T80	POD_entry 291 300	Mathieson
+E3	POD_entry:T80 address:T8 address2:T9 forename:T10 occupation:T12
+T78	POD_entry 63 69	Abbott
+E1	POD_entry:T78 forename:T2 occupation:T3 address:T4
+T81	POD_entry 380 391	Macan- drew
+E4	POD_entry:T81 forename:T13 occupation:T15 address:T16
+T82	POD_entry 560 569	Mathieson
+E5	POD_entry:T82 forename:T19 address:T18 address2:T17 occupation:T21
+T83	POD_entry 577 586	Abernethy
+E6	POD_entry:T83 forename:T23 occupation:T24 address:T25
+T84	POD_entry 619 628	Abernethy
+E7	POD_entry:T84 title:T27 occupation:T28 address:T29
+T85	POD_entry 661 670	Abernethy
+E8	POD_entry:T85 forename:T31 address:T32
+T86	POD_entry 792 796	Hill
+E9	POD_entry:T86 forename:T33 occupation:T35
+T87	POD_entry 828 841	Henderson row
+E10	POD_entry:T87 
+T88	POD_entry 861 876	5 George square
+E11	POD_entry:T88 
+T89	POD_entry 877 884	Acaster
+E12	POD_entry:T89 forename:T39 occupation:T40 address:T41
+T90	POD_entry 922 930	Acquroff
+E13	POD_entry:T90 forename:T43 occupation:T44 address:T45
+T91	POD_entry 967 972	Adair
+E14	POD_entry:T91 surname:T47 occupation:T48 address:T49
+T92	POD_entry 1013 1017	Adam
+E15	POD_entry:T92 surname:T51 occupation:T52 address:T53
+T93	POD_entry 1058 1062	Adam
+E16	POD_entry:T93 forename:T55 occupation:T56 address:T57
+T94	POD_entry 1121 1125	Adam
+E17	POD_entry:T94 forename:T59 occupation:T60 address:T61 address2:T62
+T95	POD_entry 1198 1202	Adam
+E18	POD_entry:T95 forename:T64 address:T65
+T96	POD_entry 1227 1231	Adam
+E19	POD_entry:T96 forename:T67 occupation:T68 address:T69
+T97	POD_entry 1270 1274	Adam
+E20	POD_entry:T97 forename:T71 occupation:T72 address:T73 address2:T74
+T98	POD_entry 1357 1362	Ad"""
+E21	POD_entry:T98 forename:T76 address:T77
+T99	POD_entry 1405 1411	AsUexa
+E22	POD_entry:T99 forename:T101 occupation:T102 address:T103
+T100	surname 1405 1411	AsUexa
+T101	forename 1412 1416	ames
+T102	occupation 1418 1424	S.S.C.
+T103	address 1425 1446	19 Claremont crescent
+T104	surname 1447 1454	Ad •' '
+T105	POD_entry 1447 1454	Ad •' '
+E23	POD_entry:T105 forename:T106 occupation:T107 address:T108
+T106	forename 1455 1459	ames
+T107	occupation 1461 1475	victual dealer
+T108	address 1477 1489	80 PJeasance
+T109	surname 1490 1494	Adam
+T110	POD_entry 1490 1494	Adam
+E24	POD_entry:T110 forename:T111 occupation:T112 address:T113
+T111	forename 1496 1501	James
+T112	occupation 1503 1511	advocate
+T113	address 1513 1529	36 Castle street
+T114	surname 1530 1534	Adam
+T115	POD_entry 1530 1534	Adam
+E25	POD_entry:T115 forename:T116 occupation:T117 address:T118
+T116	forename 1536 1540	John
+T117	occupation 1542 1547	hak'T
+T118	address 1549 1572	17 Tolbooth wynd, Leith
+T119	surname 1577 1581	Adam
+T120	POD_entry 1577 1581	Adam
+E26	POD_entry:T120 forename:T121 occupation:T122 address:T123
+T121	forename 1583 1587	John
+T122	occupation 1589 1619	draftsman and enslaver on wood
+T123	address 1621 1636	24 Clerk street
+T124	surname 1637 1641	Adam
+T125	POD_entry 1637 1641	Adam
+E27	POD_entry:T125 forename:T126 occupation:T127 address:T128
+T126	forename 1643 1647	John
+T127	occupation 1649 1657	lodgings
+T128	address 1659 1678	18 Brunswick street
+T129	surname 1679 1683	Adam
+T130	POD_entry 1679 1683	Adam
+E28	POD_entry:T130 forename:T131 address:T132
+T131	forename 1685 1692	Patrick
+T132	address 1707 1720	9 Brandon st.
+T133	surname 1721 1725	Adam
+T134	POD_entry 1721 1725	Adam
+E29	POD_entry:T134 forename:T135 address:T136
+T135	forename 1727 1733	Robert
+T136	address 1735 1750	53 Queen street
+T137	surname 1751 1755	Adam
+T138	POD_entry 1751 1755	Adam
+E30	POD_entry:T138 forename:T139 occupation:T140 address:T141
+T139	forename 1757 1763	Robert
+T140	occupation 1765 1771	wright
+T141	address 1773 1790	56 Lothian street
+T142	surname 1791 1795	Adam
+T143	POD_entry 1791 1795	Adam
+E31	POD_entry:T143 forename:T144 occupation:T145 address:T146 address2:T147
+T144	forename 1797 1803	Robert
+T145	occupation 1805 1820	city accountant
+T146	address 1822 1837	City Cham- bers
+T147	address 1847 1868	18 Gardner's crescent
+T148	surname 1869 1873	Adam
+T149	POD_entry 1869 1873	Adam
+E32	POD_entry:T149 forename:T150 occupation:T151 address:T152
+T150	forename 1875 1882	Stephen
+T151	occupation 1884 1895	wool-mercht
+T152	address 1897 1912	3 Bonnington pi
+T153	surname 1914 1918	Adam
+T154	POD_entry 1914 1918	Adam
+E33	POD_entry:T154 title:T155 address:T156
+T155	title 1920 1923	Mrs
+T156	address 1925 1940	11 Grove street
+T157	surname 1941 1945	Adam
+T158	POD_entry 1941 1945	Adam
+E34	POD_entry:T158 title:T159 occupation:T160 address:T161
+T159	title 1947 1950	Mrs
+T160	occupation 1952 1962	dressmaker
+T161	address 1964 1979	33 Queen street
+T162	surname 1980 1984	Adam
+T163	title 1986 1989	Mrs
+T164	POD_entry 1980 1984	Adam
+E35	POD_entry:T164 title:T163 address:T165
+T165	address 1991 2007	20 Ileriot place
+T166	surname 2008 2012	Adam
+T167	POD_entry 2008 2012	Adam
+E36	POD_entry:T167 title:T168 forename:T169 address:T170
+T168	title 2014 2018	Miss
+T169	forename 2019 2025	Louisa
+T170	address 2027 2049	13 South Castle street
+T171	surname 2050 2055	Adams
+T172	POD_entry 2050 2055	Adams
+E37	POD_entry:T172 occupation:T173 address:T174 address2:T175
+T173	occupation 2064 2078	wine-merchants
+T174	address 2080 2105	14 South St Andrew street
+T175	address 2110 2122	5 Meuse lane
+T176	surname 2123 2128	Adams
+T177	POD_entry 2123 2128	Adams
+E38	POD_entry:T177 forename:T178 occupation:T179 address:T180
+T178	forename 2130 2134	Alex
+T179	occupation 2136 2145	bootmaker
+T180	address 2147 2166	35 Bridge st. Leith
+T181	surname 2167 2172	Adams
+T182	POD_entry 2167 2172	Adams
+E39	POD_entry:T182 forename:T183 address:T184
+T183	forename 2174 2183	Alexander
+T184	address 2185 2201	34 London street
+T185	surname 2202 2207	Adams
+T186	POD_entry 2202 2207	Adams
+E40	POD_entry:T186 forename:T187 occupation:T188 address:T189
+T187	forename 2209 2222	Alex. Maxwell
+T188	occupation 2224 2228	M.D.
+T189	address 2229 2241	16 Argyle sq
+T190	surname 2243 2248	Adams
+T191	POD_entry 2243 2248	Adams
+E41	POD_entry:T191 forename:T192 address:T193
+T192	forename 2250 2256	Andrew
+T193	address 2271 2285	13 Duke street
+T194	surname 2286 2291	Adams
+T195	POD_entry 2286 2291	Adams
+E42	POD_entry:T195 forename:T196 address:T197
+T196	forename 2293 2297	G. C
+T197	address 2299 2315	1 Lynedoeh place
+T198	surname 2316 2321	Adams
+T199	POD_entry 2316 2321	Adams
+E43	POD_entry:T199 forename:T200 occupation:T201 address:T202
+T200	forename 2323 2327	John
+T201	occupation 2329 2334	S.S.C
+T202	address 2336 2352	1 Lynedoeh place
+T203	surname 2353 2358	Adams
+T204	POD_entry 2353 2358	Adams
+E44	POD_entry:T204 forename:T205 title:T206 occupation:T207 address:T208
+T205	forename 2360 2364	John
+T206	title 2366 2369	jun
+T207	occupation 2371 2376	S.S.C
+T208	address 2378 2394	1 Lynedoeh place
+T209	surname 2395 2400	Adams
+T210	POD_entry 2395 2400	Adams
+E45	POD_entry:T210 forename:T211 occupation:T212 address:T213
+T211	forename 2402 2406	John
+T212	occupation 2408 2422	session- clerk
+T213	address 2424 2456	St Cuthbert's, 3 Windmill street
+T214	surname 2457 2462	Adams
+T215	POD_entry 2457 2462	Adams
+E46	POD_entry:T215 forename:T216 occupation:T217 address:T218 address2:T219
+T216	forename 2464 2470	Robert
+T217	occupation 2472 2492	smith and ironmonger
+T218	address 2494 2511	4 Rut- land place
+T219	address 2520 2536	5 Hanover street
+T220	surname 2537 2542	Adams
+T221	POD_entry 2537 2542	Adams
+E47	POD_entry:T221 forename:T222 address:T223
+T222	forename 2544 2550	Thomas
+T223	address 2571 2597	12 Ber- nard street, Leith
+T224	surname 2598 2603	Adams
+T225	POD_entry 2598 2603	Adams
+E48	POD_entry:T225 forename:T226 occupation:T227 address:T228 address2:T229
+T226	forename 2605 2611	Wm. D.
+T227	occupation 2612 2619	surgeon
+T228	address 2621 2637	16 Argyle square
+T229	address 2642 2660	53 Nicolson street
+T230	surname 2661 2666	Adams
+T231	POD_entry 2661 2666	Adams
+E49	POD_entry:T231 title:T232 forename:T233 occupation:T234 address:T235
+T232	title 2668 2671	Mrs
+T233	forename 2672 2674	M.
+T234	occupation 2675 2688	ladies' nurse
+T235	address 2690 2703	1 Mound place
+T236	surname 2704 2709	Adams
+T237	POD_entry 2704 2709	Adams
+E50	POD_entry:T237 title:T238 occupation:T239 address:T240
+T238	title 2711 2714	Mrs
+T239	occupation 2716 2724	lodgings
+T240	address 2726 2745	52 Broughton street
+T241	surname 2746 2753	Adamson
+T242	POD_entry 2746 2753	Adamson
+E51	POD_entry:T242 forename:T243 occupation:T244 address:T245
+T243	forename 2755 2763	David M.
+T244	occupation 2765 2770	S.S.C
+T245	address 2772 2788	16 Nelson street
+T246	surname 2789 2796	Adamson
+T247	forename 2798 2802	John
+T248	occupation 2804 2810	cooper
+T249	address 2812 2831	4 Cabin wynd, Leith
+T250	POD_entry 2789 2796	Adamson
+E52	POD_entry:T250 forename:T247 occupation:T248 address:T249
+T251	surname 2832 2839	Adamson
+T252	POD_entry 2832 2839	Adamson
+E53	POD_entry:T252 forename:T253 occupation:T254 address:T255
+T253	forename 2841 2850	Thomas C.
+T254	occupation 2851 2861	tea-dealer
+T255	address 2891 2915	4 South St Andrew street
+T256	surname 2916 2923	Adamson
+T257	POD_entry 2916 2923	Adamson
+E54	POD_entry:T257 forename:T258 occupation:T259 address:T260 address2:T261
+T258	forename 2925 2931	VV. M.
+T259	occupation 2932 2955	cooper and fish- curt r
+T260	address 2957 2972	51 Giles street
+T261	address 2982 3002	4 Cable wyr;d, Leith
