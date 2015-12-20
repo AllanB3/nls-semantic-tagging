@@ -33,10 +33,6 @@ class featureExtractor:
 
                 for match in matches:
                     token = match.group()
-                    previousValue = ""
-                    tokenLength = 0
-                    digits = 0
-                    dictionaryTags = []
 
                     featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 

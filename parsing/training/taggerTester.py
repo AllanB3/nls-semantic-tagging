@@ -26,7 +26,6 @@ confusionMatrix = {
 
 os.chdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../training")))
 tagger = tokenClassifier("training.arff")
-tagger.train()
 
 os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
