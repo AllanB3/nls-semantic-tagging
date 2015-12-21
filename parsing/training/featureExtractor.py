@@ -10,6 +10,7 @@ sys.path.insert(1, path)
 
 from xmlParser import *
 
+# TODO: change feature extractor to reflect feature extraction in HMM
 class featureExtractor:
 
     def __init__(self, trainingFolder, outputPath):

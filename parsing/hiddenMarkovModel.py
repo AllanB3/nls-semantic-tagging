@@ -14,6 +14,7 @@ from nltk.probability import LidstoneProbDist
 import re
 from math import log
 from xmlParser import *
+import string
 
 class hiddenMarkovModel:
 
@@ -26,8 +27,9 @@ class hiddenMarkovModel:
         self._train()
 
     def tag(self, text):
-        print(text)
-        tokens = re.findall(r"[\w\d']+", text)
+        text = text.translate(str.maketrans(string.punctuation, "                                "))
+        text = text.replace("\n", " ")
+        tokens = text.split()
         tokensAndVectors = []
 
         for t in tokens:
@@ -159,5 +161,5 @@ if __name__ == "__main__":
     x = xmlParser()
     text = x.parseNLSPage("training/testingData/84017556.8.xml")
 
-    resultsFile = open("HMM_results.txt", "w")
-    print(h.tag(text))
+    for token in h.tag(text):
+        print(token)
