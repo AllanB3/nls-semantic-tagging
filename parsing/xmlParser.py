@@ -7,12 +7,12 @@ import importlib
 
 importlib.reload(sys)
 
-class xmlparser:
+class xmlParser:
 
     def __init__(self):
         pass
 
-    def parseocr(self, xml):
+    def parseOCR(self, xml):
         tree = ET.parse(xml)
         document = tree.getroot()
         text = ""
@@ -26,7 +26,7 @@ class xmlparser:
 
         return text
 
-    def parsenls(self, xml):
+    def parseNLSDirectory(self, xml):
         tree = ET.parse(xml)
         document = tree.getroot()
         text = ""
@@ -37,5 +37,16 @@ class xmlparser:
                     text += page.text + "\n"
                 except:
                     continue
+
+        return text
+
+    def parseNLSPage(selfself, xml):
+        tree = ET.parse(xml)
+        document = tree.getroot()
+        text = ""
+
+        for line in document:
+            if line.tag == "LINE":
+                text += line.text + "\n"
 
         return text

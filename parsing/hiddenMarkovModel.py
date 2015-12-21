@@ -26,7 +26,8 @@ class hiddenMarkovModel:
         self._train()
 
     def tag(self, text):
-        tokens = text.split(",")
+        print(text)
+        tokens = re.findall(r"[\w\d']+", text)
         tokensAndVectors = []
 
         for t in tokens:
@@ -64,9 +65,6 @@ class hiddenMarkovModel:
         firstViterbi = {}
         firstBackpointer = {}
         token, featureVector = tokensAndVectors[0]
-        print(token)
-        print(featureVector)
-        print("")
 
         for l in self.lexicon:
             entry, dictTag = l.strip().split("\t")
@@ -94,7 +92,6 @@ class hiddenMarkovModel:
             nextViterbi = {}
             nextBackpointer = {}
             token, featureVector = tokensAndVectors[t]
-            print(token)
 
             for l in self.lexicon:
                 entry, dictTag = l.strip().split("\t")
@@ -124,14 +121,11 @@ class hiddenMarkovModel:
                 elif previousTag == "ADDRESS":
                     featureVector[4] = 1
 
-                print(self.states[i] + ": " + str(featureVector))
-
                 nextViterbi[self.states[i]] = min([viterbi[index][s] + (0 - log(self.transitionModel[s].prob(self.states[i]))) + (0 - self.sensorModel.logProbabilities(featureVector)[i]) for s in self.states])
                 nextBackpointer[self.states[i]] = previousTag
 
                 featureVector[0:5] = [0, 0, 0, 0, 0]
 
-            print("")
             viterbi.append(nextViterbi)
             backpointers.append(nextBackpointer)
             index += 1
@@ -162,8 +156,8 @@ class hiddenMarkovModel:
 if __name__ == "__main__":
     h = hiddenMarkovModel()
 
-    x = xmlparser()
-    text = x.parsenls("training/testingData/EdinburghPO_1891-92.xml")
+    x = xmlParser()
+    text = x.parseNLSPage("training/testingData/84017556.8.xml")
 
     resultsFile = open("HMM_results.txt", "w")
-    resultsFile.write(h.tag(text))
+    print(h.tag(text))

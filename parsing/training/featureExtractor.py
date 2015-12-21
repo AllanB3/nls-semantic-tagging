@@ -15,7 +15,7 @@ class featureExtractor:
     def __init__(self, trainingFolder, outputPath):
         self.trainingFolder = trainingFolder
         self.outputPath = outputPath
-        self.xmlparser = xmlparser()
+        self.xmlparser = xmlParser()
 
     def extractFeatures(self):
         tagsAndVectors = []
@@ -25,9 +25,9 @@ class featureExtractor:
 
             if fileName[-3:] == "xml":
                 if fileName[:4] == "SPOD":
-                    trainingValues = self.xmlparser.parseocr(filePath)
+                    trainingValues = self.xmlparser.parseOCR(filePath)
                 else:
-                    trainingValues = self.xmlparser.parsenls(filePath)
+                    trainingValues = self.xmlparser.parseNLSDirectory(filePath)
 
                 matches = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
 
