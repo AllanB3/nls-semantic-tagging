@@ -97,7 +97,7 @@ class hiddenMarkovModel:
 
             for l in self.lexicon:
                 entry, dictTag = l.strip().split("\t")
-                if entry == token.lower().strip():
+                if token.lower().strip() in entry.split():
                     if dictTag == "surname":
                         featureVector[7] = 1
                     elif dictTag == "forename":
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     h = hiddenMarkovModel()
 
     x = xmlParser()
-    text = x.parseNLSPage("training/testingData/84017556.8.xml")
+    text = x.parseNLSPage("training/HMM_testing/84017556.8.xml")
 
     for token in h.tag(text):
         print(token)

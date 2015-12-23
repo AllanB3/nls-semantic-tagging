@@ -4,13 +4,13 @@ import sys
 import os
 import arff
 import re
+import string
 
 path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(1, path)
 
 from xmlParser import *
 
-# TODO: change feature extractor to reflect feature extraction in HMM
 class featureExtractor:
 
     def __init__(self, trainingFolder, outputPath):
@@ -25,15 +25,25 @@ class featureExtractor:
             filePath = os.path.abspath(os.path.join(self.trainingFolder, fileName))
 
             if fileName[-3:] == "xml":
+                # TODO: have this handle single pages from NLS
                 if fileName[:4] == "SPOD":
                     trainingValues = self.xmlparser.parseOCR(filePath)
                 else:
                     trainingValues = self.xmlparser.parseNLSDirectory(filePath)
 
-                matches = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
+                annotations = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
+                matches = []
+
+                for a in annotations:
+                    strippedA = a.group().translate(str.maketrans(string.punctuation, "                                "))
+                    words = strippedA.split()
+
+                    for i in range(0, len(words) - 1):
+                        matches.append((words[i], words[len(words) - 1]))
 
                 for match in matches:
-                    token = match.group()
+                    token, tag = match
+                    print(token)
 
                     featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
@@ -52,14 +62,6 @@ class featureExtractor:
                             featureVector[4] = 1
 
                     featureVector[5] = len(re.findall("\d", token))
-
-                    tag = re.search(r"\[[A-Z|_]*\]", token).group()
-                    tag = tag[1 : len(tag) - 1]
-
-                    token = re.sub(r"\[(\s|\n)*[A-Z|_]*\]\)", "", token)
-                    token = re.sub(r"^\(", "", token)
-                    token = re.sub(r"\d+\s*", "", token)
-                    print(token)
                     featureVector[6] = len(token)
 
                     lexicon = open("classifierTraining.txt", "r").read()
@@ -68,7 +70,7 @@ class featureExtractor:
                     for e in entries:
                         entry, dictTag = e.strip().split("\t")
 
-                        if entry == token.lower().strip():
+                        if token.lower().strip() in entry.split():
                             if dictTag == "surname":
                                 featureVector[7] = 1
                             elif dictTag == "forename":
@@ -103,56 +105,55 @@ class featureExtractor:
                     constituentTokens = entry.split()
 
                     for c in constituentTokens:
-                        featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
                         tag, index = c.split(":")
                         tokenData, token = tokens[index].split("\t")
-                        tokenData = tokenData.split()
                         print(token)
 
-                        if len(tagsAndVectors) > 0:
-                            previousValue = tagsAndVectors[len(tagsAndVectors) - 1][12]
+                        for t in token.split():
+                            featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-                            if previousValue == "SURNAME":
-                                featureVector[0] = 1
-                            elif previousValue == "FORENAME":
-                                featureVector[1] = 1
-                            elif previousValue == "TITLE":
-                                featureVector[2] = 1
-                            elif previousValue == "OCCUPATION":
-                                featureVector[3] = 1
-                            elif previousValue == "ADDRESS":
-                                featureVector[4] = 1
+                            if len(tagsAndVectors) > 0:
+                                previousValue = tagsAndVectors[len(tagsAndVectors) - 1][12]
 
-                        featureVector[5] = len(re.findall(r"\d", token))
+                                if previousValue == "SURNAME":
+                                    featureVector[0] = 1
+                                elif previousValue == "FORENAME":
+                                    featureVector[1] = 1
+                                elif previousValue == "TITLE":
+                                    featureVector[2] = 1
+                                elif previousValue == "OCCUPATION":
+                                    featureVector[3] = 1
+                                elif previousValue == "ADDRESS":
+                                    featureVector[4] = 1
 
-                        featureVector[6] = int(tokenData[2]) - int(tokenData[1])
+                            featureVector[5] = len(re.findall(r"\d", t))
+                            featureVector[6] = len(t)
 
-                        lexicon = open("classifierTraining.txt", "r").read().splitlines()
+                            lexicon = open("classifierTraining.txt", "r").read().splitlines()
 
-                        for l in lexicon:
-                            dictEntry, dictTag = l.split("\t")
+                            for l in lexicon:
+                                entry, dictTag = l.split("\t")
 
-                            if dictEntry == token.lower().strip():
-                                if dictTag == "surname":
-                                    featureVector[7] = 1
-                                elif dictTag == "forename":
-                                    featureVector[8] = 1
-                                elif dictTag == "title":
-                                    featureVector[9] = 1
-                                elif dictTag == "occupation":
-                                    featureVector[10] = 1
-                                elif dictTag == "address":
-                                    featureVector[11] = 1
+                                if t.lower().strip() in entry.split():
+                                    if dictTag == "surname":
+                                        featureVector[7] = 1
+                                    elif dictTag == "forename":
+                                        featureVector[8] = 1
+                                    elif dictTag == "title":
+                                        featureVector[9] = 1
+                                    elif dictTag == "occupation":
+                                        featureVector[10] = 1
+                                    elif dictTag == "address":
+                                        featureVector[11] = 1
 
-                        if tag == "POD_entry":
-                            tag = "SURNAME"
+                            if tag == "POD_entry":
+                                tag = "SURNAME"
 
-                        featureVector.append("".join([c for c in tag.upper() if not c.isdigit()]))
-                        print(featureVector)
-                        print("")
+                            featureVector.append("".join([c for c in tag.upper() if not c.isdigit()]))
+                            print(featureVector)
+                            print("")
 
-                        tagsAndVectors.append(featureVector)
+                            tagsAndVectors.append(featureVector)
             else:
                 raise IOError("The file " + fileName + " is in an unsupported format. Please use .xml or .ann files.")
 
