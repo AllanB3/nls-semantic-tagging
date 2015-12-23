@@ -606,7 +606,7 @@
         <Point x="1020" y="317"/>
         <Point x="1020" y="262"/>
       </Coords>
-        <Line text="(Aitchison [SURNAME]), (James [FORENAME]), (11 Henderson street [HOME_ADDRESS])" id="27" boldness="3.22581" boldnessReliability="20.8678" color="#110E07" colorReliability="7.27975" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="228" meanline="208" xHeight="21" dHeight="-9" aHeight="33" charWidth="16" textConfidence="85.7748">
+        <Line text="(Aitchison [SURNAME]), (James [FORENAME]), (11 Henderson street [ADDRESS])" id="27" boldness="3.22581" boldnessReliability="20.8678" color="#110E07" colorReliability="7.27975" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="228" meanline="208" xHeight="21" dHeight="-9" aHeight="33" charWidth="16" textConfidence="85.7748">
           <Coords>
             <Point x="1019" y="196"/>
             <Point x="1761" y="196"/>
@@ -614,7 +614,7 @@
             <Point x="1019" y="237"/>
           </Coords>
         </Line>
-        <Line text="(Aitchison [SURNAME]), (James, jun. [FORENAME]), (7 Regent terrace [HOME_ADDRESS])" id="40" boldness="3.23333" boldnessReliability="20.7073" color="#120F09" colorReliability="8.53418" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="272" meanline="252" xHeight="21" dHeight="-11" aHeight="33" charWidth="18" textConfidence="85.1432">
+        <Line text="(Aitchison [SURNAME]), (James, jun. [FORENAME]), (7 Regent terrace [ADDRESS])" id="40" boldness="3.23333" boldnessReliability="20.7073" color="#120F09" colorReliability="8.53418" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="272" meanline="252" xHeight="21" dHeight="-11" aHeight="33" charWidth="18" textConfidence="85.1432">
           <Coords>
             <Point x="1020" y="240"/>
             <Point x="1799" y="240"/>
@@ -824,7 +824,7 @@
             <Point x="107" y="286"/>
           </Coords>
         </Line>
-        <Line text="(Ainge [SURNAME]), (Mrs [TITLE]), (28 Dudley terrace [HOME_ADDRESS])" id="67" boldness="3.29167" boldnessReliability="18.3724" color="#1D190F" colorReliability="9.38083" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="319" meanline="298" xHeight="22" dHeight="-12" aHeight="34" charWidth="17" textConfidence="85.9709">
+        <Line text="(Ainge [SURNAME]), (Mrs [TITLE]), (28 Dudley terrace [ADDRESS])" id="67" boldness="3.29167" boldnessReliability="18.3724" color="#1D190F" colorReliability="9.38083" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="319" meanline="298" xHeight="22" dHeight="-12" aHeight="34" charWidth="17" textConfidence="85.9709">
           <Coords>
             <Point x="64" y="286"/>
             <Point x="646" y="286"/>
@@ -832,7 +832,7 @@
             <Point x="64" y="331"/>
           </Coords>
         </Line>
-        <Line text="(Ainley [SURNAME]), (George B. [FORENAME]), (30 Alva street [HOME_ADDRESS])" id="91" boldness="3.375" boldnessReliability="18.908" color="#17140B" colorReliability="7.91524" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="363" meanline="338" xHeight="26" dHeight="-12" aHeight="34" charWidth="18" textConfidence="83.6786">
+        <Line text="(Ainley [SURNAME]), (George B. [FORENAME]), (30 Alva street [ADDRESS])" id="91" boldness="3.375" boldnessReliability="18.908" color="#17140B" colorReliability="7.91524" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="363" meanline="338" xHeight="26" dHeight="-12" aHeight="34" charWidth="18" textConfidence="83.6786">
           <Coords>
             <Point x="65" y="330"/>
             <Point x="710" y="330"/>
@@ -888,7 +888,7 @@
             <Point x="62" y="636"/>
           </Coords>
         </Line>
-        <Line text="(Archibald [FORENAME]), (28 Montrose terrace [HOME_ADDRESS])" id="223" boldness="3.07143" boldnessReliability="18.6154" color="#1D1A11" colorReliability="9.18545" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="626" meanline="605" xHeight="22" dHeight="-9" aHeight="32" charWidth="17" textConfidence="85.2169">
+        <Line text="(Archibald [FORENAME]), (28 Montrose terrace [ADDRESS])" id="223" boldness="3.07143" boldnessReliability="18.6154" color="#1D1A11" colorReliability="9.18545" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="626" meanline="605" xHeight="22" dHeight="-9" aHeight="32" charWidth="17" textConfidence="85.2169">
           <Coords>
             <Point x="232" y="595"/>
             <Point x="826" y="595"/>
@@ -920,7 +920,7 @@
             <Point x="115" y="725"/>
           </Coords>
         </Line>
-        <Line text="(Ainslie [SURNAME]), (David [FORENAME]), (10 Lauriston park [HOME_ADDRESS])" id="276" boldness="3.25926" boldnessReliability="19.724" color="#19160E" colorReliability="7.99399" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="759" meanline="734" xHeight="26" dHeight="-9" aHeight="34" charWidth="19" textConfidence="84.1956">
+        <Line text="(Ainslie [SURNAME]), (David [FORENAME]), (10 Lauriston park [ADDRESS])" id="276" boldness="3.25926" boldnessReliability="19.724" color="#19160E" colorReliability="7.99399" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="759" meanline="734" xHeight="26" dHeight="-9" aHeight="34" charWidth="19" textConfidence="84.1956">
           <Coords>
             <Point x="56" y="726"/>
             <Point x="725" y="726"/>
@@ -952,7 +952,7 @@
             <Point x="73" y="900"/>
           </Coords>
         </Line>
-        <Line text="(Ainslie [SURNAME]), (James [FORENAME]), (engineer [OCCUPATION]), (25 Dundee terrace [HOME_ADDRESS])" id="358" boldness="3.05714" boldnessReliability="20.9646" color="#1F1C12" colorReliability="9.38927" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="934" meanline="912" xHeight="23" dHeight="-12" aHeight="34" charWidth="17" textConfidence="83.1149">
+        <Line text="(Ainslie [SURNAME]), (James [FORENAME]), (engineer [OCCUPATION]), (25 Dundee terrace [ADDRESS])" id="358" boldness="3.05714" boldnessReliability="20.9646" color="#1F1C12" colorReliability="9.38927" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="934" meanline="912" xHeight="23" dHeight="-12" aHeight="34" charWidth="17" textConfidence="83.1149">
           <Coords>
             <Point x="51" y="901"/>
             <Point x="916" y="901"/>
@@ -960,7 +960,7 @@
             <Point x="51" y="946"/>
           </Coords>
         </Line>
-        <Line text="(Ainslie [SURNAME]), (L. [FORENAME]), (79 Duke street, Leith [HOME_ADDRESS])" id="390" boldness="3.24" boldnessReliability="18.9994" color="#18160C" colorReliability="8.95375" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="979" meanline="953" xHeight="27" dHeight="-9" aHeight="35" charWidth="17" textConfidence="87.4249">
+        <Line text="(Ainslie [SURNAME]), (L. [FORENAME]), (79 Duke street, Leith [ADDRESS])" id="390" boldness="3.24" boldnessReliability="18.9994" color="#18160C" colorReliability="8.95375" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="979" meanline="953" xHeight="27" dHeight="-9" aHeight="35" charWidth="17" textConfidence="87.4249">
           <Coords>
             <Point x="73" y="945"/>
             <Point x="721" y="945"/>
@@ -1164,7 +1164,7 @@
             <Point x="1063" y="370"/>
           </Coords>
         </Line>
-        <Line text="(Aitchison [SURNAME]), (John [FORENAME]), (21 Montpelier [HOME_ADDRESS])" id="105" boldness="3.36" boldnessReliability="19.8471" color="#16130B" colorReliability="7.48182" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="404" meanline="380" xHeight="25" dHeight="-12" aHeight="32" charWidth="17" textConfidence="82.2033">
+        <Line text="(Aitchison [SURNAME]), (John [FORENAME]), (21 Montpelier [ADDRESS])" id="105" boldness="3.36" boldnessReliability="19.8471" color="#16130B" colorReliability="7.48182" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="404" meanline="380" xHeight="25" dHeight="-12" aHeight="32" charWidth="17" textConfidence="82.2033">
           <Coords>
             <Point x="1020" y="373"/>
             <Point x="1632" y="373"/>
@@ -1180,7 +1180,7 @@
             <Point x="1021" y="459"/>
           </Coords>
         </Line>
-        <Line text="(33 Circus lane [WORK_ADDRESS]) ; house. (29 Rintoul place [HOME_ADDRESS])" id="141" boldness="3.34375" boldnessReliability="22.069" color="#14110A" colorReliability="7.7437" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="492" meanline="468" xHeight="25" dHeight="-11" aHeight="33" charWidth="17" textConfidence="86.3994">
+        <Line text="(33 Circus lane [ADDRESS]) ; house. (29 Rintoul place [ADDRESS])" id="141" boldness="3.34375" boldnessReliability="22.069" color="#14110A" colorReliability="7.7437" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="492" meanline="468" xHeight="25" dHeight="-11" aHeight="33" charWidth="17" textConfidence="86.3994">
           <Coords>
             <Point x="1066" y="460"/>
             <Point x="1831" y="460"/>
@@ -1204,7 +1204,7 @@
             <Point x="1064" y="591"/>
           </Coords>
         </Line>
-        <Line text="and 86 Comiston road [WORK_ADDRESS]); house, (13 St" id="221" boldness="3.15385" boldnessReliability="18.8238" color="#18150C" colorReliability="9.33951" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="624" meanline="604" xHeight="21" dHeight="-10" aHeight="33" charWidth="18" textConfidence="87.6796">
+        <Line text="and 86 Comiston road [ADDRESS]); house, (13 St" id="221" boldness="3.15385" boldnessReliability="18.8238" color="#18150C" colorReliability="9.33951" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="624" meanline="604" xHeight="21" dHeight="-10" aHeight="33" charWidth="18" textConfidence="87.6796">
           <Coords>
             <Point x="1068" y="592"/>
             <Point x="1943" y="592"/>
@@ -1212,7 +1212,7 @@
             <Point x="1068" y="634"/>
           </Coords>
         </Line>
-        <Line text="Fillans terrace [HOME_ADDRESS])" id="238" boldness="3.28571" boldnessReliability="14.3967" color="#17140B" colorReliability="8.06605" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="1" baseline="669" meanline="648" xHeight="22" dHeight="-1" aHeight="32" charWidth="16" textConfidence="89.1523">
+        <Line text="Fillans terrace [ADDRESS])" id="238" boldness="3.28571" boldnessReliability="14.3967" color="#17140B" colorReliability="8.06605" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="1" baseline="669" meanline="648" xHeight="22" dHeight="-1" aHeight="32" charWidth="16" textConfidence="89.1523">
           <Coords>
             <Point x="1069" y="638"/>
             <Point x="1339" y="638"/>
@@ -1244,7 +1244,7 @@
             <Point x="1235" y="721"/>
           </Coords>
         </Line>
-        <Line text="(28 Gayﬁeld square [HOME_ADDRESS])" id="261" boldness="3.26667" boldnessReliability="15.056" color="#17150C" colorReliability="7.83894" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="713" meanline="692" xHeight="22" dHeight="-10" aHeight="33" charWidth="19" textConfidence="85.4706">
+        <Line text="(28 Gayﬁeld square [ADDRESS])" id="261" boldness="3.26667" boldnessReliability="15.056" color="#17150C" colorReliability="7.83894" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="713" meanline="692" xHeight="22" dHeight="-10" aHeight="33" charWidth="19" textConfidence="85.4706">
           <Coords>
             <Point x="1361" y="681"/>
             <Point x="1708" y="681"/>
@@ -1292,7 +1292,7 @@
             <Point x="1237" y="809"/>
           </Coords>
         </Line>
-        <Line text="(25 Balcarres street [HOME_ADDRESS])" id="299" boldness="3.23529" boldnessReliability="15.6549" color="#13110A" colorReliability="7.27559" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="801" meanline="781" xHeight="21" dHeight="-2" aHeight="31" charWidth="16" textConfidence="86.8138">
+        <Line text="(25 Balcarres street [ADDRESS])" id="299" boldness="3.23529" boldnessReliability="15.6549" color="#13110A" colorReliability="7.27559" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="801" meanline="781" xHeight="21" dHeight="-2" aHeight="31" charWidth="16" textConfidence="86.8138">
           <Coords>
             <Point x="1360" y="771"/>
             <Point x="1716" y="771"/>
@@ -1340,7 +1340,7 @@
             <Point x="1028" y="1032"/>
           </Coords>
         </Line>
-        <Line text="measures [OCCUPATION]), (41 Charlotte street, Leith [WORK_ADDRESS]) ; house," id="421" boldness="3.22857" boldnessReliability="22.0343" color="#17140B" colorReliability="9.49071" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1065" meanline="1040" xHeight="26" dHeight="-8" aHeight="35" charWidth="16" textConfidence="88.919">
+        <Line text="measures [OCCUPATION]), (41 Charlotte street, Leith [ADDRESS]) ; house," id="421" boldness="3.22857" boldnessReliability="22.0343" color="#17140B" colorReliability="9.49071" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1065" meanline="1040" xHeight="26" dHeight="-8" aHeight="35" charWidth="16" textConfidence="88.919">
           <Coords>
             <Point x="1071" y="1031"/>
             <Point x="1943" y="1031"/>
@@ -1348,7 +1348,7 @@
             <Point x="1071" y="1073"/>
           </Coords>
         </Line>
-        <Line text="(39 East Trinity road [HOME_ADDRESS])" id="439" boldness="3.29412" boldnessReliability="15.7168" color="#17140B" colorReliability="9.32905" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1109" meanline="1085" xHeight="25" dHeight="-11" aHeight="33" charWidth="18" textConfidence="87.4726">
+        <Line text="(39 East Trinity road [ADDRESS])" id="439" boldness="3.29412" boldnessReliability="15.7168" color="#17140B" colorReliability="9.32905" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1109" meanline="1085" xHeight="25" dHeight="-11" aHeight="33" charWidth="18" textConfidence="87.4726">
           <Coords>
             <Point x="1072" y="1077"/>
             <Point x="1464" y="1077"/>
@@ -1356,7 +1356,7 @@
             <Point x="1072" y="1120"/>
           </Coords>
         </Line>
-        <Line text="(Aitchison [SURNAME]), (Thomas [FORENAME]), (90 Easter road [HOME_ADDRESS])" id="455" boldness="3.21429" boldnessReliability="19.3662" color="#17140B" colorReliability="8.37665" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1152" meanline="1128" xHeight="25" dHeight="-10" aHeight="34" charWidth="18" textConfidence="89.0945">
+        <Line text="(Aitchison [SURNAME]), (Thomas [FORENAME]), (90 Easter road [ADDRESS])" id="455" boldness="3.21429" boldnessReliability="19.3662" color="#17140B" colorReliability="8.37665" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1152" meanline="1128" xHeight="25" dHeight="-10" aHeight="34" charWidth="18" textConfidence="89.0945">
           <Coords>
             <Point x="1029" y="1119"/>
             <Point x="1696" y="1119"/>
@@ -1556,7 +1556,7 @@
             <Point x="72" y="1209"/>
           </Coords>
         </Line>
-        <Line text="(Mrs C. Scott [FORENAME]), (23 Inverleith row [HOME_ADDRESS])" id="480" boldness="3.16667" boldnessReliability="18.509" color="#1D1A10" colorReliability="11.5575" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1198" meanline="1172" xHeight="27" dHeight="-7" aHeight="34" charWidth="17" textConfidence="87.8578">
+        <Line text="(Mrs C. Scott [FORENAME]), (23 Inverleith row [ADDRESS])" id="480" boldness="3.16667" boldnessReliability="18.509" color="#1D1A10" colorReliability="11.5575" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1198" meanline="1172" xHeight="27" dHeight="-7" aHeight="34" charWidth="17" textConfidence="87.8578">
           <Coords>
             <Point x="237" y="1165"/>
             <Point x="847" y="1165"/>
@@ -1572,7 +1572,7 @@
             <Point x="73" y="1253"/>
           </Coords>
         </Line>
-        <Line text="(Mrs John [FORENAME]), (64 Broughton street [HOME_ADDRESS])" id="489" boldness="3.11538" boldnessReliability="18.9685" color="#1A180E" colorReliability="8.50417" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1242" meanline="1221" xHeight="22" dHeight="-10" aHeight="32" charWidth="17" textConfidence="88.4257">
+        <Line text="(Mrs John [FORENAME]), (64 Broughton street [ADDRESS])" id="489" boldness="3.11538" boldnessReliability="18.9685" color="#1A180E" colorReliability="8.50417" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1242" meanline="1221" xHeight="22" dHeight="-10" aHeight="32" charWidth="17" textConfidence="88.4257">
           <Coords>
             <Point x="236" y="1211"/>
             <Point x="835" y="1211"/>
@@ -1604,7 +1604,7 @@
             <Point x="75" y="1342"/>
           </Coords>
         </Line>
-        <Line text="(Mrs [TITLE]), (1 Laverockbank avenue [HOME_ADDRESS])" id="525" boldness="3.08696" boldnessReliability="17.461" color="#1E1C10" colorReliability="7.261" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1331" meanline="1310" xHeight="22" dHeight="-8" aHeight="34" charWidth="20" textConfidence="89.8003">
+        <Line text="(Mrs [TITLE]), (1 Laverockbank avenue [ADDRESS])" id="525" boldness="3.08696" boldnessReliability="17.461" color="#1E1C10" colorReliability="7.261" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1331" meanline="1310" xHeight="22" dHeight="-8" aHeight="34" charWidth="20" textConfidence="89.8003">
           <Coords>
             <Point x="239" y="1298"/>
             <Point x="791" y="1298"/>
@@ -1644,7 +1644,7 @@
             <Point x="75" y="1474"/>
           </Coords>
         </Line>
-        <Line text="(12 Mayﬁeld terrace [HOME_ADDRESS])" id="608" boldness="3.17647" boldnessReliability="15.0933" color="#272517" colorReliability="12.6047" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1508" meanline="1488" xHeight="21" dHeight="-11" aHeight="32" charWidth="16" textConfidence="89.1125">
+        <Line text="(12 Mayﬁeld terrace [ADDRESS])" id="608" boldness="3.17647" boldnessReliability="15.0933" color="#272517" colorReliability="12.6047" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1508" meanline="1488" xHeight="21" dHeight="-11" aHeight="32" charWidth="16" textConfidence="89.1125">
           <Coords>
             <Point x="120" y="1477"/>
             <Point x="485" y="1477"/>
@@ -1652,7 +1652,7 @@
             <Point x="120" y="1519"/>
           </Coords>
         </Line>
-        <Line text="(Air [SURNAME]), (William M. [FORENAME]), (1 Daisy terrace [HOME_ADDRESS])" id="612" boldness="3" boldnessReliability="17.505" color="#1F1D12" colorReliability="11.8001" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1552" meanline="1527" xHeight="26" dHeight="-10" aHeight="34" charWidth="16" textConfidence="87.3224">
+        <Line text="(Air [SURNAME]), (William M. [FORENAME]), (1 Daisy terrace [ADDRESS])" id="612" boldness="3" boldnessReliability="17.505" color="#1F1D12" colorReliability="11.8001" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1552" meanline="1527" xHeight="26" dHeight="-10" aHeight="34" charWidth="16" textConfidence="87.3224">
           <Coords>
             <Point x="75" y="1519"/>
             <Point x="710" y="1519"/>
@@ -1692,7 +1692,7 @@
             <Point x="75" y="1695"/>
           </Coords>
         </Line>
-        <Line text="(James [FORENAME]), (18 Marchmont road [HOME_ADDRESS])" id="690" boldness="3.04762" boldnessReliability="16.3513" color="#211F14" colorReliability="9.68553" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1684" meanline="1659" xHeight="26" dHeight="-10" aHeight="36" charWidth="18" textConfidence="90.8661">
+        <Line text="(James [FORENAME]), (18 Marchmont road [ADDRESS])" id="690" boldness="3.04762" boldnessReliability="16.3513" color="#211F14" colorReliability="9.68553" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1684" meanline="1659" xHeight="26" dHeight="-10" aHeight="36" charWidth="18" textConfidence="90.8661">
           <Coords>
             <Point x="193" y="1649"/>
             <Point x="711" y="1649"/>
@@ -1740,7 +1740,7 @@
             <Point x="123" y="1821"/>
           </Coords>
         </Line>
-        <Line text="(Aird [SURNAME]), (Mrs John [FORENAME]), (1 West Montgomery place [HOME_ADDRESS])" id="762" boldness="3.32353" boldnessReliability="22.5031" color="#221F13" colorReliability="9.52764" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1860" meanline="1835" xHeight="26" dHeight="-12" aHeight="35" charWidth="18" textConfidence="87.8584">
+        <Line text="(Aird [SURNAME]), (Mrs John [FORENAME]), (1 West Montgomery place [ADDRESS])" id="762" boldness="3.32353" boldnessReliability="22.5031" color="#221F13" colorReliability="9.52764" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1860" meanline="1835" xHeight="26" dHeight="-12" aHeight="35" charWidth="18" textConfidence="87.8584">
           <Coords>
             <Point x="78" y="1826"/>
             <Point x="910" y="1826"/>
@@ -1748,7 +1748,7 @@
             <Point x="78" y="1872"/>
           </Coords>
         </Line>
-        <Line text="(Aird [SURNAME]), (Mrs [TITLE]), (11 Comiston Gardens [HOME_ADDRESS])" id="783" boldness="3.16" boldnessReliability="18.421" color="#242115" colorReliability="11.9374" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1905" meanline="1881" xHeight="25" dHeight="-11" aHeight="35" charWidth="17" textConfidence="81.9554">
+        <Line text="(Aird [SURNAME]), (Mrs [TITLE]), (11 Comiston Gardens [ADDRESS])" id="783" boldness="3.16" boldnessReliability="18.421" color="#242115" colorReliability="11.9374" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1905" meanline="1881" xHeight="25" dHeight="-11" aHeight="35" charWidth="17" textConfidence="81.9554">
           <Coords>
             <Point x="80" y="1871"/>
             <Point x="695" y="1871"/>
@@ -1756,7 +1756,7 @@
             <Point x="80" y="1916"/>
           </Coords>
         </Line>
-        <Line text="(Aird [SURNAME]), (Miss [TITLE]), (dressmaker [OCCUPATION]), (1 West Montgomery pl. [HOME_ADDRESS])" id="799" boldness="3.16216" boldnessReliability="22.3316" color="#262317" colorReliability="13.2288" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1949" meanline="1924" xHeight="26" dHeight="-12" aHeight="37" charWidth="16" textConfidence="85.6502">
+        <Line text="(Aird [SURNAME]), (Miss [TITLE]), (dressmaker [OCCUPATION]), (1 West Montgomery pl. [ADDRESS])" id="799" boldness="3.16216" boldnessReliability="22.3316" color="#262317" colorReliability="13.2288" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1949" meanline="1924" xHeight="26" dHeight="-12" aHeight="37" charWidth="16" textConfidence="85.6502">
           <Coords>
             <Point x="80" y="1913"/>
             <Point x="998" y="1913"/>
@@ -1764,7 +1764,7 @@
             <Point x="80" y="1961"/>
           </Coords>
         </Line>
-        <Line text="(Airey [SURNAME]), (Francis [FORENAME]), (6 Gladstone terrace [HOME_ADDRESS])" id="817" boldness="3" boldnessReliability="19.6628" color="#232013" colorReliability="12.2439" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1994" meanline="1973" xHeight="22" dHeight="-13" aHeight="33" charWidth="16" textConfidence="86.5694">
+        <Line text="(Airey [SURNAME]), (Francis [FORENAME]), (6 Gladstone terrace [ADDRESS])" id="817" boldness="3" boldnessReliability="19.6628" color="#232013" colorReliability="12.2439" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1994" meanline="1973" xHeight="22" dHeight="-13" aHeight="33" charWidth="16" textConfidence="86.5694">
           <Coords>
             <Point x="81" y="1962"/>
             <Point x="755" y="1962"/>
@@ -1772,7 +1772,7 @@
             <Point x="81" y="2007"/>
           </Coords>
         </Line>
-        <Line text="(Airlie [SURNAME]), (Robert [FORENAME]), (1 Cheyne street [HOME_ADDRESS])" id="834" boldness="3.4" boldnessReliability="19.1571" color="#232013" colorReliability="13.3754" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2039" meanline="2014" xHeight="26" dHeight="-10" aHeight="34" charWidth="16" textConfidence="89.2541">
+        <Line text="(Airlie [SURNAME]), (Robert [FORENAME]), (1 Cheyne street [ADDRESS])" id="834" boldness="3.4" boldnessReliability="19.1571" color="#232013" colorReliability="13.3754" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2039" meanline="2014" xHeight="26" dHeight="-10" aHeight="34" charWidth="16" textConfidence="89.2541">
           <Coords>
             <Point x="82" y="2006"/>
             <Point x="678" y="2006"/>
@@ -1989,7 +1989,7 @@
             <Point x="1030" y="1382"/>
           </Coords>
         </Line>
-        <Line text="(Mrs James [FORENAME]), (83 Great King street [HOME_ADDRESS])" id="574" boldness="3.26923" boldnessReliability="19.1246" color="#16140C" colorReliability="9.72134" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1416" meanline="1395" xHeight="22" dHeight="-6" aHeight="32" charWidth="16" textConfidence="86.4448">
+        <Line text="(Mrs James [FORENAME]), (83 Great King street [ADDRESS])" id="574" boldness="3.26923" boldnessReliability="19.1246" color="#16140C" colorReliability="9.72134" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1416" meanline="1395" xHeight="22" dHeight="-6" aHeight="32" charWidth="16" textConfidence="86.4448">
           <Coords>
             <Point x="1244" y="1385"/>
             <Point x="1870" y="1385"/>
@@ -2005,7 +2005,7 @@
             <Point x="1031" y="1427"/>
           </Coords>
         </Line>
-        <Line text="(Mrs [TITLE]), (27 Comely Bank avenue [HOME_ADDRESS])" id="583" boldness="3.09524" boldnessReliability="16.2723" color="#1D1B10" colorReliability="7.95167" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1460" meanline="1439" xHeight="22" dHeight="-9" aHeight="33" charWidth="20" textConfidence="88.1823">
+        <Line text="(Mrs [TITLE]), (27 Comely Bank avenue [ADDRESS])" id="583" boldness="3.09524" boldnessReliability="16.2723" color="#1D1B10" colorReliability="7.95167" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1460" meanline="1439" xHeight="22" dHeight="-9" aHeight="33" charWidth="20" textConfidence="88.1823">
           <Coords>
             <Point x="1246" y="1428"/>
             <Point x="1810" y="1428"/>
@@ -2021,7 +2021,7 @@
             <Point x="1031" y="1470"/>
           </Coords>
         </Line>
-        <Line text="(Mrs [TITLE]), (106 Bruntsﬁeld place [HOME_ADDRESS])" id="603" boldness="3" boldnessReliability="16.4633" color="#1C1A0F" colorReliability="12.2539" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1504" meanline="1480" xHeight="25" dHeight="-10" aHeight="33" charWidth="17" textConfidence="87.8406">
+        <Line text="(Mrs [TITLE]), (106 Bruntsﬁeld place [ADDRESS])" id="603" boldness="3" boldnessReliability="16.4633" color="#1C1A0F" colorReliability="12.2539" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1504" meanline="1480" xHeight="25" dHeight="-10" aHeight="33" charWidth="17" textConfidence="87.8406">
           <Coords>
             <Point x="1245" y="1472"/>
             <Point x="1749" y="1472"/>
@@ -2037,7 +2037,7 @@
             <Point x="1031" y="1513"/>
           </Coords>
         </Line>
-        <Line text="(Misses [TITLE]), (53 Melville street [HOME_ADDRESS])" id="627" boldness="3.04545" boldnessReliability="16.7035" color="#1B190E" colorReliability="9.05733" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1548" meanline="1524" xHeight="25" dHeight="-9" aHeight="32" charWidth="16" textConfidence="88.824">
+        <Line text="(Misses [TITLE]), (53 Melville street [ADDRESS])" id="627" boldness="3.04545" boldnessReliability="16.7035" color="#1B190E" colorReliability="9.05733" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1548" meanline="1524" xHeight="25" dHeight="-9" aHeight="32" charWidth="16" textConfidence="88.824">
           <Coords>
             <Point x="1244" y="1517"/>
             <Point x="1728" y="1517"/>
@@ -2053,7 +2053,7 @@
             <Point x="1032" y="1559"/>
           </Coords>
         </Line>
-        <Line text="(Miss A. S. [FORENAME]), (10 Mansionhonse road [HOME_ADDRESS])" id="634" boldness="3.08" boldnessReliability="18.2057" color="#17140C" colorReliability="8.35474" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1592" meanline="1568" xHeight="25" dHeight="-8" aHeight="34" charWidth="18" textConfidence="89.8524">
+        <Line text="(Miss A. S. [FORENAME]), (10 Mansionhonse road [ADDRESS])" id="634" boldness="3.08" boldnessReliability="18.2057" color="#17140C" colorReliability="8.35474" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1592" meanline="1568" xHeight="25" dHeight="-8" aHeight="34" charWidth="18" textConfidence="89.8524">
           <Coords>
             <Point x="1246" y="1559"/>
             <Point x="1887" y="1559"/>
@@ -2069,7 +2069,7 @@
             <Point x="1033" y="1603"/>
           </Coords>
         </Line>
-        <Line text="(Miss Catherine [FORENAME]), (5 Nelson street [HOME_ADDRESS])" id="654" boldness="3.11111" boldnessReliability="19.251" color="#19170D" colorReliability="8.86958" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1636" meanline="1617" xHeight="20" dHeight="-6" aHeight="32" charWidth="16" textConfidence="88.2589">
+        <Line text="(Miss Catherine [FORENAME]), (5 Nelson street [ADDRESS])" id="654" boldness="3.11111" boldnessReliability="19.251" color="#19170D" colorReliability="8.86958" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1636" meanline="1617" xHeight="20" dHeight="-6" aHeight="32" charWidth="16" textConfidence="88.2589">
           <Coords>
             <Point x="1247" y="1605"/>
             <Point x="1849" y="1605"/>
@@ -2141,7 +2141,7 @@
             <Point x="1248" y="1866"/>
           </Coords>
         </Line>
-        <Line text="(19 Church Hill place [HOME_ADDRESS])" id="750" boldness="3.36842" boldnessReliability="17.2189" color="#19170C" colorReliability="10.8201" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1856" meanline="1831" xHeight="26" dHeight="-11" aHeight="32" charWidth="16" textConfidence="90.6247">
+        <Line text="(19 Church Hill place [ADDRESS])" id="750" boldness="3.36842" boldnessReliability="17.2189" color="#19170C" colorReliability="10.8201" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1856" meanline="1831" xHeight="26" dHeight="-11" aHeight="32" charWidth="16" textConfidence="90.6247">
           <Coords>
             <Point x="1365" y="1825"/>
             <Point x="1766" y="1825"/>
@@ -2165,7 +2165,7 @@
             <Point x="1247" y="1909"/>
           </Coords>
         </Line>
-        <Line text="(9 Hope Park terrace [HOME_ADDRESS])" id="770" boldness="3.125" boldnessReliability="14.6447" color="#232114" colorReliability="13.5634" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1901" meanline="1880" xHeight="22" dHeight="-10" aHeight="33" charWidth="18" textConfidence="87.6872">
+        <Line text="(9 Hope Park terrace [ADDRESS])" id="770" boldness="3.125" boldnessReliability="14.6447" color="#232114" colorReliability="13.5634" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1901" meanline="1880" xHeight="22" dHeight="-10" aHeight="33" charWidth="18" textConfidence="87.6872">
           <Coords>
             <Point x="1364" y="1869"/>
             <Point x="1749" y="1869"/>
@@ -2513,7 +2513,7 @@
             <Point x="128" y="2130"/>
           </Coords>
         </Line>
-        <Line text="(Aitcheson [SURNAME]), (J. T. [FORENAME]), (80 Comiston drive [HOME_ADDRESS])" id="907" boldness="3.08" boldnessReliability="18.3803" color="#221F12" colorReliability="10.0579" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2169" meanline="2146" xHeight="24" dHeight="-13" aHeight="35" charWidth="18" textConfidence="87.9542">
+        <Line text="(Aitcheson [SURNAME]), (J. T. [FORENAME]), (80 Comiston drive [ADDRESS])" id="907" boldness="3.08" boldnessReliability="18.3803" color="#221F12" colorReliability="10.0579" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2169" meanline="2146" xHeight="24" dHeight="-13" aHeight="35" charWidth="18" textConfidence="87.9542">
           <Coords>
             <Point x="84" y="2135"/>
             <Point x="776" y="2135"/>
@@ -2817,7 +2817,7 @@
             <Point x="138" y="2582"/>
           </Coords>
         </Line>
-        <Line text="(Aitchison [SURNAME]), (Alexander [FORENAME]), (8 Glenogle place [HOME_ADDRESS])" id="1098" boldness="3.21875" boldnessReliability="20.6949" color="#211E13" colorReliability="10.0673" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2612" meanline="2587" xHeight="26" dHeight="-8" aHeight="38" charWidth="18" textConfidence="83.9418">
+        <Line text="(Aitchison [SURNAME]), (Alexander [FORENAME]), (8 Glenogle place [ADDRESS])" id="1098" boldness="3.21875" boldnessReliability="20.6949" color="#211E13" colorReliability="10.0673" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2612" meanline="2587" xHeight="26" dHeight="-8" aHeight="38" charWidth="18" textConfidence="83.9418">
           <Coords>
             <Point x="92" y="2575"/>
             <Point x="842" y="2575"/>
@@ -2833,7 +2833,7 @@
             <Point x="93" y="2666"/>
           </Coords>
         </Line>
-        <Line text="(Andrew [FORENAME]), (10 Howden street [HOME_ADDRESS])" id="1128" boldness="3.27273" boldnessReliability="17.4442" color="#1F1C10" colorReliability="11.6928" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="2653" meanline="2629" xHeight="25" dHeight="-9" aHeight="33" charWidth="16" textConfidence="88.2045">
+        <Line text="(Andrew [FORENAME]), (10 Howden street [ADDRESS])" id="1128" boldness="3.27273" boldnessReliability="17.4442" color="#1F1C10" colorReliability="11.6928" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="2653" meanline="2629" xHeight="25" dHeight="-9" aHeight="33" charWidth="16" textConfidence="88.2045">
           <Coords>
             <Point x="304" y="2621"/>
             <Point x="821" y="2621"/>
@@ -2905,7 +2905,7 @@
             <Point x="144" y="2881"/>
           </Coords>
         </Line>
-        <Line text="(Aitchison [SURNAME]), (George [FORENAME]), (38 Morningside drive [HOME_ADDRESS])" id="1262" boldness="3.11765" boldnessReliability="21.2045" color="#282519" colorReliability="13.804" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2918" meanline="2895" xHeight="24" dHeight="-13" aHeight="38" charWidth="17" textConfidence="86.7999">
+        <Line text="(Aitchison [SURNAME]), (George [FORENAME]), (38 Morningside drive [ADDRESS])" id="1262" boldness="3.11765" boldnessReliability="21.2045" color="#282519" colorReliability="13.804" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="2918" meanline="2895" xHeight="24" dHeight="-13" aHeight="38" charWidth="17" textConfidence="86.7999">
           <Coords>
             <Point x="101" y="2881"/>
             <Point x="883" y="2881"/>

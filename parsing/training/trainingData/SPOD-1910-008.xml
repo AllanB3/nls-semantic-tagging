@@ -803,7 +803,7 @@
             <Point x="42" y="887"/>
           </Coords>
         </Line>
-        <Line text="(John [FORENAME]), (smith [OCCUPATION]), (36 Leven street [WORK_ADDRESS]) ; workshop," id="307" boldness="3.13333" boldnessReliability="20.0044" color="#1A180E" colorReliability="7.14765" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="877" meanline="852" xHeight="26" dHeight="-10" aHeight="35" charWidth="18" textConfidence="87.1899">
+        <Line text="(John [FORENAME]), (smith [OCCUPATION]), (36 Leven street [ADDRESS]) ; workshop," id="307" boldness="3.13333" boldnessReliability="20.0044" color="#1A180E" colorReliability="7.14765" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="877" meanline="852" xHeight="26" dHeight="-10" aHeight="35" charWidth="18" textConfidence="87.1899">
           <Coords>
             <Point x="174" y="843"/>
             <Point x="961" y="843"/>
@@ -811,7 +811,7 @@
             <Point x="174" y="887"/>
           </Coords>
         </Line>
-        <Line text="house, (17 Drumdryan street [HOME_ADDRESS])" id="330" boldness="3.27273" boldnessReliability="17.4144" color="#1F1C11" colorReliability="6.98301" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="921" meanline="901" xHeight="21" dHeight="-11" aHeight="32" charWidth="17" textConfidence="89.2008">
+        <Line text="house, (17 Drumdryan street [ADDRESS])" id="330" boldness="3.27273" boldnessReliability="17.4144" color="#1F1C11" colorReliability="6.98301" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="921" meanline="901" xHeight="21" dHeight="-11" aHeight="32" charWidth="17" textConfidence="89.2008">
           <Coords>
             <Point x="177" y="890"/>
             <Point x="717" y="890"/>

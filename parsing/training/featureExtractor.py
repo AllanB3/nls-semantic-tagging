@@ -56,10 +56,6 @@ class featureExtractor:
                     tag = re.search(r"\[[A-Z|_]*\]", token).group()
                     tag = tag[1 : len(tag) - 1]
 
-                    # TODO: change these in annotations
-                    if tag == "WORK_ADDRESS" or tag == "HOME_ADDRESS":
-                        tag = "ADDRESS"
-
                     token = re.sub(r"\[(\s|\n)*[A-Z|_]*\]\)", "", token)
                     token = re.sub(r"^\(", "", token)
                     token = re.sub(r"\d+\s*", "", token)

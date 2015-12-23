@@ -1291,7 +1291,7 @@
             <Point x="69" y="930"/>
           </Coords>
         </Line>
-        <Line text="of Scotland [OCCUPATION]), (Mound [WORK_ADDRESS]); house, (Beechmount," id="507" boldness="3.15152" boldnessReliability="20.4294" color="#1C1910" colorReliability="11.2275" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="966" meanline="941" xHeight="26" dHeight="-9" aHeight="35" charWidth="18" textConfidence="83.8192">
+        <Line text="of Scotland [OCCUPATION]), (Mound [ADDRESS]); house, (Beechmount," id="507" boldness="3.15152" boldnessReliability="20.4294" color="#1C1910" colorReliability="11.2275" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="966" meanline="941" xHeight="26" dHeight="-9" aHeight="35" charWidth="18" textConfidence="83.8192">
           <Coords>
             <Point x="115" y="932"/>
             <Point x="988" y="932"/>
@@ -1299,7 +1299,7 @@
             <Point x="115" y="975"/>
           </Coords>
         </Line>
-        <Line text="Murrayﬁeld [HOME_ADDRESS])" id="514" boldness="3.1" boldnessReliability="11.0418" color="#1E1C11" colorReliability="7.00642" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1010" meanline="989" xHeight="22" dHeight="-11" aHeight="32" charWidth="22" textConfidence="80.2032">
+        <Line text="Murrayﬁeld [ADDRESS])" id="514" boldness="3.1" boldnessReliability="11.0418" color="#1E1C11" colorReliability="7.00642" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="2" baseline="1010" meanline="989" xHeight="22" dHeight="-11" aHeight="32" charWidth="22" textConfidence="80.2032">
           <Coords>
             <Point x="111" y="979"/>
             <Point x="337" y="979"/>
@@ -1523,7 +1523,7 @@
             <Point x="114" y="1598"/>
           </Coords>
         </Line>
-        <Line text="and 10 Mary’s place [WORK_ADDRESS]); house, (Howard house," id="784" boldness="3" boldnessReliability="20.7576" color="#201D12" colorReliability="12.2698" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1631" meanline="1610" xHeight="22" dHeight="-11" aHeight="34" charWidth="17" textConfidence="85.9224">
+        <Line text="and 10 Mary’s place [ADDRESS]); house, (Howard house," id="784" boldness="3" boldnessReliability="20.7576" color="#201D12" colorReliability="12.2698" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1631" meanline="1610" xHeight="22" dHeight="-11" aHeight="34" charWidth="17" textConfidence="85.9224">
           <Coords>
             <Point x="112" y="1598"/>
             <Point x="986" y="1598"/>
@@ -1531,7 +1531,7 @@
             <Point x="112" y="1642"/>
           </Coords>
         </Line>
-        <Line text="Jock's lodge [HOME_ADDRESS])" id="786" boldness="2.8" boldnessReliability="10.5048" color="#262216" colorReliability="11.136" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1676" meanline="1656" xHeight="21" dHeight="-10" aHeight="34" charWidth="18" textConfidence="85.1128">
+        <Line text="Jock's lodge [ADDRESS])" id="786" boldness="2.8" boldnessReliability="10.5048" color="#262216" colorReliability="11.136" orientation="0" readingOrientation="0" readingDirection="left-to-right" type="text" reverseVideo="false" indented="false" textColour="black" kerning="3" baseline="1676" meanline="1656" xHeight="21" dHeight="-10" aHeight="34" charWidth="18" textConfidence="85.1128">
           <Coords>
             <Point x="113" y="1643"/>
             <Point x="342" y="1643"/>
