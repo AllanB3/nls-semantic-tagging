@@ -178,7 +178,7 @@ class featureExtractor:
             arffWriter.write(data)
 
 if __name__ == "__main__":
-    f = featureExtractor("trainingData", "training.arff")
+    f = featureExtractor("taggerTrainingData", "training.arff")
     f.extractFeatures()
-    f = featureExtractor("testingData", "testing.arff")
+    f = featureExtractor("taggerTestingData", "testing.arff")
     f.extractFeatures()

@@ -159,7 +159,7 @@ if __name__ == "__main__":
     h = hiddenMarkovModel()
 
     x = xmlParser()
-    text = x.parseNLSPage("training/HMM_testing/84017556.8.xml")
+    text = x.parseNLSPage("training/hmmTestingData/84017556.8.xml")
 
     for token in h.tag(text):
         print(token)
