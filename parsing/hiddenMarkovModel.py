@@ -26,8 +26,7 @@ class hiddenMarkovModel:
         self.states = ["SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"]
         self._train()
 
-    def tag(self, text):
-        text = text.translate(str.maketrans(string.punctuation, "                                "))
+    def tag(self, text, test=False):
         text = text.replace("\n", " ")
         tokens = text.split()
         tokensAndVectors = []
@@ -38,7 +37,7 @@ class hiddenMarkovModel:
             featureVector[6] = len(t)
             tokensAndVectors.append((t, featureVector))
 
-        return self._viterbi(tokensAndVectors)
+        return self._viterbi(tokensAndVectors, test)
 
     def _train(self):
         self.sensorModel = tokenClassifier(self.trainingData)
@@ -60,17 +59,19 @@ class hiddenMarkovModel:
         transitionFreqDist = ConditionalFreqDist(transitions)
         self.transitionModel = ConditionalProbDist(transitionFreqDist, LidstoneProbDist, 0.01, bins=3125)
 
-    def _viterbi(self, tokensAndVectors):
+    def _viterbi(self, tokensAndVectors, test):
         viterbi = []
         backpointers = []
 
         firstViterbi = {}
         firstBackpointer = {}
         token, featureVector = tokensAndVectors[0]
+        strippedToken = token.translate(str.maketrans(string.punctuation, "                                "))
+
 
         for l in self.lexicon:
             entry, dictTag = l.strip().split("\t")
-            if entry == token.lower().strip():
+            if entry == strippedToken.lower().strip():
                 if dictTag == "surname":
                     featureVector[7] = 1
                 elif dictTag == "forename":
@@ -94,10 +95,11 @@ class hiddenMarkovModel:
             nextViterbi = {}
             nextBackpointer = {}
             token, featureVector = tokensAndVectors[t]
+            strippedToken = token.translate(str.maketrans(string.punctuation, "                                "))
 
             for l in self.lexicon:
                 entry, dictTag = l.strip().split("\t")
-                if token.lower().strip() in entry.split():
+                if strippedToken.lower().strip() in entry.split():
                     if dictTag == "surname":
                         featureVector[7] = 1
                     elif dictTag == "forename":
@@ -147,11 +149,23 @@ class hiddenMarkovModel:
 
         tags = []
         tokenIndex = 0
-        for i in range(1, len(backpointers)):
-            for s in self.states:
-                if s == min(viterbi[i], key=viterbi[i].get):
-                    tags.append((tokensAndVectors[tokenIndex][0], backpointers[i][s]))
-            tokenIndex += 1
+        if not test:
+            for i in range(1, len(backpointers)):
+                for s in self.states:
+                    if s == min(viterbi[i], key=viterbi[i].get):
+                        tags.append((tokensAndVectors[tokenIndex][0], backpointers[i][s]))
+                tokenIndex += 1
+        else:
+            characterIndex = 0
+            for i in range(1, len(backpointers)):
+                for s in self.states:
+                    if s == min(viterbi[i], key=viterbi[i].get):
+                        tags.append("T{0}\t{1} {2} {3}\t{4}".format(i, backpointers[i][s], characterIndex,
+                                                                    characterIndex +
+                                                                    len(tokensAndVectors[tokenIndex][0]) - 1,
+                                                                    tokensAndVectors[tokenIndex][0]))
+                characterIndex += len(tokensAndVectors[tokenIndex][0]) + 1
+                tokenIndex += 1
 
         return tags
 
@@ -159,7 +173,7 @@ if __name__ == "__main__":
     h = hiddenMarkovModel()
 
     x = xmlParser()
-    text = x.parseNLSPage("training/hmmTestingData/84017556.8.xml")
+    text = x.parseNLSPage("training/hmmTestingData/1851-52-p153/83073680.8.xml")
 
-    for token in h.tag(text):
+    for token in h.tag(text, test=True):
         print(token)

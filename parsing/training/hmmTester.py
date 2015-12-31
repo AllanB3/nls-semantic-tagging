@@ -6,6 +6,7 @@ import os
 TESTINGFOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hmmTestingData")
 
 from tabulate import tabulate
+import string
 
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from hiddenMarkovModel import *
@@ -47,37 +48,52 @@ for dirName in os.listdir(TESTINGFOLDER):
         raise IOError("Test folder must have an XML file of the page from the NLS and a corresponding brat ann file.")
 
     text = x.parseNLSPage(xmlFile)
-    classifiedTags = hmm.tag(text)
+    classifiedTags = hmm.tag(text, test=True)
 
     annFileText = open(annFile, "r").read().splitlines()
 
-    hmmCounter = 0
     for a in annFileText:
-        key, tokenData, actualToken = a.split("\t")
+        if a[0] == "E":
+            continue
 
-        classifiedToken = ""
-        classifiedTag = ""
-        while classifiedToken != actualToken:
-            classifiedToken, classifiedTag = classifiedTags[hmmCounter]
-            hmmCounter += 1
-
+        key, tokenData, actualToken = a.strip().split("\t")
         actualTag = tokenData.split()[0].upper()
+        startIndex = tokenData.split()[1]
 
-        confusionMatrix[actualTag][classifiedTag] += 1
+        if actualTag == "POD_ENTRY":
+            continue
 
-        if actualTag == classifiedTag:
-            results[actualTag]["TP"] += 1
+        for c in classifiedTags:
+            classifiedKey, classifiedData, classifiedToken = c.strip().split("\t")
+            classifiedStartIndex = classifiedData.split()[1]
 
-            for tag, tagResults in results.items():
-                if tag != actualTag:
-                    tagResults["TN"] += 1
-        else:
-            results[actualTag]["FN"] += 1
-            results[classifiedTag]["FP"] += 1
+            if classifiedStartIndex != startIndex:
+                continue
 
-            for tag, tagResults in results.items():
-                if tag != actualTag and tag != classifiedTag:
-                    tagResults["TN"] += 1
+            classifiedTag = classifiedData.split()[0]
+
+            for word in actualToken.split():
+                confusionMatrix[actualTag][classifiedTag] += 1
+
+                if actualTag == classifiedTag:
+                    results[actualTag]["TP"] += 1
+
+                    for tag, tagResults in results.items():
+                        if tag != actualTag:
+                            tagResults["TN"] += 1
+                else:
+                    results[actualTag]["FN"] += 1
+                    results[classifiedTag]["FP"] += 1
+
+                    for tag, tagResults in results.items():
+                        if tag != actualTag and tag != classifiedTag:
+                            tagResults["TN"] += 1
+
+            print("Token: " + actualToken)
+            print("Actual tag: " + actualTag)
+            print("Classified tag: " + classifiedTag)
+            print("")
+            break
 
 scores = {"SURNAME": {"Precision": 0, "Recall": 0, "F-score": 0},
           "FORENAME": {"Precision": 0, "Recall": 0, "F-score": 0},
