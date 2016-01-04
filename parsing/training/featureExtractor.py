@@ -35,11 +35,11 @@ class featureExtractor:
                 matches = []
 
                 for a in annotations:
-                    strippedA = a.group().translate(str.maketrans(string.punctuation, "                                "))
-                    words = strippedA.split()
+                    words = a.group().split(",")
+                    tag = a.group().split()[-1].translate(str.maketrans(string.punctuation, "                                ")).replace(" ", "")
 
                     for i in range(0, len(words) - 1):
-                        matches.append((words[i], words[len(words) - 1]))
+                        matches.append((words[i].translate(str.maketrans(string.punctuation, "                                ")), tag))
 
                 for match in matches:
                     token, tag = match
@@ -70,7 +70,7 @@ class featureExtractor:
                     for e in entries:
                         entry, dictTag = e.strip().split("\t")
 
-                        if token.lower().strip() in entry.split():
+                        if token.lower().strip() == entry.split():
                             if dictTag == "surname":
                                 featureVector[7] = 1
                             elif dictTag == "forename":
@@ -109,7 +109,7 @@ class featureExtractor:
                         tokenData, token = tokens[index].split("\t")
                         print(token)
 
-                        for t in token.split():
+                        for t in token.split(","):
                             featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
                             if len(tagsAndVectors) > 0:
@@ -134,7 +134,7 @@ class featureExtractor:
                             for l in lexicon:
                                 entry, dictTag = l.split("\t")
 
-                                if t.lower().strip() in entry.split():
+                                if token.lower().strip() == entry.split():
                                     if dictTag == "surname":
                                         featureVector[7] = 1
                                     elif dictTag == "forename":

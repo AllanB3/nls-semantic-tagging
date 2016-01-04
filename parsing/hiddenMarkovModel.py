@@ -27,8 +27,8 @@ class hiddenMarkovModel:
         self._train()
 
     def tag(self, text, test=False):
-        text = text.replace("\n", " ")
-        tokens = text.split()
+        text = text.replace("\n", ",")
+        tokens = text.split(",")
         tokensAndVectors = []
 
         for t in tokens:
@@ -70,7 +70,12 @@ class hiddenMarkovModel:
 
 
         for l in self.lexicon:
-            entry, dictTag = l.strip().split("\t")
+            try:
+                entry, dictTag = l.strip().split("\t")
+            except ValueError:
+                print(l)
+                continue
+
             if entry == strippedToken.lower().strip():
                 if dictTag == "surname":
                     featureVector[7] = 1
@@ -98,8 +103,13 @@ class hiddenMarkovModel:
             strippedToken = token.translate(str.maketrans(string.punctuation, "                                "))
 
             for l in self.lexicon:
-                entry, dictTag = l.strip().split("\t")
-                if strippedToken.lower().strip() in entry.split():
+                try:
+                    entry, dictTag = l.strip().split("\t")
+                except ValueError:
+                    print(l)
+                    continue
+
+                if strippedToken.lower().strip() == entry.split():
                     if dictTag == "surname":
                         featureVector[7] = 1
                     elif dictTag == "forename":
@@ -128,8 +138,6 @@ class hiddenMarkovModel:
                 nextViterbi[self.states[i]] = min([viterbi[index][s] + (0 - log(self.transitionModel[s].prob(self.states[i]))) + (0 - self.sensorModel.logProbabilities(featureVector)[i]) for s in self.states])
                 nextBackpointer[self.states[i]] = previousTag
 
-                featureVector[0:5] = [0, 0, 0, 0, 0]
-
             viterbi.append(nextViterbi)
             backpointers.append(nextBackpointer)
             index += 1
@@ -157,13 +165,28 @@ class hiddenMarkovModel:
                 tokenIndex += 1
         else:
             characterIndex = 0
+            badParse = False
             for i in range(1, len(backpointers)):
                 for s in self.states:
                     if s == min(viterbi[i], key=viterbi[i].get):
+                        try:
+                            if tokensAndVectors[tokenIndex][0][0] == " ":
+                                characterIndex += 1
+                        except IndexError:
+                            badParse = True
+
+                        if badParse:
+                            break
+
+                        # TODO: figure out way of lining up BRAT output and HMM output
                         tags.append("T{0}\t{1} {2} {3}\t{4}".format(i, backpointers[i][s], characterIndex,
                                                                     characterIndex +
-                                                                    len(tokensAndVectors[tokenIndex][0]) - 1,
+                                                                    len(tokensAndVectors[tokenIndex][0]),
                                                                     tokensAndVectors[tokenIndex][0]))
+                if badParse:
+                    badParse = False
+                    continue
+
                 characterIndex += len(tokensAndVectors[tokenIndex][0]) + 1
                 tokenIndex += 1
 

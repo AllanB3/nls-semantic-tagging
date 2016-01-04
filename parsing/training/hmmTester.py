@@ -72,7 +72,7 @@ for dirName in os.listdir(TESTINGFOLDER):
 
             classifiedTag = classifiedData.split()[0]
 
-            for word in actualToken.split():
+            for word in actualToken.split(","):
                 confusionMatrix[actualTag][classifiedTag] += 1
 
                 if actualTag == classifiedTag:
@@ -89,11 +89,10 @@ for dirName in os.listdir(TESTINGFOLDER):
                         if tag != actualTag and tag != classifiedTag:
                             tagResults["TN"] += 1
 
-            print("Token: " + actualToken)
-            print("Actual tag: " + actualTag)
-            print("Classified tag: " + classifiedTag)
-            print("")
-            break
+                print("Token: " + word)
+                print("Actual tag: " + actualTag)
+                print("Classified tag: " + classifiedTag)
+                print("")
 
 scores = {"SURNAME": {"Precision": 0, "Recall": 0, "F-score": 0},
           "FORENAME": {"Precision": 0, "Recall": 0, "F-score": 0},
@@ -102,13 +101,25 @@ scores = {"SURNAME": {"Precision": 0, "Recall": 0, "F-score": 0},
           "ADDRESS": {"Precision": 0, "Recall": 0, "F-score": 0}}
 
 for tag, tagResults in results.items():
-    precision = tagResults["TP"] / (tagResults["TP"] + tagResults["FP"])
+    try:
+        precision = tagResults["TP"] / (tagResults["TP"] + tagResults["FP"])
+    except ZeroDivisionError:
+        precision = "N/A"
     scores[tag]["Precision"] = precision
 
-    recall = tagResults["TP"] / (tagResults["TP"] + tagResults["FN"])
+    try:
+        recall = tagResults["TP"] / (tagResults["TP"] + tagResults["FN"])
+    except ZeroDivisionError:
+        recall = "N/A"
     scores[tag]["Recall"] = recall
 
-    scores[tag]["F-score"] = (2 * precision * recall) / (precision + recall)
+    if recall != "N/A" and precision != "N/A":
+        try:
+            scores[tag]["F-score"] = (2 * precision * recall) / (precision + recall)
+        except ZeroDivisionError:
+            scores[tag]["F-score"] = "N/A"
+    else:
+        scores[tag]["F-score"] = "N/A"
 
 table = [["", "SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"],
          ["Precision", scores["SURNAME"]["Precision"], scores["FORENAME"]["Precision"],

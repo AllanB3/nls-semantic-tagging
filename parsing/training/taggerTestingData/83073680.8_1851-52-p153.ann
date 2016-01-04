@@ -23,7 +23,7 @@ E4	POD_entry:T18
 T19	surname 244 251	Rendall
 T20	POD_entry 244 251	Rendall
 E5	POD_entry:T20 forename:T21 occupation:T22 address:T23
-T21	forename 253 257	Win.
+T21	forename 253 257	Wiprintn.
 T22	occupation 258 274	commission agent
 T23	address 276 288	2 Dook gates
 T24	surname 289 295	Renuie

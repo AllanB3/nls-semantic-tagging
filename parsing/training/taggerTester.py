@@ -68,13 +68,26 @@ scores = {"SURNAME": {"Precision": 0, "Recall": 0, "F-score": 0},
           "ADDRESS": {"Precision": 0, "Recall": 0, "F-score": 0}}
 
 for tag, tagResults in results.items():
-    precision = tagResults["TP"] / (tagResults["TP"] + tagResults["FP"])
+    try:
+        precision = tagResults["TP"] / (tagResults["TP"] + tagResults["FP"])
+    except ZeroDivisionError:
+        precision = "N/A"
+
     scores[tag]["Precision"] = precision
 
-    recall = tagResults["TP"] / (tagResults["TP"] + tagResults["FN"])
+    try:
+        recall = tagResults["TP"] / (tagResults["TP"] + tagResults["FN"])
+    except ZeroDivisionError:
+        recall = "N/A"
     scores[tag]["Recall"] = recall
 
-    scores[tag]["F-score"] = (2 * precision * recall) / (precision + recall)
+    if recall != "N/A" and precision != "N/A":
+        try:
+            scores[tag]["F-score"] = (2 * precision * recall) / (precision + recall)
+        except ZeroDivisionError:
+            scores[tag]["F-score"] = "N/A"
+    else:
+        scores[tag]["F-score"] = "N/A"
 
 table = [["", "SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"],
          ["Precision", scores["SURNAME"]["Precision"], scores["FORENAME"]["Precision"],
