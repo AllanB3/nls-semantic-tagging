@@ -70,7 +70,7 @@ class featureExtractor:
                     for e in entries:
                         entry, dictTag = e.strip().split("\t")
 
-                        if token.lower().strip() == entry.split():
+                        if token.lower().lstrip().strip().replace(string.digits, "          ") == entry:
                             if dictTag == "surname":
                                 featureVector[7] = 1
                             elif dictTag == "forename":
@@ -134,7 +134,7 @@ class featureExtractor:
                             for l in lexicon:
                                 entry, dictTag = l.split("\t")
 
-                                if token.lower().strip() == entry.split():
+                                if token.lower().lstrip().strip().replace(string.digits, "          ") == entry:
                                     if dictTag == "surname":
                                         featureVector[7] = 1
                                     elif dictTag == "forename":
