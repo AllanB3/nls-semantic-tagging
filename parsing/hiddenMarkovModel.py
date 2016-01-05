@@ -26,7 +26,7 @@ class hiddenMarkovModel:
         self.states = ["SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"]
         self._train()
 
-    def tag(self, text, test=False):
+    def tag(self, text):
         text = text.replace("\n", ",")
         tokens = text.split(",")
         tokensAndVectors = []
@@ -37,7 +37,7 @@ class hiddenMarkovModel:
             featureVector[6] = len(t)
             tokensAndVectors.append((t, featureVector))
 
-        return self._viterbi(tokensAndVectors, test)
+        return self._viterbi(tokensAndVectors)
 
     def _train(self):
         self.sensorModel = tokenClassifier(self.trainingData)
@@ -59,7 +59,7 @@ class hiddenMarkovModel:
         transitionFreqDist = ConditionalFreqDist(transitions)
         self.transitionModel = ConditionalProbDist(transitionFreqDist, LidstoneProbDist, 0.01, bins=3125)
 
-    def _viterbi(self, tokensAndVectors, test):
+    def _viterbi(self, tokensAndVectors):
         viterbi = []
         backpointers = []
 
@@ -157,38 +157,11 @@ class hiddenMarkovModel:
 
         tags = []
         tokenIndex = 0
-        if not test:
-            for i in range(1, len(backpointers)):
-                for s in self.states:
-                    if s == min(viterbi[i], key=viterbi[i].get):
-                        tags.append((tokensAndVectors[tokenIndex][0], backpointers[i][s]))
-                tokenIndex += 1
-        else:
-            characterIndex = 0
-            badParse = False
-            for i in range(1, len(backpointers)):
-                for s in self.states:
-                    if s == min(viterbi[i], key=viterbi[i].get):
-                        try:
-                            if tokensAndVectors[tokenIndex][0][0] == " ":
-                                characterIndex += 1
-                        except IndexError:
-                            badParse = True
-
-                        if badParse:
-                            break
-
-                        # TODO: figure out way of lining up BRAT output and HMM output
-                        tags.append("T{0}\t{1} {2} {3}\t{4}".format(i, backpointers[i][s], characterIndex,
-                                                                    characterIndex +
-                                                                    len(tokensAndVectors[tokenIndex][0]),
-                                                                    tokensAndVectors[tokenIndex][0]))
-                if badParse:
-                    badParse = False
-                    continue
-
-                characterIndex += len(tokensAndVectors[tokenIndex][0]) + 1
-                tokenIndex += 1
+        for i in range(1, len(backpointers)):
+            for s in self.states:
+                if s == min(viterbi[i], key=viterbi[i].get):
+                    tags.append((tokensAndVectors[tokenIndex][0], backpointers[i][s]))
+            tokenIndex += 1
 
         return tags
 
@@ -198,5 +171,5 @@ if __name__ == "__main__":
     x = xmlParser()
     text = x.parseNLSPage("training/hmmTestingData/1851-52-p153/83073680.8.xml")
 
-    for token in h.tag(text, test=True):
+    for token in h.tag(text):
         print(token)

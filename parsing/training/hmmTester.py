@@ -48,10 +48,11 @@ for dirName in os.listdir(TESTINGFOLDER):
         raise IOError("Test folder must have an XML file of the page from the NLS and a corresponding brat ann file.")
 
     text = x.parseNLSPage(xmlFile)
-    classifiedTags = hmm.tag(text, test=True)
+    classifiedTags = hmm.tag(text)
 
     annFileText = open(annFile, "r").read().splitlines()
 
+    classifiedCounter = 0
     for a in annFileText:
         if a[0] == "E":
             continue
@@ -63,36 +64,34 @@ for dirName in os.listdir(TESTINGFOLDER):
         if actualTag == "POD_ENTRY":
             continue
 
-        for c in classifiedTags:
-            classifiedKey, classifiedData, classifiedToken = c.strip().split("\t")
-            classifiedStartIndex = classifiedData.split()[1]
+        for word in actualToken.split(","):
+            classifiedToken, classifiedTag = classifiedTags[classifiedCounter]
 
-            if classifiedStartIndex != startIndex:
-                continue
+            if classifiedToken.replace(" ", "") != actualToken.replace(" ", ""):
+                raise ValueError("HMM output and BRAT output misaligned. Expected {0} and got {1}.".format(actualToken,
+                                                                                                           classifiedToken))
 
-            classifiedTag = classifiedData.split()[0]
+            confusionMatrix[actualTag][classifiedTag] += 1
 
-            for word in actualToken.split(","):
-                confusionMatrix[actualTag][classifiedTag] += 1
+            if actualTag == classifiedTag:
+                results[actualTag]["TP"] += 1
 
-                if actualTag == classifiedTag:
-                    results[actualTag]["TP"] += 1
+                for tag, tagResults in results.items():
+                    if tag != actualTag:
+                        tagResults["TN"] += 1
+            else:
+                results[actualTag]["FN"] += 1
+                results[classifiedTag]["FP"] += 1
 
-                    for tag, tagResults in results.items():
-                        if tag != actualTag:
-                            tagResults["TN"] += 1
-                else:
-                    results[actualTag]["FN"] += 1
-                    results[classifiedTag]["FP"] += 1
+                for tag, tagResults in results.items():
+                    if tag != actualTag and tag != classifiedTag:
+                        tagResults["TN"] += 1
 
-                    for tag, tagResults in results.items():
-                        if tag != actualTag and tag != classifiedTag:
-                            tagResults["TN"] += 1
-
-                print("Token: " + word)
-                print("Actual tag: " + actualTag)
-                print("Classified tag: " + classifiedTag)
-                print("")
+            print("Token: " + word)
+            print("Actual tag: " + actualTag)
+            print("Classified tag: " + classifiedTag)
+            print("")
+            classifiedCounter += 1
 
 scores = {"SURNAME": {"Precision": 0, "Recall": 0, "F-score": 0},
           "FORENAME": {"Precision": 0, "Recall": 0, "F-score": 0},
