@@ -67,9 +67,14 @@ for dirName in os.listdir(TESTINGFOLDER):
         for word in actualToken.split(","):
             classifiedToken, classifiedTag = classifiedTags[classifiedCounter]
 
-            if classifiedToken.replace(" ", "") != actualToken.replace(" ", ""):
-                raise ValueError("HMM output and BRAT output misaligned. Expected {0} and got {1}.".format(actualToken,
-                                                                                                           classifiedToken))
+            if classifiedToken.replace(" ", "") != word.replace(" ", ""):
+                if ((classifiedTags[classifiedCounter][0] + classifiedTags[classifiedCounter + 1][0]).replace(" ", "") ==
+                    actualToken.replace(" ", "")):
+                    classifiedToken = classifiedTags[classifiedCounter][0] + " " + classifiedTags[classifiedCounter + 1][0]
+                    classifiedCounter += 1
+                else:
+                    raise ValueError("HMM output and BRAT output misaligned. Expected {0} and got {1}.".format(word,
+                                                                                                            classifiedToken))
 
             confusionMatrix[actualTag][classifiedTag] += 1
 
