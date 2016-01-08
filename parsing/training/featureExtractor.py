@@ -35,10 +35,11 @@ class featureExtractor:
                 matches = []
 
                 for a in annotations:
-                    words = a.group().split(",")
-                    tag = a.group().split()[-1].translate(str.maketrans(string.punctuation, "                                ")).replace(" ", "")
+                    word, tag = a.group().split("[")
+                    words = word.split(",")
+                    tag = tag.translate(str.maketrans(string.punctuation, "                                ")).replace(" ", "")
 
-                    for i in range(0, len(words) - 1):
+                    for i in range(0, len(words)):
                         matches.append((words[i].translate(str.maketrans(string.punctuation, "                                ")), tag))
 
                 for match in matches:
@@ -172,7 +173,6 @@ class featureExtractor:
                                                                                        'class'])
 
         arffWriter.pytypes[str] = '{SURNAME, FORENAME, TITLE, OCCUPATION, ADDRESS}'
-
 
         for data in tagsAndVectors:
             arffWriter.write(data)
