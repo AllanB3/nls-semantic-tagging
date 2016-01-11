@@ -1,0 +1,448 @@
+T1	surname 13 19	Burnet
+T2	forename 21 26	Alex.
+T3	occupation 28 54	corn merchant and seedsman
+T4	address 56 73	8 Bowhill terrace
+T5	address 75 113	1 Barnbougle cottage, Davidson's mains
+T6	POD_entry 13 19	Burnet
+E1	POD_entry:T6 forename:T2 occupation:T3 address:T4 address2:T5
+T7	surname 116 122	Burnet
+T8	forename 124 130	George
+T9	address 132 146	31 Easter road
+T10	POD_entry 116 122	Burnet
+E2	POD_entry:T10 forename:T8 address:T9
+T11	surname 149 155	Burnet
+T12	forename 157 162	Henry
+T13	occupation 164 175	Chamberlain
+T14	occupation 177 205	Edinburgh Mer- chant Company
+T15	address 207 224	22 Hanover street
+T16	address 226 258	2 Blinkbonny crescent, Blackhall
+T17	POD_entry 149 155	Burnet
+E3	POD_entry:T17 forename:T12 occupation:T13 occupation2:T14 address:T15 address2:T16
+T18	surname 261 267	Burnet
+T19	forename 269 274	James
+T20	occupation 276 288	warehouseman
+T21	address 290 305	50 South Bridge
+T22	address 307 320	St Margaret's
+T23	address 322 336	14 Cumin place
+T24	POD_entry 261 267	Burnet
+E4	POD_entry:T24 forename:T19 occupation:T20 address:T21 address2:T22 address3:T23
+T25	surname 339 345	Burnet
+T26	forename 347 352	James
+T27	occupation 354 362	japanner
+T28	occupation 364 378	and signwriter
+T29	address 380 396	40 Niddry street
+T30	address 398 418	32 Merchiston avenue
+T31	POD_entry 339 345	Burnet
+E5	POD_entry:T31 forename:T26 occupation:T27 occupation2:T28 address:T29 address2:T30
+T32	surname 421 427	Burnet
+T33	forename 429 434	James
+T34	address 436 455	21 Woodburn terrace
+T35	POD_entry 421 427	Burnet
+E6	POD_entry:T35 forename:T33 address:T34
+T36	surname 458 464	Burnet
+T37	forename 466 471	James
+T38	occupation 473 495	baker and confectioner
+T39	address 497 513	31 Dublin street
+T40	address 515 535	21 Bellevue crescent
+T41	POD_entry 458 464	Burnet
+E7	POD_entry:T41 forename:T37 occupation:T38 address:T39 address2:T40
+T42	surname 538 544	Burnet
+T43	forename 546 551	James
+T44	occupation 553 557	M.A.
+T45	occupation 559 563	M.D.
+T46	occupation 565 575	M.R.C.P.E.
+T47	address 577 595	6 Glengyle terrace
+T48	POD_entry 538 544	Burnet
+E8	POD_entry:T48 forename:T43 occupation:T44 occupation2:T45 occupation3:T46 address:T47
+T49	surname 598 604	Burnet
+T50	forename 606 610	John
+T51	address 612 632	10 Gladstone terrace
+T52	POD_entry 598 604	Burnet
+E9	POD_entry:T52 forename:T50 address:T51
+T53	surname 635 641	Burnet
+T54	forename 643 652	Walter D.
+T55	address 654 674	32 Merchiston avenue
+T56	POD_entry 635 641	Burnet
+E10	POD_entry:T56 forename:T54 address:T55
+T57	surname 677 683	Burnet
+T58	forename 685 692	William
+T59	address 694 706	1 Summerbank
+T60	POD_entry 677 683	Burnet
+E11	POD_entry:T60 forename:T58 address:T59
+T61	surname 709 715	Burnet
+T62	forename 717 726	Mrs Helen
+T63	occupation 728 739	greengrocer
+T64	address 741 762	54 Blackfriars street
+T65	POD_entry 709 715	Burnet
+E12	POD_entry:T65 forename:T62 occupation:T63 address:T64
+T66	surname 765 771	Burnet
+T67	forename 773 782	Miss Jane
+T68	occupation 784 796	confectioner
+T69	address 798 813	64 Clerk street
+T70	address 815 835	44 Rankeillor street
+T71	POD_entry 765 771	Burnet
+E13	POD_entry:T71 forename:T67 occupation:T68 address:T69 address2:T70
+T72	surname 838 844	Burnet
+T73	title 846 850	Miss
+T74	forename 852 856	L.R.
+T75	address 858 878	44 Rankeillor street
+T76	POD_entry 838 844	Burnet
+E14	POD_entry:T76 title:T73 forename:T74 address:T75
+T77	surname 881 888	Burnett
+T78	forename 890 899	Alexander
+T79	address 901 920	9 Rosebank cottages
+T80	POD_entry 881 888	Burnett
+E15	POD_entry:T80 forename:T78 address:T79
+T81	surname 923 930	Burnett
+T82	forename 932 941	Andrew T.
+T83	address 943 964	24 Blackwood crescent
+T84	POD_entry 923 930	Burnett
+E16	POD_entry:T84 forename:T82 address:T83
+T85	surname 967 974	Burnett
+T86	forename 976 982	George
+T87	occupation 984 989	clerk
+T88	address 991 1010	43 W Savile terrace
+T89	POD_entry 967 974	Burnett
+E17	POD_entry:T89 forename:T86 occupation:T87 address:T88
+T90	surname 1013 1020	Burnett
+T91	forename 1022 1027	James
+T92	address 1029 1050	172 Bruntsfield place
+T93	POD_entry 1013 1020	Burnett
+E18	POD_entry:T93 forename:T91 address:T92
+T94	surname 1053 1060	Burnett
+T95	forename 1062 1077	James Robertson
+T96	occupation 1079 1103	bookseller and stationer
+T97	address 1105 1121	1 Antigua street
+T98	address 1123 1141	29 Broughton place
+T99	POD_entry 1053 1060	Burnett
+E19	POD_entry:T99 forename:T95 occupation:T96 address:T97 address2:T98
+T100	surname 1144 1151	Burnett
+T101	title 1153 1157	Rev.
+T102	forename 1159 1163	John
+T103	occupation 1165 1169	B.D.
+T104	address 1171 1189	135 Craiglea drive
+T105	POD_entry 1144 1151	Burnett
+E20	POD_entry:T105 title:T101 forename:T102 occupation:T103 address:T104
+T106	surname 1192 1199	Burnett
+T107	forename 1201 1205	John
+T108	occupation 1207 1212	agent
+T109	address 1214 1228	59 Iona street
+T110	POD_entry 1192 1199	Burnett
+E21	POD_entry:T110 forename:T107 occupation:T108 address:T109
+T111	surname 1231 1238	Burnett
+T112	forename 1240 1244	John
+T113	address 1246 1265	16 Glengyle terrace
+T114	POD_entry 1231 1238	Burnett
+E22	POD_entry:T114 forename:T112 address:T113
+T115	surname 1268 1275	Burnett
+T116	forename 1277 1286	Thomas J.
+T117	occupation 1288 1304	master of method
+T118	address 1306 1326	45 Dalhousie terrace
+T119	POD_entry 1268 1275	Burnett
+E23	POD_entry:T119 forename:T116 occupation:T117 address:T118
+T120	surname 1329 1336	Burnett
+T121	title 1338 1342	Rev.
+T122	forename 1344 1346	W.
+T123	occupation 1348 1352	B.D.
+T124	address 1354 1375	31 Li sm ore crescent
+T125	POD_entry 1329 1336	Burnett
+E24	POD_entry:T125 title:T121 forename:T122 occupation:T123 address:T124
+T126	surname 1378 1385	Burnett
+T127	forename 1387 1397	Mrs Andrew
+T128	address 1399 1419	44 Rankeillor street
+T129	POD_entry 1378 1385	Burnett
+E25	POD_entry:T129 forename:T127 address:T128
+T130	surname 1422 1429	Burnett
+T131	forename 1431 1441	Mrs Stuart
+T132	address 1443 1458	17 Lutton place
+T133	surname 1461 1468	Burnett
+T134	POD_entry 1422 1429	Burnett
+E26	POD_entry:T134 forename:T131 address:T132
+T135	title 1470 1473	Mrs
+T136	occupation 1475 1483	masseuse
+T137	address 1485 1505	23 Springvalley ter.
+T138	surname 1508 1515	Burnett
+T139	POD_entry 1461 1468	Burnett
+E27	POD_entry:T139 title:T135 occupation:T136 address:T137
+T140	title 1517 1520	Mrs
+T141	address 1522 1541	84 Dumbiedykes road
+T142	POD_entry 1508 1515	Burnett
+E28	POD_entry:T142 title:T140 address:T141
+T143	surname 1544 1551	Burnett
+T144	title 1553 1556	Mrs
+T145	address 1558 1582	1 South St James' street
+T146	POD_entry 1544 1551	Burnett
+E29	POD_entry:T146 title:T144 address:T145
+T147	surname 1585 1592	Burnett
+T148	title 1594 1600	Misses
+T149	address 1602 1619	7 Bernard terrace
+T150	POD_entry 1585 1592	Burnett
+E30	POD_entry:T150 title:T148 address:T149
+T151	surname 1622 1636	Burnett-Stuart
+T152	forename 1638 1640	F.
+T153	occupation 1642 1646	W.S.
+T154	address 1648 1667	63 Frederick street
+T155	POD_entry 1622 1636	Burnett-Stuart
+E31	POD_entry:T155 forename:T152 occupation:T153 address:T154
+T156	surname 1670 1676	Burnie
+T157	forename 1678 1683	James
+T158	occupation 1685 1690	mason
+T159	occupation 1692 1698	slater
+T160	occupation 1700 1717	and chimney sweep
+T161	address 1719 1734	15 Leven street
+T162	POD_entry 1670 1676	Burnie
+E32	POD_entry:T162 forename:T157 occupation:T158 occupation2:T159 occupation3:T160 address:T161
+T163	surname 1737 1743	Burnie
+T164	forename 1745 1751	Mrs M.
+T165	address 1753 1775	39 Merchiston crescent
+T166	POD_entry 1737 1743	Burnie
+E33	POD_entry:T166 forename:T164 address:T165
+T167	surname 1778 1784	Burnie
+T168	title 1786 1790	Miss
+T169	address 1792 1809	70 Findhorn place
+T170	POD_entry 1778 1784	Burnie
+E34	POD_entry:T170 title:T168 address:T169
+T171	surname 1812 1819	Burnley
+T172	forename 1821 1827	George
+T173	address 1829 1849	25 Lauriston gardens
+T174	POD_entry 1812 1819	Burnley
+E35	POD_entry:T174 forename:T172 address:T173
+T175	surname 1852 1857	Burns
+T176	forename 1859 1864	Alex.
+T181	occupation 1866 1875	bootmaker
+T178	address 1877 1892	33 Lochend road
+T179	address 1894 1911	24 Ryehill avenue
+T180	POD_entry 1852 1857	Burns
+E36	POD_entry:T180 forename:T176 occupation:T181 address:T178 address2:T179
+T177	surname 1914 1919	Burns
+T182	forename 1921 1922	A
+T183	occupation 1924 1950	fruiterer and confectioner
+T184	address 1952 1969	17 Jeffrey street
+T185	POD_entry 1914 1919	Burns
+E37	POD_entry:T185 forename:T182 occupation:T183 address:T184
+T186	surname 1972 1977	Burns
+T187	forename 1979 1982	A.L
+T188	occupation 1985 1999	colliery agent
+T189	address 2001 2023	28 Constitution street
+T190	address 2025 2038	7 Durham road
+T191	address 2040 2050	Portobello
+T192	POD_entry 1972 1977	Burns
+E38	POD_entry:T192 forename:T187 occupation:T188 address:T189 address2:T190 address3:T191
+T193	surname 2053 2058	Burns
+T194	forename 2060 2067	Bernard
+T195	occupation 2069 2075	broker
+T196	address 2077 2088	208 Cowgate
+T197	address 2090 2104	28 Grunge road
+T198	POD_entry 2053 2058	Burns
+E39	POD_entry:T198 forename:T194 occupation:T195 address:T196 address2:T197
+T199	surname 2107 2112	Burns
+T200	forename 2114 2126	Charles R.A.
+T202	address 2128 2145	17 Marchmont road
+T203	POD_entry 2107 2112	Burns
+E40	POD_entry:T203 forename:T200 occupation:T201 address:T202
+T204	surname 2148 2153	Burns
+T205	forename 2155 2160	David
+T206	address 2162 2179	4 Bowhill terrace
+T207	POD_entry 2148 2153	Burns
+E41	POD_entry:T207 forename:T205 address:T206
+T208	surname 2182 2187	Burns
+T209	forename 2189 2195	George
+T210	occupation 2197 2206	fruiterer
+T211	address 2208 2224	92 Raeburn place
+T212	POD_entry 2182 2187	Burns
+E42	POD_entry:T212 forename:T209 occupation:T210 address:T211
+T213	surname 2227 2232	Burns
+T214	forename 2234 2239	James
+T215	address 2241 2261	102 Buccleuch street
+T216	POD_entry 2227 2232	Burns
+E43	POD_entry:T216 forename:T214 address:T215
+T217	surname 2264 2269	Burns
+T218	forename 2271 2279	James B.
+T219	occupation 2281 2293	cabinetmaker
+T220	address 2295 2314	4 Ardmillan terrace
+T221	POD_entry 2264 2269	Burns
+E44	POD_entry:T221 forename:T218 occupation:T219 address:T220
+T222	surname 2317 2322	Burns
+T223	forename 2324 2332	James S.
+T224	occupation 2334 2345	S.S.C.N.P.
+T225	address 2347 2363	61 Castle street
+T226	address 2365 2382	105 Dalkeith road
+T227	POD_entry 2317 2322	Burns
+E45	POD_entry:T227 forename:T223 occupation:T224 address:T225 address2:T226
+T228	surname 2385 2390	Burns
+T229	forename 2392 2394	J.
+T230	address 2396 2414	6 Baronscourt road
+T231	POD_entry 2385 2390	Burns
+E46	POD_entry:T231 forename:T229 address:T230
+T232	surname 2417 2422	Burns
+T233	forename 2424 2426	J.
+T234	address 2428 2446	9 Mayfield terrace
+T235	POD_entry 2417 2422	Burns
+E47	POD_entry:T235 forename:T233 address:T234
+T236	surname 2449 2454	Burns
+T237	forename 2456 2459	J.C
+T238	address 2461 2476	2 Elgin terrace
+T239	POD_entry 2449 2454	Burns
+E48	POD_entry:T239 forename:T237 address:T238
+T240	surname 2479 2484	Burns
+T241	forename 2486 2490	John
+T242	occupation 2492 2511	clothier and hatter
+T243	address 2513 2526	8 Dudley ter.
+T244	POD_entry 2479 2484	Burns
+E49	POD_entry:T244 forename:T241 occupation:T242 address:T243
+T245	surname 2529 2534	Burns
+T246	forename 2536 2540	John
+T247	address 2542 2561	85 Comely Bank road
+T248	POD_entry 2529 2534	Burns
+E50	POD_entry:T248 forename:T246 address:T247
+T249	surname 2564 2569	Burns
+T250	forename 2571 2575	John
+T251	address 2577 2592	457 Lawnniarket
+T252	POD_entry 2564 2569	Burns
+E51	POD_entry:T252 forename:T250 address:T251
+T253	surname 2595 2600	Burns
+T254	forename 2602 2604	M.
+T255	occupation 2606 2617	tobacconist
+T256	address 2619 2634	499 Lawnniarket
+T257	POD_entry 2595 2600	Burns
+E52	POD_entry:T257 forename:T254 occupation:T255 address:T256
+T258	surname 2637 2642	Burns
+T259	forename 2644 2649	Peter
+T260	address 2651 2671	20 Wellington street
+T261	POD_entry 2637 2642	Burns
+E53	POD_entry:T261 forename:T259 address:T260
+T262	surname 2674 2679	Burns
+T263	forename 2681 2686	Peter
+T264	occupation 2688 2694	draper
+T265	address 2696 2712	3 Jeffrey street
+T266	POD_entry 2674 2679	Burns
+E54	POD_entry:T266 forename:T263 occupation:T264 address:T265
+T267	surname 2715 2720	Burns
+T268	forename 2722 2727	Robt.
+T269	occupation 2729 2737	A.R.S.A.
+T270	address 2739 2763	49 Northumberland street
+T271	POD_entry 2715 2720	Burns
+E55	POD_entry:T271 forename:T268 occupation:T269 address:T270
+T272	surname 2766 2771	Burns
+T273	forename 2773 2779	Robert
+T274	address 2781 2799	21 Scotland street
+T275	POD_entry 2766 2771	Burns
+E56	POD_entry:T275 forename:T273 address:T274
+T276	surname 2802 2807	Burns
+T277	forename 2809 2818	Robert E.
+T278	occupation 2820 2840	advertisement writer
+T279	address 2842 2862	7 Momingside gardens
+T280	POD_entry 2802 2807	Burns
+E57	POD_entry:T280 forename:T277 occupation:T278 address:T279
+T281	surname 2865 2870	Burns
+T282	forename 2872 2874	R.
+T283	address 2876 2895	38 Lismore crescent
+T284	POD_entry 2865 2870	Burns
+E58	POD_entry:T284 forename:T282 address:T283
+T285	surname 2898 2903	Burns
+T286	title 2905 2908	Rev
+T287	forename 2910 2916	Thomas
+T288	occupation 2918 2922	D.D.
+T289	occupation 2924 2932	F.R.S.E.
+T290	address 2934 2947	Croston lodge
+T291	address 2949 2966	Chalmers crescent
+T292	POD_entry 2898 2903	Burns
+E59	POD_entry:T292 title:T286 forename:T287 occupation:T288 occupation2:T289 address:T290 address2:T291
+T293	surname 2969 2974	Burns
+T294	forename 2976 2982	Thomas
+T295	address 2984 3001	138 Newhaven road
+T296	POD_entry 2969 2974	Burns
+E60	POD_entry:T296 forename:T294 address:T295
+T297	surname 3004 3009	Burns
+T298	forename 3011 3018	William
+T299	address 3020 3035	8 Oxford street
+T300	POD_entry 3004 3009	Burns
+E61	POD_entry:T300 forename:T298 address:T299
+T301	surname 3038 3043	Burns
+T302	forename 3045 3052	William
+T303	address 3054 3071	8 Clifton terrace
+T304	POD_entry 3038 3043	Burns
+E62	POD_entry:T304 forename:T302 address:T303
+T305	surname 3074 3079	Burns
+T306	forename 3081 3090	William C
+T307	address 3092 3112	38 Polwarth crescent
+T308	POD_entry 3074 3079	Burns
+E63	POD_entry:T308 forename:T306 address:T307
+T309	surname 3115 3120	Burns
+T310	title 3122 3128	Misses
+T311	address 3130 3149	98 Thirlestane road
+T312	POD_entry 3115 3120	Burns
+E64	POD_entry:T312 title:T310 address:T311
+T313	surname 3152 3157	Burns
+T314	forename 3159 3165	Mioses
+T315	address 3167 3186	15 Woodburn terrace
+T316	POD_entry 3152 3157	Burns
+E65	POD_entry:T316 forename:T314 address:T315
+T317	surname 3189 3194	Burns
+T318	forename 3196 3203	Miss A.
+T319	address 3205 3226	3 Seiennes Hill place
+T320	POD_entry 3189 3194	Burns
+E66	POD_entry:T320 forename:T318 address:T319
+T321	surname 3229 3237	Rurnside
+T322	forename 3239 3243	John
+T323	address 3245 3266	25 Bruntsfield avenue
+T324	POD_entry 3229 3237	Rurnside
+E67	POD_entry:T324 forename:T322 address:T323
+T325	surname 3269 3277	Buruside
+T326	forename 3279 3283	John
+T327	occupation 3285 3295	blacksmith
+T328	address 3297 3314	163a Causewayside
+T329	POD_entry 3269 3277	Buruside
+E68	POD_entry:T329 forename:T326 occupation:T327 address:T328
+T330	surname 3317 3325	Rurnside
+T331	forename 3327 3331	John
+T332	address 3333 3348	102 Pitt street
+T333	POD_entry 3317 3325	Rurnside
+E69	POD_entry:T333 forename:T331 address:T332
+T334	surname 3351 3359	Burnside
+T335	forename 3361 3365	John
+T336	occupation 3367 3374	butcher
+T337	address 3376 3393	68 Fountainbridge
+T338	POD_entry 3351 3359	Burnside
+E70	POD_entry:T338 forename:T335 occupation:T336 address:T337
+T339	surname 3396 3404	Burnside
+T340	forename 3406 3421	William Thomson
+T341	address 3423 3442	15 Dean Park street
+T342	POD_entry 3396 3404	Burnside
+E71	POD_entry:T342 forename:T340 address:T341
+T343	surname 3445 3453	Rurnside
+T344	title 3455 3461	Misses
+T345	address 3463 3479	15 Kilmaurs road
+T346	POD_entry 3445 3453	Rurnside
+E72	POD_entry:T346 title:T344 address:T345
+T347	surname 3482 3489	Burrell
+T348	forename 3491 3500	Alexander
+T349	address 3502 3515	11 Tay street
+T350	POD_entry 3482 3489	Burrell
+E73	POD_entry:T350 forename:T348 address:T349
+T351	surname 3518 3525	Burrell
+T352	forename 3527 3532	James
+T353	address 3534 3544	37 Elm row
+T354	POD_entry 3518 3525	Burrell
+E74	POD_entry:T354 forename:T352 address:T353
+T355	surname 3547 3554	Burrell
+T356	forename 3556 3562	Samuel
+T357	address 3564 3574	37 Elm row
+T358	POD_entry 3547 3554	Burrell
+E75	POD_entry:T358 forename:T356 address:T357
+T359	surname 3577 3584	Burrell
+T360	forename 3586 3593	William
+T361	address 3595 3611	6a Dudley avenue
+T362	POD_entry 3577 3584	Burrell
+E76	POD_entry:T362 forename:T360 address:T361
+T363	surname 3614 3621	Burrell
+T364	title 3623 3626	Mrs
+T365	occupation 3628 3637	fruiterer
+T366	address 3639 3657	165 Fountainbridge
+T367	POD_entry 3614 3621	Burrell
+E77	POD_entry:T367 title:T364 occupation:T365 address:T366
+T368	surname 3660 3667	Burrell
+T369	title 3669 3673	Miss
+T370	address 3675 3696	135 Bruntsfield place
+T371	POD_entry 3660 3667	Burrell
+E78	POD_entry:T371 title:T369 address:T370
