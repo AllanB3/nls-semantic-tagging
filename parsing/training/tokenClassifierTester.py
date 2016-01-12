@@ -30,8 +30,8 @@ tagger = tokenClassifier("training.arff")
 os.chdir(os.path.abspath(os.path.dirname(__file__)))
 
 dataset = arffParser.parseFile("testing.arff")
-testingValues = dataset[:,:12]
-testingClasses = dataset[:,12]
+testingValues = dataset[:,:13]
+testingClasses = dataset[:,13]
 
 i = 0
 for t in testingClasses:

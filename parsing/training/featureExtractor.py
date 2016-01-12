@@ -46,10 +46,10 @@ class featureExtractor:
                     token, tag = match
                     print(token)
 
-                    featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                    featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
                     if len(tagsAndVectors) > 0:
-                        previousValue = tagsAndVectors[len(tagsAndVectors) - 1][12]
+                        previousValue = tagsAndVectors[len(tagsAndVectors) - 1][13]
 
                         if previousValue == "SURNAME":
                             featureVector[0] = 1
@@ -83,6 +83,8 @@ class featureExtractor:
                             elif dictTag == "address":
                                 featureVector[11] = 1
 
+                    featureVector[12] = len([c for c in token if c.isupper()])
+
                     featureVector.append(tag)
                     print(featureVector)
                     print("")
@@ -111,10 +113,10 @@ class featureExtractor:
                         print(token)
 
                         for t in token.split(","):
-                            featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                            featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
                             if len(tagsAndVectors) > 0:
-                                previousValue = tagsAndVectors[len(tagsAndVectors) - 1][12]
+                                previousValue = tagsAndVectors[len(tagsAndVectors) - 1][13]
 
                                 if previousValue == "SURNAME":
                                     featureVector[0] = 1
@@ -147,6 +149,8 @@ class featureExtractor:
                                     elif dictTag == "address":
                                         featureVector[11] = 1
 
+                            featureVector[12] = len([c for c in token if c.isupper()])
+
                             if tag == "POD_entry":
                                 tag = "SURNAME"
 
@@ -170,6 +174,7 @@ class featureExtractor:
                                                                                        'dictionaryTitle',
                                                                                        'dictionaryOccupation',
                                                                                        'dictionaryAddress',
+                                                                                       'capitalLetters',
                                                                                        'class'])
 
         arffWriter.pytypes[str] = '{SURNAME, FORENAME, TITLE, OCCUPATION, ADDRESS}'

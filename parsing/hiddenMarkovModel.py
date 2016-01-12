@@ -34,9 +34,10 @@ class hiddenMarkovModel:
         tokensAndVectors = []
 
         for t in tokens:
-            featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            featureVector = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             featureVector[5] = len(re.findall("\d", t))
             featureVector[6] = len(t)
+            featureVector[12] = len([letter for letter in t if letter.isupper()])
             tokensAndVectors.append((t, featureVector))
 
         return self._viterbi(tokensAndVectors)

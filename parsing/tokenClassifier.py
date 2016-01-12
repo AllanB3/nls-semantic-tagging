@@ -41,8 +41,8 @@ class tokenClassifier:
     def _train(self):
         dataset = arffParser.parseFile(self.trainingFile)
 
-        trainingValues = dataset[:,:12]
-        trainingClasses = dataset[:,12]
+        trainingValues = dataset[:,:13]
+        trainingClasses = dataset[:,13]
 
         i = 0
         for t in trainingClasses:
