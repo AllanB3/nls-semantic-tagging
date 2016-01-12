@@ -3,7 +3,7 @@
 import sys
 import os
 
-TESTINGFOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hmmTestingData")
+TESTINGFOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hmmDevTest")
 
 from tabulate import tabulate
 import string
