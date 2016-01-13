@@ -51,13 +51,6 @@ class hiddenMarkovModel:
 
         for i in range(0, len(dataset) - 1):
             tag = dataset[i][12]
-            tokenLength = int(dataset[i][6])
-
-            j = 0
-            while j < tokenLength:
-                transitions.append((tag, tag))
-                j += 1
-
             transitions.append((tag, dataset[i + 1][12]))
 
         transitionFreqDist = ConditionalFreqDist(transitions)
