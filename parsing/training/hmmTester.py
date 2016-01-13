@@ -6,7 +6,6 @@ import os
 TESTINGFOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hmmDevTest")
 
 from tabulate import tabulate
-import string
 
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from hiddenMarkovModel import *

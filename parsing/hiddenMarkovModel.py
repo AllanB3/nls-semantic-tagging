@@ -29,6 +29,7 @@ class hiddenMarkovModel:
     def tag(self, text):
         # TODO: have this remove metadata in the entry (for example, "house" and "workshop")
         # TODO: experiment with replacing full stops with commas
+        text = text.replace(" ; house", "")
         text = text.replace("\n", ",")
         tokens = text.split(",")
         tokensAndVectors = []

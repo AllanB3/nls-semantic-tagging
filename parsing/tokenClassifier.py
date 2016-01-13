@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-import numpy
-from sklearn.naive_bayes import MultinomialNB
+from sklearn.naive_bayes import BernoulliNB
 import os
 import sys
 
@@ -14,7 +13,7 @@ class tokenClassifier:
 
     def __init__(self, trainingFile):
         self.trainingFile = trainingFile
-        self.nb = MultinomialNB()
+        self.nb = BernoulliNB()
         self._train()
 
     def classify(self, vector):
