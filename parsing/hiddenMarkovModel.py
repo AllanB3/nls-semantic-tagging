@@ -73,7 +73,7 @@ class hiddenMarkovModel:
                 print(l)
                 continue
 
-            if entry == strippedToken.lower().strip():
+            if int(entry) == hash(strippedToken.lower().strip()):
                 if dictTag == "surname":
                     featureVector[7] = 1
                 elif dictTag == "forename":
@@ -106,7 +106,7 @@ class hiddenMarkovModel:
                     print(l)
                     continue
 
-                if strippedToken.lower().lstrip().strip() == entry:
+                if hash(strippedToken.lower().lstrip().strip()) == int(entry):
                     if dictTag == "surname":
                         featureVector[7] = 1
                     elif dictTag == "forename":
