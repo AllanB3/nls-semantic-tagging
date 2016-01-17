@@ -16,6 +16,8 @@ from math import log
 from xmlParser import *
 import string
 
+PUNCTUATION = set(string.punctuation)
+
 class hiddenMarkovModel:
 
     def __init__(self, trainingData=TRAININGFOLDER+"/training.arff", lexicon=TRAININGFOLDER+"/classifierTraining.txt"):
@@ -63,7 +65,7 @@ class hiddenMarkovModel:
         firstViterbi = {}
         firstBackpointer = {}
         token, featureVector = tokensAndVectors[0]
-        strippedToken = token.translate(str.maketrans(string.punctuation, "                                "))
+        strippedToken = "".join(c in token if not c in PUNCTUATION)
 
 
         for l in self.lexicon:
@@ -97,7 +99,7 @@ class hiddenMarkovModel:
             nextViterbi = {}
             nextBackpointer = {}
             token, featureVector = tokensAndVectors[t]
-            strippedToken = token.translate(str.maketrans(string.punctuation, "                                "))
+            strippedToken = "".join(c in token if not c in PUNCTUATION)
 
             for l in self.lexicon:
                 try:
