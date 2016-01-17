@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import division
 import sys
 import os
 
@@ -10,7 +11,6 @@ from tabulate import tabulate
 sys.path.insert(1, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from hiddenMarkovModel import *
 from xmlParser import *
-from __future__ import division
 
 results = {
     "SURNAME": {"TP": 0, "FP": 0, "TN": 0, "FN": 0},
