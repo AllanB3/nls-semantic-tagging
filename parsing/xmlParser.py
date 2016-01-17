@@ -5,8 +5,6 @@ import sys
 import os
 import importlib
 
-importlib.reload(sys)
-
 class xmlParser:
 
     def __init__(self):
