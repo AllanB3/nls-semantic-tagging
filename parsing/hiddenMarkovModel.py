@@ -65,7 +65,7 @@ class hiddenMarkovModel:
         firstViterbi = {}
         firstBackpointer = {}
         token, featureVector = tokensAndVectors[0]
-        strippedToken = "".join(c in token if not c in PUNCTUATION)
+        strippedToken = "".join(c for c in token if not c in PUNCTUATION)
 
 
         for l in self.lexicon:
@@ -99,7 +99,7 @@ class hiddenMarkovModel:
             nextViterbi = {}
             nextBackpointer = {}
             token, featureVector = tokensAndVectors[t]
-            strippedToken = "".join(c in token if not c in PUNCTUATION)
+            strippedToken = "".join(c for c in token if not c in PUNCTUATION)
 
             for l in self.lexicon:
                 try:
