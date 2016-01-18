@@ -10,14 +10,12 @@ class EntityExtractor:
 		self.hiddenMarkovModel = hiddenMarkovModel()
 
 	def extractFeatures(self, filePath, source):
-		xmlData = open(filePath, "r").read()
-
 		if source == "ocr":
-			text = self.xmlParser.parseOCR(xmlData)
+			text = self.xmlParser.parseOCR(filePath)
 		elif source == "page":
-			text = self.xmlParser.parseNLSPage(xmlData)
+			text = self.xmlParser.parseNLSPage(filePath)
 		elif source == "directory":
-			text = self.xmlParser.parseNLSDirectory(xmlData)
+			text = self.xmlParser.parseNLSDirectory(filePath)
 		else:
 			raise IOError("source must equal \"ocr\", \"directory\" or \"page\"")
 
