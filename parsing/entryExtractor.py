@@ -39,7 +39,15 @@ class EntityExtractor:
 				if not tag == "SURNAME":
 					continue
 
-			entry[tag] = token
+			if not tag in entry:
+				entry[tag] = token
+			else:
+				entry[tag] = entry[tag] + ", "  + token
+
 			previousTag = tag
 
 		return entries
+
+if __name__ == "__main__":
+	e = EntityExtractor()
+	print(e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page"))
