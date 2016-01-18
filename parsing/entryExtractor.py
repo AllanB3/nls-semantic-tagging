@@ -1,4 +1,4 @@
-#!/usr/bin
+##!/usr/bin
 
 from hiddenMarkovModel import *
 from xmlParser import *
@@ -27,11 +27,10 @@ class EntityExtractor:
 		previousTag = "SURNAME"
 		for token, tag in tokensAndTags:
 			if not tag in nextTags[previousTag]:
-				if tag == "SURNAME":
-					entries.append(entry)
+				print(entry)
+				entries.append(entry)
 
 				entries = []
-				nextTags = ["SURNAME"]
 				entry = {}
 
 				if not tag == "SURNAME":
@@ -48,4 +47,4 @@ class EntityExtractor:
 
 if __name__ == "__main__":
 	e = EntityExtractor()
-	print(e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page"))
+	entries = e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page")
