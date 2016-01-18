@@ -7,7 +7,7 @@ class EntityExtractor:
 
 	def __init__(self):
 		self.xmlParser = xmlParser()
-		self.hiddenMarkovModel = HiddenMarkovModel()
+		self.hiddenMarkovModel = hiddenMarkovModel()
 
 	def extractFeatures(self, filePath, source):
 		xmlData = open(filePath, "").read()
