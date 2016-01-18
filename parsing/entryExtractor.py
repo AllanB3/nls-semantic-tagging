@@ -10,7 +10,7 @@ class EntityExtractor:
 		self.hiddenMarkovModel = hiddenMarkovModel()
 
 	def extractFeatures(self, filePath, source):
-		xmlData = open(filePath, "").read()
+		xmlData = open(filePath, "r").read()
 
 		if source == "ocr":
 			text = self.xmlParser.parseOCR(xmlData)
