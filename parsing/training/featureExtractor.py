@@ -18,6 +18,7 @@ class featureExtractor:
         self.outputPath = outputPath
         self.xmlparser = xmlParser()
 
+    # TODO: fix dictionary lookup problem
     def extractFeatures(self):
         tagsAndVectors = []
 

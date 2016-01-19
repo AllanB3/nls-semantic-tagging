@@ -58,6 +58,7 @@ class hiddenMarkovModel:
         transitionFreqDist = ConditionalFreqDist(transitions)
         self.transitionModel = ConditionalProbDist(transitionFreqDist, LidstoneProbDist, 0.01, bins=3125)
 
+    # TODO: fix dictionary lookup problem
     def _viterbi(self, tokensAndVectors):
         viterbi = []
         backpointers = []
