@@ -15,6 +15,7 @@ import re
 from math import log
 from xmlParser import *
 import string
+import hashlib
 
 PUNCTUATION = set(string.punctuation)
 
@@ -58,7 +59,6 @@ class hiddenMarkovModel:
         transitionFreqDist = ConditionalFreqDist(transitions)
         self.transitionModel = ConditionalProbDist(transitionFreqDist, LidstoneProbDist, 0.01, bins=3125)
 
-    # TODO: fix dictionary lookup problem
     def _viterbi(self, tokensAndVectors):
         viterbi = []
         backpointers = []
@@ -76,7 +76,7 @@ class hiddenMarkovModel:
                 print(l)
                 continue
 
-            if int(entry) == hash(strippedToken.lower().strip()):
+            if entry == hashlib.md5(strippedToken.lower().strip().encode("utf-8")).hexdigest():
                 if dictTag == "surname":
                     featureVector[7] = 1
                 elif dictTag == "forename":
@@ -109,7 +109,7 @@ class hiddenMarkovModel:
                     print(l)
                     continue
 
-                if hash(strippedToken.lower().lstrip().strip()) == int(entry):
+                if hashlib.md5(strippedToken.lower().lstrip().strip().encode("utf-8")).hexdigest() == entry:
                     if dictTag == "surname":
                         featureVector[7] = 1
                     elif dictTag == "forename":

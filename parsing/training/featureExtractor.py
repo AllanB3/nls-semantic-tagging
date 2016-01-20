@@ -5,6 +5,7 @@ import os
 import arff
 import re
 import string
+import hashlib
 
 path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(1, path)
@@ -18,7 +19,6 @@ class featureExtractor:
         self.outputPath = outputPath
         self.xmlparser = xmlParser()
 
-    # TODO: fix dictionary lookup problem
     def extractFeatures(self):
         tagsAndVectors = []
 
@@ -72,7 +72,7 @@ class featureExtractor:
                     for e in entries:
                         entry, dictTag = e.strip().split("\t")
 
-                        if hash(token.lower().lstrip().strip().replace(string.digits, "          ")) == int(entry):
+                        if hashlib.md5(token.lower().lstrip().strip().replace(string.digits, "          ").encode("utf-8")).hexdigest() == entry:
                             if dictTag == "surname":
                                 featureVector[7] = 1
                             elif dictTag == "forename":
@@ -138,7 +138,7 @@ class featureExtractor:
                             for l in lexicon:
                                 entry, dictTag = l.split("\t")
 
-                                if hash(token.lower().lstrip().strip().replace(string.digits, "          ")) == int(entry):
+                                if hashlib.md5(token.lower().lstrip().strip().replace(string.digits, "          ").encode("utf-8")).hexdigest() == entry:
                                     if dictTag == "surname":
                                         featureVector[7] = 1
                                     elif dictTag == "forename":
