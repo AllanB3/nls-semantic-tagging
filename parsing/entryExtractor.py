@@ -1,4 +1,4 @@
-##!/usr/bin
+#!/usr/bin
 
 from hiddenMarkovModel import *
 from xmlParser import *
