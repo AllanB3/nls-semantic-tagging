@@ -3,7 +3,7 @@
 from hiddenMarkovModel import *
 from xmlParser import *
 
-class EntityExtractor:
+class EntryExtractor:
 
 	def __init__(self):
 		self.xmlParser = xmlParser()
@@ -46,5 +46,5 @@ class EntityExtractor:
 		return entries
 
 if __name__ == "__main__":
-	e = EntityExtractor()
+	e = EntryExtractor()
 	entries = e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page")
