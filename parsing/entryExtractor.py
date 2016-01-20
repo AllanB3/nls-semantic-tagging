@@ -22,7 +22,7 @@ class EntryExtractor:
 		tokensAndTags = self.hiddenMarkovModel.tag(text)
 
 		entries = []
-		nextTags = {"SURNAME": ["FORENAME", "TITLE"], "FORENAME": ["OCCUPATION", "ADDRESS"], "TITLE": ["FORENAME", "OCCUPATION", "ADDRESS"], "OCCUPATION": ["ADDRESS"], "ADDRESS": ["ADDRESS"]}
+		nextTags = {"SURNAME": ["FORENAME", "TITLE"], "FORENAME": ["OCCUPATION", "ADDRESS"], "TITLE": ["FORENAME", "OCCUPATION", "ADDRESS"], "OCCUPATION": ["OCCUPATION", "ADDRESS"], "ADDRESS": ["ADDRESS"]}
 		entry = {}
 		previousTag = "SURNAME"
 		for token, tag in tokensAndTags:
