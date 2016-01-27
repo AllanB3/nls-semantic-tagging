@@ -88,7 +88,7 @@ class hiddenMarkovModel:
                     featureVector[11] = 1
 
         for i in range(0, len(self.states)):
-            firstViterbi[self.states[i]] = ((0 - log(self.transitionModel["<s>"].prob(self.states[i]))) + (self.sensorModel.logProbabilities(featureVector)[i]))
+            firstViterbi[self.states[i]] = ((0 - log(self.transitionModel["<s>"].prob(self.states[i]))) + (0 - self.sensorModel.logProbabilities(featureVector)[i]))
             firstBackpointer[self.states[i]] = "<s>"
 
         viterbi.append(firstViterbi)
