@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 from sklearn.naive_bayes import BernoulliNB
 import os

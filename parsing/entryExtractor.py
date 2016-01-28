@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/usr/bin/python3
 
 from hiddenMarkovModel import *
 from xmlParser import *
