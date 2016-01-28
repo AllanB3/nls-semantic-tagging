@@ -2,6 +2,10 @@
 
 from hiddenMarkovModel import *
 from xmlParser import *
+import rdflib
+from rdflib.namespace import RDF
+import pathlib
+import os
 
 class EntryExtractor:
 
@@ -27,10 +31,7 @@ class EntryExtractor:
 		previousTag = "SURNAME"
 		for token, tag in tokensAndTags:
 			if not tag in nextTags[previousTag]:
-				print(entry)
 				entries.append(entry)
-
-				entries = []
 				entry = {}
 
 				if not tag == "SURNAME":
@@ -45,6 +46,46 @@ class EntryExtractor:
 
 		return entries
 
+	@staticmethod
+	def addRecordsToDatabase(self, records, recordYear):
+		g = rdflib.Graph()
+		schema = rdflib.Namespace("http://schema.org/")
+		person = rdflib.Namespace("http://schema.org/Person/")
+
+		try:
+			data = open("../{0}.ttl".format(recordYear), "r").read()
+			g.load(data)
+		except FileNotFoundError:
+			pass
+
+		uri = pathlib.Path(os.path.abspath(os.path.join(os.path.dirname(__file__),
+														"../database/{0}.ttl".format(recordYear)))).as_uri()
+
+		idNumber = 0
+		for r in records:
+			idNumber += 1
+			identifier = rdflib.URIRef("{0}#{1}".format(uri, idNumber))
+			g.add((identifier, RDF.type, schema.Person))
+			for key, value in r.items():
+				if key == "SURNAME":
+					relation = person.familyName
+				elif key == "FORENAME":
+					relation = person.givenName
+				elif key == "TITLE":
+					relation = person.honorificPrefix
+				elif key == "OCCUPATION":
+					relation = person.jobTitle
+				elif key == "ADDRESS":
+					relation = person.address
+				else:
+					raise ValueError("{0} is not a valid key".format(key))
+
+				g.add((identifier, relation, rdflib.Literal(value)))
+
+		g.serialize(uri, format="turtle")
+
+
 if __name__ == "__main__":
 	e = EntryExtractor()
 	entries = e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page")
+	e.addRecordsToDatabase(entries, "1911")
