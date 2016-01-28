@@ -47,7 +47,7 @@ class EntryExtractor:
 		return entries
 
 	@staticmethod
-	def addRecordsToDatabase(self, records, recordYear):
+	def addRecordsToDatabase(records, recordYear):
 		g = rdflib.Graph()
 		schema = rdflib.Namespace("http://schema.org/")
 		person = rdflib.Namespace("http://schema.org/Person/")
