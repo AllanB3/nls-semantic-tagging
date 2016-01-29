@@ -50,7 +50,7 @@ class EntryExtractor:
 	def addRecordsToDatabase(records, recordYear):
 		g = rdflib.Graph()
 		schema = rdflib.Namespace("http://schema.org/")
-		person = rdflib.Namespace("http://schema.org/Person/")
+		person = rdflib.Namespace("http://schema.org/Person#")
 
 		try:
 			data = open("../{0}.ttl".format(recordYear), "r").read()
