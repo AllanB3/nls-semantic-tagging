@@ -1,0 +1,455 @@
+T1	surname 31 39	Christie
+T2	POD_entry 31 39	Christie
+E1	POD_entry:T2 forename:T3 occupation:T4 address:T5 address2:T6 address3:T7
+T3	forename 41 46	James
+T4	occupation 48 72	grocer and wine merchant
+T5	address 74 92	1 Catherine street
+T6	address 98 112	30 High street
+T7	address 122 138	8 Lauriston lane
+T8	surname 139 147	Christie
+T9	POD_entry 139 147	Christie
+E2	POD_entry:T9 forename:T10 occupation:T11 address:T12 address2:T13
+T10	forename 149 154	James
+T11	occupation 156 183	ladies' boot and shoe maker
+T12	address 185 201	63 George street
+T13	address 207 210	132
+T14	surname 211 219	Christie
+T15	POD_entry 211 219	Christie
+E3	POD_entry:T15 forename:T16 occupation:T17 address:T18
+T16	forename 221 226	James
+T17	occupation 228 256	supervisor of Inland Revenue
+T18	address 258 272	5 Union street
+T19	surname 273 281	Christie
+T20	POD_entry 273 281	Christie
+E4	POD_entry:T20 forename:T21 occupation:T22 address:T23
+T21	forename 283 288	James
+T22	occupation 290 295	baker
+T23	address 297 317	4 N. Junction street
+T24	surname 318 326	Christie
+T25	POD_entry 318 326	Christie
+E5	POD_entry:T25 forename:T26 occupation:T27 address:T28
+T26	forename 328 332	John
+T27	occupation 340 377	breeches raakers,hosiers, and glovers
+T28	address 379 395	16 George street
+T29	surname 396 404	Christie
+T30	POD_entry 396 404	Christie
+E6	POD_entry:T30 forename:T31 occupation:T32 address:T33
+T31	forename 406 412	John C
+T32	occupation 414 418	W.S.
+T33	address 419 443	4 Duncan st. New- ington
+T34	surname 444 452	Christie
+T35	forename 454 458	John
+T36	POD_entry 444 452	Christie
+E7	POD_entry:T36 forename:T35 address:T37
+T37	address 477 488	Lauder road
+T38	surname 489 497	Christie
+T39	POD_entry 489 497	Christie
+E8	POD_entry:T39 forename:T40 address:T41
+T40	forename 499 503	John
+T41	address 505 521	6 St John street
+T42	surname 522 530	Christie
+T43	POD_entry 522 530	Christie
+E9	POD_entry:T43 title:T44 forename:T45 occupation:T46 address:T47
+T44	title 532 539	Captain
+T45	forename 540 542	R.
+T46	occupation 544 552	H.M.I.S
+T47	address 554 572	St Bernard's Bower
+T48	surname 573 581	Christie
+T49	POD_entry 573 581	Christie
+E10	POD_entry:T49 forename:T50 occupation:T51 address:T52
+T50	forename 583 589	Robert
+T51	occupation 591 598	manager
+T52	address 648 661	Juniper green
+T53	surname 662 670	Christie
+T54	POD_entry 662 670	Christie
+E11	POD_entry:T54 forename:T55 occupation:T56 address:T57
+T55	forename 672 678	Robert
+T56	occupation 680 704	grocer and wine merchant
+T57	address 706 723	53 Hanover street
+T58	surname 724 732	Christie
+T59	POD_entry 724 732	Christie
+E12	POD_entry:T59 forename:T60 title:T61 occupation:T62 address:T63
+T60	forename 734 737	Rt.
+T61	title 739 742	jun
+T62	occupation 744 747	C.A
+T63	address 790 806	36 Dublin street
+T64	surname 807 815	Christie
+T65	POD_entry 807 815	Christie
+E13	POD_entry:T65 forename:T66 occupation:T67 address:T68 address2:T69
+T66	forename 817 826	Robert L.
+T67	occupation 827 859	working jevreller and watchmaker
+T68	address 861 891	17, 18, 19, and 20 Bank street
+T69	address 896 919	19 Tolbooth wynd, Leith
+T70	surname 920 928	Christie
+T71	POD_entry 920 928	Christie
+E14	POD_entry:T71 forename:T72 occupation:T73 address:T74
+T72	forename 930 936	Thomas
+T73	occupation 938 982	teacher of English, geo- graphy, history, &c
+T74	address 984 1000	36 George street
+T75	surname 1001 1009	Christie
+T76	POD_entry 1001 1009	Christie
+E15	POD_entry:T76 title:T77 forename:T78 address:T79
+T77	title 1011 1018	Captain
+T78	forename 1019 1021	T.
+T79	address 1029 1045	58 Castle street
+T80	surname 1046 1054	Christie
+T81	POD_entry 1046 1054	Christie
+E16	POD_entry:T81 forename:T82 occupation:T83 address:T84 address2:T85
+T82	forename 1056 1059	Wm.
+T83	occupation 1060 1072	cabinetmaker
+T84	address 1074 1090	Victoria terrace
+T85	address 1098 1113	366 Castle hill
+T86	surname 1114 1122	Christie
+T87	POD_entry 1114 1122	Christie
+E17	POD_entry:T87 forename:T88 occupation:T89 address:T90 address2:T91
+T88	forename 1124 1131	William
+T89	occupation 1133 1139	slater
+T90	address 1141 1163	31 Constitution street
+T91	address 1173 1188	6 Baltic street
+T92	surname 1189 1197	Christie
+T93	POD_entry 1189 1197	Christie
+E18	POD_entry:T93 forename:T94 address:T95
+T94	forename 1199 1206	William
+T95	address 1208 1223	81 Clerk street
+T96	surname 1224 1232	Christie
+T97	POD_entry 1224 1232	Christie
+E19	POD_entry:T97 forename:T98 occupation:T99 address:T100
+T98	forename 1234 1241	William
+T99	occupation 1243 1250	printer
+T100	address 1252 1264	94 Pleasance
+T101	surname 1265 1273	Christie
+T102	POD_entry 1265 1273	Christie
+E20	POD_entry:T102 forename:T103 address:T104
+T103	forename 1275 1280	W, L.
+T104	address 1281 1298	I Claremont place
+T105	surname 1299 1307	Christie
+T106	POD_entry 1299 1307	Christie
+E21	POD_entry:T106 title:T107 forename:T108 address:T109
+T107	title 1309 1312	Mrs
+T108	forename 1313 1317	John
+T109	address 1319 1332	Wight's place
+T110	surname 1333 1341	Christie
+T111	POD_entry 1333 1341	Christie
+E22	POD_entry:T111 title:T112 address:T113
+T112	title 1343 1346	Mrs
+T113	address 1348 1362	23 Duke street
+T114	surname 1363 1371	Christie
+T115	POD_entry 1363 1371	Christie
+E23	POD_entry:T115 title:T116 address:T117
+T116	title 1373 1376	Mrs
+T117	address 1378 1392	14 Pitt street
+T118	surname 1393 1401	Christie
+T119	POD_entry 1393 1401	Christie
+E24	POD_entry:T119 title:T120 address:T121
+T120	title 1403 1406	Mrs
+T121	address 1408 1424	5 Roxburgh place
+T122	surname 1425 1433	Christie
+T123	POD_entry 1425 1433	Christie
+E25	POD_entry:T123 title:T124 address:T125
+T124	title 1435 1438	Mrs
+T125	address 1440 1457	Malta Green place
+T126	surname 1458 1466	Christie
+T127	POD_entry 1458 1466	Christie
+E26	POD_entry:T127 title:T128 address:T129
+T128	title 1468 1471	Mrs
+T129	address 1473 1488	32 Howard place
+T130	surname 1489 1497	Christie
+T131	POD_entry 1489 1497	Christie
+E27	POD_entry:T131 title:T132 address:T133
+T132	title 1499 1503	Miss
+T133	address 1505 1520	30 Howard place
+T134	surname 1521 1529	Christie
+T135	POD_entry 1521 1529	Christie
+E28	POD_entry:T135 title:T136 address:T137
+T136	title 1531 1535	Miss
+T137	address 1537 1555	22 Clarence street
+T138	surname 1556 1564	Christie
+T139	POD_entry 1556 1564	Christie
+E29	POD_entry:T139 title:T140 occupation:T141 address:T142
+T140	title 1566 1570	Miss
+T141	occupation 1572 1582	dressmaker
+T142	address 1584 1599	2 Corunna place
+T143	surname 1600 1608	Christie
+T144	POD_entry 1600 1608	Christie
+E30	POD_entry:T144 title:T145 address:T146
+T145	title 1610 1614	Miss
+T146	address 1616 1629	20 Ann street
+T147	surname 1630 1638	Christie
+T148	POD_entry 1630 1638	Christie
+E31	POD_entry:T148 title:T149 forename:T150 occupation:T151 address:T152
+T149	title 1640 1644	Miss
+T150	forename 1645 1647	A.
+T151	occupation 1648 1658	dressmaker
+T152	address 1660 1676	22 S. College st
+T158	surname 1749 1759	Christison
+T159	POD_entry 1749 1759	Christison
+E33	POD_entry:T159 forename:T160 occupation:T162 occupation2:T163 address:T164
+T160	forename 1761 1767	Robert
+T162	occupation 1769 1796	professor of materia medica
+T163	occupation 1802 1822	consulting physician
+T164	address 1824 1838	40 Moray place
+T165	surname 1839 1847	Chrystal
+T166	POD_entry 1839 1847	Chrystal
+E34	POD_entry:T166 forename:T167 occupation:T168 address:T169
+T167	forename 1849 1857	Cockburn
+T168	occupation 1859 1868	bootmaker
+T169	address 1870 1891	28 Hadding- ton place
+T170	address 1949 1963	18 Hill street
+T171	POD_entry 1949 1963	18 Hill street
+E35	POD_entry:T171 
+T172	address 2000 2015	22 Queen street
+T173	POD_entry 2000 2015	22 Queen street
+E36	POD_entry:T173 
+T174	surname 2016 2022	Ciceri
+T175	POD_entry 2016 2022	Ciceri
+E37	POD_entry:T175 forename:T176 forename2:T177 surname:T178 surname2:T179 occupation:T180 address:T181 address2:T182
+T176	forename 2024 2026	J.
+T177	forename 2029 2031	J.
+T178	surname 2033 2040	Mantica
+T179	surname 2046 2051	Torre
+T180	occupation 2053 2102	carvers, gilders, and looking-glass manufacturers
+T181	address 2104 2119	81 Leith street
+T182	address 2129 2148	28 Greenside street
+T183	address 2170 2190	4 N.-E. Circus place
+T184	address 2196 2210	2 Royal circus
+T185	surname 2220 2226	Begbie
+T186	POD_entry 2220 2226	Begbie
+E38	POD_entry:T186 forename:T187 occupation:T188 address:T183 address2:T184
+T187	forename 2213 2218	Wm. M
+T188	occupation 2228 2234	rector
+T189	address 2261 2274	10 Royal Exch
+T190	POD_entry 2261 2274	10 Royal Exch
+E39	POD_entry:T190 
+T191	address 2303 2316	10 Royal Exch
+T192	POD_entry 2303 2316	10 Royal Exch
+E40	POD_entry:T192 
+T193	address 2333 2350	10 Royal Exchange
+T194	POD_entry 2333 2350	10 Royal Exchange
+E41	POD_entry:T194 
+T195	address 2372 2389	10 Royal Exchange
+T196	POD_entry 2372 2389	10 Royal Exchange
+E42	POD_entry:T196 
+T197	address 2432 2447	271 High street
+T198	surname 2457 2464	Jardine
+T199	forename 2450 2454	W. A
+T200	occupation 2466 2487	surveyor and engineer
+T201	POD_entry 2457 2464	Jardine
+E43	POD_entry:T201 forename:T199 occupation:T200 address:T197
+T202	address 2523 2538	21 St Andrew sq
+T203	surname 2547 2554	Balfour
+T204	POD_entry 2547 2554	Balfour
+E44	POD_entry:T204 forename:T205 occupation:T206 address:T202
+T205	forename 2542 2546	Rob.
+T206	occupation 2556 2559	sec
+T207	address 2594 2611	12 Hanover street
+T208	surname 2622 2626	Bain
+T209	forename 2614 2621	William
+T210	occupation 2628 2635	manager
+T211	address 2651 2665	60 Grassmarket
+T212	address 2667 2682	8 Hunter square
+T213	POD_entry 2622 2626	Bain
+E45	POD_entry:T213 forename:T209 occupation:T210 address:T207 address2:T211 address3:T212
+T214	address 2721 2735	4 Forrest road
+T215	POD_entry 2721 2735	4 Forrest road
+E46	POD_entry:T215 
+T216	address 2769 2788	10 Royal Ex- change
+T217	POD_entry 2769 2788	10 Royal Ex- change
+E47	POD_entry:T217 
+T218	address 2812 2829	29 Princes street
+T219	POD_entry 2812 2829	29 Princes street
+E48	POD_entry:T219 
+T220	surname 2830 2840	Clapperton
+T221	POD_entry 2830 2840	Clapperton
+E49	POD_entry:T221 forename:T222 occupation:T223 address:T224
+T222	forename 2842 2846	John
+T223	occupation 2854 2890	wholesale and retail woollen drapers
+T224	address 2892 2907	371 High street
+T225	surname 2908 2918	Clapperton
+T226	POD_entry 2908 2918	Clapperton
+E50	POD_entry:T226 forename:T227 address:T228
+T227	forename 2920 2925	Alex.
+T228	address 2926 2941	15 Clerk street
+T229	surname 2942 2952	Clapperton
+T230	POD_entry 2942 2952	Clapperton
+E51	POD_entry:T230 forename:T231 address:T232
+T231	forename 2954 2958	Jas.
+T232	address 2976 2988	Williamfield
+T233	surname 2989 2999	Clapperton
+T234	POD_entry 2989 2999	Clapperton
+E52	POD_entry:T234 forename:T235 occupation:T236 address:T237
+T235	forename 3001 3006	M. J.
+T236	occupation 3007 3013	grocer
+T237	address 3015 3031	31 Upper Gray st
+T238	surname 3033 3043	Clapperton
+T239	POD_entry 3033 3043	Clapperton
+E53	POD_entry:T239 forename:T240 address:T241
+T240	forename 3045 3051	Thomas
+T241	address 3053 3066	12 Teviot row
+T242	surname 3067 3077	Clapperton
+T243	POD_entry 3067 3077	Clapperton
+E54	POD_entry:T243 forename:T244 address:T245
+T244	forename 3079 3085	Wm. R.
+T245	address 3102 3122	11 Salis- bury place
+T246	surname 3123 3133	Clapperton
+T247	POD_entry 3123 3133	Clapperton
+E55	POD_entry:T247 title:T248 forename:T249 address:T250
+T248	title 3135 3138	Mrs
+T249	forename 3139 3143	Alex
+T250	address 3145 3162	29 Drummond place
+T251	surname 3163 3173	Clapperton
+T252	POD_entry 3163 3173	Clapperton
+E56	POD_entry:T252 title:T253 address:T254
+T253	title 3175 3179	Miss
+T254	address 3181 3204	1 West Claremont street
+T255	surname 3205 3210	Clark
+T256	surname 3215 3222	Beatson
+T257	occupation 3224 3266	furnishing and manufac- turing ironmongers
+T258	POD_entry 3205 3210	Clark
+E57	POD_entry:T258 surname:T256 occupation:T257 address:T259
+T259	address 3268 3282	24 Howe street
+T260	surname 3283 3288	Clark
+T261	POD_entry 3283 3288	Clark
+E58	POD_entry:T261 occupation:T262 address:T263
+T262	occupation 3295 3317	clothiers and drapers
+T263	address 3318 3330	1 Bristo pi.
+T264	surname 3331 3336	Clark
+T265	POD_entry 3331 3336	Clark
+E59	POD_entry:T265 surname:T266 occupation:T267 address:T268
+T266	surname 3339 3347	Crawford
+T267	occupation 3349 3373	grocers and wine merchts
+T268	address 3375 3390	3 Rutland place
+T269	surname 3391 3396	Clark
+T270	POD_entry 3391 3396	Clark
+E60	POD_entry:T270 forename:T271 address:T272
+T271	forename 3398 3402	Alex
+T272	address 3422 3435	6 Wharton pi.
+T273	surname 3436 3441	Clark
+T274	POD_entry 3436 3441	Clark
+E61	POD_entry:T274 forename:T275 address:T276
+T275	forename 3443 3445	A.
+T276	address 3447 3480	Salisbury Bank, St Leonard's hill
+T277	surname 3481 3486	Clark
+T278	POD_entry 3481 3486	Clark
+E62	POD_entry:T278 forename:T279 occupation:T280 address:T281
+T279	forename 3488 3495	Charles
+T280	occupation 3497 3502	agent
+T281	address 3504 3521	2 St James' place
+T282	surname 3522 3527	Clark
+T283	POD_entry 3522 3527	Clark
+E63	POD_entry:T283 forename:T284 occupation:T285 address:T286
+T284	forename 3529 3534	Henry
+T285	occupation 3536 3547	silk mercer
+T286	address 3549 3565	83 George street
+T287	surname 3566 3571	Clark
+T288	POD_entry 3566 3571	Clark
+E64	POD_entry:T288 forename:T289 occupation:T290 address:T291
+T289	forename 3573 3577	Hugh
+T290	occupation 3579 3584	agent
+T291	address 3586 3602	78 George street
+T292	surname 3603 3608	Clark
+T293	POD_entry 3603 3608	Clark
+E65	POD_entry:T293 forename:T294 occupation:T295 address:T296
+T294	forename 3610 3612	J.
+T295	occupation 3613 3642	invalid gentlemen's attendant
+T296	address 3644 3654	1 Dean st.
+T297	surname 3655 3660	Clark
+T298	POD_entry 3655 3660	Clark
+E66	POD_entry:T298 forename:T299 occupation:T300 address:T301
+T299	forename 3662 3670	Andw, R.
+T300	occupation 3671 3679	advocate
+T301	address 3681 3703	17 Great Stuart street
+T302	surname 3704 3709	Clark
+T303	POD_entry 3704 3709	Clark
+E67	POD_entry:T303 forename:T304 occupation:T305 address:T306
+T304	forename 3711 3716	James
+T305	occupation 3718 3739	inspecting mail guard
+T306	address 3741 3759	25 Ba- rony street
+T307	surname 3760 3765	Clark
+T308	POD_entry 3760 3765	Clark
+E68	POD_entry:T308 forename:T309 occupation:T310 address:T311
+T309	forename 3767 3772	James
+T310	occupation 3774 3784	watchmaker
+T311	address 3786 3803	31 Fountainbridge
+T312	surname 3804 3809	Clark
+T313	POD_entry 3804 3809	Clark
+E69	POD_entry:T313 forename:T314 address:T315
+T314	forename 3811 3824	James Patrick
+T315	address 3826 3842	10 Duncan street
+T316	surname 3843 3848	Clark
+T317	POD_entry 3843 3848	Clark
+E70	POD_entry:T317 forename:T318 address:T319
+T318	forename 3850 3862	James Backer
+T319	address 3864 3885	3 Charlotte st. Leith
+T320	surname 3887 3892	Clark
+T321	POD_entry 3887 3892	Clark
+E71	POD_entry:T321 forename:T322 occupation:T323 address:T324 address2:T325
+T322	forename 3894 3898	John
+T323	occupation 3900 3927	Venetian-blind manufacturer
+T324	address 3929 3949	Gayfield square lane
+T325	address 3959 3972	1 Windsor st.
+T326	surname 3973 3978	Clark
+T327	POD_entry 3973 3978	Clark
+E72	POD_entry:T327 forename:T328 occupation:T329 address:T330
+T328	forename 3980 3984	John
+T329	occupation 3986 4014	currier and leather merchant
+T330	address 4016 4047	Cowan's close. East Crosscausey
+T331	surname 4048 4053	Clark
+T332	POD_entry 4048 4053	Clark
+E73	POD_entry:T332 forename:T333 address:T334
+T333	forename 4055 4059	John
+T334	address 4061 4094	Salisbury bank, St Leonard's hill
+T335	surname 4095 4100	Clark
+T336	POD_entry 4095 4100	Clark
+E74	POD_entry:T336 forename:T337 occupation:T338 address:T339
+T337	forename 4102 4104	J.
+T338	occupation 4106 4120	letter-carrier
+T339	address 4122 4139	12 N. Richmond st
+T340	surname 4141 4146	Clark
+T341	POD_entry 4141 4146	Clark
+E75	POD_entry:T341 forename:T342 occupation:T343 address:T344
+T342	forename 4148 4154	Robert
+T343	occupation 4156 4176	wholesale tea dealer
+T344	address 4178 4197	36 Drum- mond place
+T345	surname 4198 4203	Clark
+T346	POD_entry 4198 4204	Clark
+E76	POD_entry:T346 forename:T347 forename2:T348 occupation:T349 address:T350
+T347	forename 4205 4207	R.
+T348	forename 4212 4214	R.
+T349	occupation 4215 4223	printers
+T350	address 4225 4242	42 Hanover street
+T351	surname 4243 4248	Clark
+T352	POD_entry 4243 4248	Clark
+E77	POD_entry:T352 forename:T353 occupation:T354 address:T355 address2:T356
+T353	forename 4250 4255	Robt.
+T354	occupation 4256 4279	engraver & lithographer
+T355	address 4281 4302	10 So. Hanover street
+T356	address 4312 4328	26 Dublin street
+T357	surname 4329 4334	Clark
+T358	POD_entry 4329 4334	Clark
+E78	POD_entry:T358 forename:T359 address:T360
+T359	forename 4336 4342	Robert
+T360	address 4357 4375	17 E. Claremont st
+T361	surname 4377 4382	Clark
+T362	POD_entry 4377 4382	Clark
+E79	POD_entry:T362 forename:T363 occupation:T364 address:T365
+T363	forename 4384 4390	Robert
+T364	occupation 4392 4414	coal and lime merchant
+T365	address 4416 4436	22 St Leonard street
+T366	surname 4437 4442	Clark
+T367	POD_entry 4437 4442	Clark
+E80	POD_entry:T367 forename:T368 forename2:T369 occupation:T370 address:T371
+T368	forename 4444 4445	T
+T369	forename 4449 4451	T.
+T370	occupation 4452 4484	law-booksellers and publish- ers
+T371	address 4486 4502	38 George street
+T372	surname 4503 4508	Clark
+T373	POD_entry 4503 4508	Clark
+E81	POD_entry:T373 forename:T374 address:T375
+T374	forename 4510 4516	Thomas
+T375	address 4531 4546	12 Forth street
+T376	surname 4547 4552	Clark
+T377	POD_entry 4547 4552	Clark
+E82	POD_entry:T377 forename:T378 occupation:T379 address:T380
+T378	forename 4554 4560	Thomas
+T379	occupation 4562 4568	waiter
+T380	address 4570 4583	19 Fettes row

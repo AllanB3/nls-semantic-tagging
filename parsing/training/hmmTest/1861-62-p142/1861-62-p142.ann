@@ -1,0 +1,510 @@
+T1	surname 32 39	Adamson
+T2	POD_entry 32 39	Adamson
+E1	POD_entry:T2 forename:T3 address:T4
+T3	forename 41 60	John William Mackie
+T4	address 62 89	9 Hamilton place, Newington
+T5	surname 90 97	Adamson
+T6	POD_entry 90 97	Adamson
+E2	POD_entry:T6 forename:T7 occupation:T8 address:T9
+T7	forename 99 101	T
+T8	occupation 102 118	carriage builder
+T9	address 120 150	13 Spring gar- dens, Abbeyhill
+T10	surname 151 158	Adamson
+T11	POD_entry 151 158	Adamson
+E3	POD_entry:T11 forename:T12 occupation:T13 address:T14 address2:T15
+T12	forename 160 166	Walter
+T13	occupation 168 194	ribbon and flower merchant
+T14	address 196 211	29 South bridge
+T15	address 220 235	31 Clerk street
+T16	surname 236 243	Adamson
+T17	POD_entry 236 243	Adamson
+E4	POD_entry:T17 forename:T18 occupation:T19 address:T20 address2:T21
+T18	forename 245 251	Walter
+T19	occupation 253 260	builder
+T20	address 262 279	St Leonard's lane
+T21	address 289 311	70 St Leonard's street
+T22	surname 312 319	Adamson
+T23	POD_entry 312 319	Adamson
+E5	POD_entry:T23 title:T24 forename:T25 occupation:T26 address:T27
+T24	title 321 324	Mrs
+T25	forename 325 327	A
+T26	occupation 328 339	plumber
+T27	address 341 352	64 Clerk st
+T28	surname 354 361	Adamson
+T29	POD_entry 354 361	Adamson
+E6	POD_entry:T29 title:T30 address:T31
+T30	title 363 366	Mrs
+T31	address 368 386	5 ]\I'Kenzie place
+T32	surname 387 394	Adamson
+T33	POD_entry 387 394	Adamson
+E7	POD_entry:T33 title:T34 occupation:T35 address:T36
+T34	title 396 399	Mrs
+T35	occupation 401 417	provision dealer
+T36	address 419 431	: Allison pi
+T37	surname 433 439	Adcock
+T38	POD_entry 433 439	Adcock
+E8	POD_entry:T38 forename:T39 occupation:T40 address:T41 address2:T42
+T39	forename 441 448	Gilbert
+T40	occupation 450 464	paper merchant
+T41	address 466 486	1 South St Andrew st
+T42	address 494 510	30 James' square
+T43	surname 511 516	Addis
+T44	POD_entry 511 516	Addis
+E9	POD_entry:T44 title:T45 forename:T46 address:T47
+T45	title 518 521	Rev
+T46	forename 523 529	Thomas
+T47	address 531 548	Morningside place
+T48	surname 549 554	Addis
+T49	POD_entry 549 554	Addis
+E10	POD_entry:T49 title:T50 forename:T51 address:T52
+T50	title 556 561	j\Irs
+T51	forename 562 569	William
+T52	address 571 585	6 Grove street
+T53	surname 586 593	Addison
+T54	POD_entry 586 593	Addison
+E11	POD_entry:T54 forename:T55 occupation:T56 address:T57 address2:T58
+T55	forename 595 604	Alexander
+T56	occupation 606 611	baker
+T57	address 613 625	124 Kirkgate
+T58	address 635 637	30
+T59	address 660 678	112 Princes street
+T60	POD_entry 660 678	112 Princes street
+E12	POD_entry:T60 
+T61	surname 679 686	Addison
+T62	POD_entry 679 686	Addison
+E13	POD_entry:T62 forename:T63 occupation:T64 address:T65
+T63	forename 688 692	Jas
+T64	occupation 694 707	spirit dealer
+T65	address 709 722	6 Rose street
+T66	surname 723 727	Adie
+T67	POD_entry 723 727	Adie
+E14	POD_entry:T67 forename:T68 occupation:T69 address:T70
+T68	forename 729 733	Adam
+T69	occupation 735 741	grocer
+T70	address 743 758	6 Coburg street
+T71	surname 759 763	Adie
+T72	POD_entry 759 763	Adie
+E15	POD_entry:T72 forename:T73 occupation:T74 address:T75
+T73	forename 765 774	Alexander
+T74	occupation 785 794	opticians
+T75	address 796 813	50 Princes street
+T76	surname 814 819	Aidie
+T77	POD_entry 814 819	Aidie
+E16	POD_entry:T77 forename:T78 occupation:T79 address:T80
+T78	forename 821 824	Jn
+T79	occupation 825 840	spirit merchant
+T80	address 842 857	38 St Andrew st
+T81	surname 859 863	Adie
+T82	POD_entry 859 863	Adie
+E17	POD_entry:T82 title:T83 occupation:T84 address:T85
+T83	title 865 868	Mrs
+T84	occupation 870 883	spirit dealer
+T85	address 885 903	7 Dock place Leith
+T86	surname 904 908	Adie
+T87	title 910 913	Mrs
+T88	forename 915 921	Canaan
+T89	address 923 934	Grange loan
+T90	POD_entry 904 908	Adie
+E18	POD_entry:T90 title:T87 forename:T88 address:T89
+T91	surname 935 939	Adie
+T92	POD_entry 935 939	Adie
+E19	POD_entry:T92 title:T93 forename:T94 address:T95
+T93	title 941 944	Mrs
+T94	forename 945 951	Robert
+T95	address 953 969	11 Duncan street
+T96	address 997 1008	21 Young st
+T97	POD_entry 997 1008	21 Young st
+E20	POD_entry:T97 
+T98	address 1030 1047	Parliament square
+T99	POD_entry 1030 1047	Parliament square
+E21	POD_entry:T99
+T101	surname 1147 1150	Cay
+T102	POD_entry 1147 1150	Cay
+E22	POD_entry:T102 forename:T103 occupation:T104 address:T100
+T103	forename 1142 1146	John
+T104	occupation 1152 1161	collector
+T105	surname 1162 1169	Affleck
+T106	POD_entry 1162 1169	Affleck
+E23	POD_entry:T106 forename:T107 occupation:T108 address:T109
+T107	forename 1171 1180	Archibald
+T108	occupation 1182 1189	flesher
+T109	address 1191 1204	9 Home street
+T110	surname 1205 1212	Affleck
+T111	POD_entry 1205 1212	Affleck
+E24	POD_entry:T111 forename:T112 occupation:T113 address:T114
+T112	forename 1214 1220	George
+T113	occupation 1222 1249	hosier, glover, and laceman
+T114	address 1251 1266	39 Queen street
+T115	surname 1267 1274	Affleck
+T116	POD_entry 1267 1274	Affleck
+E25	POD_entry:T116 forename:T117 address:T118
+T117	forename 1276 1280	John
+T118	address 1282 1301	38 Brunswick street
+T119	surname 1302 1309	Affleck
+T120	POD_entry 1302 1309	Affleck
+E26	POD_entry:T120 forename:T121 occupation:T122 address:T123
+T121	forename 1311 1315	John
+T122	occupation 1317 1325	gardener
+T123	address 1327 1344	Fillyside gardens
+T124	surname 1345 1352	Affleck
+T125	POD_entry 1345 1352	Affleck
+E27	POD_entry:T125 forename:T126 occupation:T127 address:T128 address2:T129
+T126	forename 1354 1360	Robert
+T127	occupation 1362 1390	grocer, wine & spirit dealer
+T128	address 1392 1412	26 St Leonard street
+T129	address 1422 1424	22
+T130	surname 1425 1432	Affleck
+T131	POD_entry 1425 1432	Affleck
+E28	POD_entry:T131 forename:T132 occupation:T133 address:T134
+T132	forename 1434 1441	William
+T133	occupation 1443 1449	hatter
+T134	address 1451 1470	41 N. Frederick st
+T135	surname 1471 1476	Agn€w
+T136	POD_entry 1471 1476	Agn€w
+E29	POD_entry:T136 forename:T137 occupation:T138 address:T139
+T137	forename 1478 1483	S. A.
+T138	occupation 1485 1493	advocate
+T139	address 1495 1512	81 Princes street
+T140	address 1570 1595	9 South St Andrevf street
+T141	surname 1601 1607	M'Minn
+T142	POD_entry 1601 1608	M'Minn,
+E30	POD_entry:T142 forename:T143 occupation:T144 address:T140
+T143	forename 1598 1599	F
+T144	occupation 1609 1623	superintendent
+T145	surname 1682 1688	Walker
+T146	POD_entry 1682 1688	Walker
+E31	POD_entry:T146 forename:T147 occupation:T148 address:T149
+T147	forename 1673 1681	James C.
+T148	occupation 1690 1713	architect and secretary
+T149	address 1715 1734	53 Frederick street
+T150	surname 1735 1740	Aiken
+T151	POD_entry 1735 1740	Aiken
+E32	POD_entry:T151 forename:T152 address:T153
+T152	forename 1742 1749	Richard
+T153	address 1751 1767	11 Danube street
+T154	surname 1768 1773	Aiken
+T155	POD_entry 1768 1773	Aiken
+E33	POD_entry:T155 title:T156 occupation:T157 address:T158
+T156	title 1775 1778	Mrs
+T157	occupation 1780 1793	ladies' nurse
+T158	address 1795 1814	50 Lauriston street
+T159	surname 1815 1824	Aikenhead
+T160	POD_entry 1815 1824	Aikenhead
+E34	POD_entry:T160 forename:T161 occupation:T162 address:T163 address2:T164
+T161	forename 1826 1830	Adam
+T162	occupation 1832 1839	flesher
+T163	address 1841 1864	13 East Richmond street
+T164	address 1869 1888	46 Broughton street
+T165	surname 1889 1895	Aikman
+T166	POD_entry 1889 1895	Aikman
+E35	POD_entry:T166 forename:T167 occupation:T168 address:T169 address2:T170
+T167	forename 1897 1903	Andrew
+T168	occupation 1911 1923	law printers
+T169	address 1925 1942	11 Hanover street
+T170	address 1952 1968	30 Castle street
+T171	surname 1969 1975	Aikman
+T172	POD_entry 1969 1975	Aikman
+E36	POD_entry:T172 forename:T173 occupation:T174 address:T175 address2:T176
+T173	forename 1977 1979	A.
+T174	occupation 1980 1991	corn dealer
+T175	address 1993 2010	17 Queensferry st
+T176	address 2021 2043	9 South Melville place
+T177	surname 2044 2050	Aikman
+T178	POD_entry 2044 2050	Aikman
+E37	POD_entry:T178 forename:T179 occupation:T180 address:T181
+T179	forename 2052 2061	Archibald
+T180	occupation 2070 2079	merchants
+T181	address 2081 2100	1 Vic- toria street
+T182	surname 2101 2107	Aikman
+T183	POD_entry 2101 2107	Aikman
+E38	POD_entry:T183 forename:T184 forename2:T185 occupation:T186 address:T187
+T184	forename 2109 2111	A.
+T185	forename 2116 2118	D.
+T186	occupation 2120 2149	wholesale leather mer- chants
+T187	address 2151 2167	38 Niddry street
+T188	surname 2168 2174	Aikman
+T189	POD_entry 2168 2174	Aikman
+E39	POD_entry:T189 forename:T190 occupation:T191 address:T192
+T190	forename 2176 2181	David
+T191	occupation 2183 2188	agent
+T192	address 2190 2210	N. B. Railway, Leith
+T193	surname 2211 2217	Aikman
+T194	POD_entry 2211 2217	Aikman
+E40	POD_entry:T194 forename:T195 address:T196
+T195	forename 2219 2233	George Spankie
+T196	address 2250 2268	94 Lauriston place
+T197	surname 2269 2275	Aikman
+T198	POD_entry 2269 2275	Aikman
+E41	POD_entry:T198 forename:T199 title:T200 occupation:T201 address:T202
+T199	forename 2277 2281	Geo.
+T200	title 2283 2286	jun
+T201	occupation 2288 2320	draughtsman and engraver on wood
+T202	address 2322 2334	29 N. Bridge
+T203	surname 2335 2341	Aikman
+T204	POD_entry 2335 2341	Aikman
+E42	POD_entry:T204 forename:T205 occupation:T206 address:T207
+T205	forename 2343 2345	G.
+T206	occupation 2346 2383	engraver, printer, and lithogra- pher
+T207	address 2385 2397	29 N. bridge
+T208	surname 2398 2404	Aikman
+T209	POD_entry 2398 2404	Aikman
+E43	POD_entry:T209 forename:T210 occupation:T211 address:T212
+T210	forename 2406 2411	James
+T211	occupation 2413 2429	leather merchant
+T212	address 2431 2454	24 and 26 Niddry street
+T213	surname 2455 2461	Aikman
+T214	POD_entry 2455 2461	Aikman
+E44	POD_entry:T214 forename:T215 occupation:T216 address:T217 address2:T218
+T215	forename 2464 2468	John
+T216	occupation 2477 2514	painters, paper-hangers, and glaziers
+T217	address 2516 2536	8 Queensferry street
+T218	address 2543 2561	16 Charlotte place
+T219	surname 2562 2568	Aikman
+T220	POD_entry 2562 2568	Aikman
+E45	POD_entry:T220 title:T221 forename:T222 address:T223
+T221	title 2570 2573	Mrs
+T222	forename 2574 2575	A
+T223	address 2577 2595	94 Lauriston place
+T224	surname 2596 2602	Aikman
+T225	POD_entry 2596 2602	Aikman
+E46	POD_entry:T225 title:T226 forename:T227 address:T228
+T226	title 2604 2607	Mrs
+T227	forename 2608 2613	James
+T228	address 2615 2629	3 George place
+T229	surname 2630 2636	Aikman
+T230	POD_entry 2630 2636	Aikman
+E47	POD_entry:T230 title:T231 forename:T232 address:T233
+T231	title 2638 2641	Mrs
+T232	forename 2642 2647	James
+T233	address 2649 2670	7-b St Patrick square
+T234	surname 2671 2677	Aikman
+T235	POD_entry 2671 2677	Aikman
+E48	POD_entry:T235 title:T236 address:T237
+T236	title 2679 2682	Mrs
+T237	address 2684 2701	11 Charles street
+T238	surname 2702 2708	Aimers
+T239	POD_entry 2702 2708	Aimers
+E49	POD_entry:T239 forename:T240 address:T241
+T240	forename 2710 2716	Samuel
+T241	address 2718 2734	38 Rankeillor st
+T242	surname 2736 2743	Ainslie
+T243	POD_entry 2736 2743	Ainslie
+E50	POD_entry:T243 forename:T244 address:T245
+T244	forename 2745 2751	Daniel
+T245	address 2753 2767	48 Moray place
+T246	surname 2768 2775	Ainslie
+T247	POD_entry 2768 2775	Ainslie
+E51	POD_entry:T247 forename:T248 address:T249
+T248	forename 2777 2782	David
+T249	address 2784 2799	54 Queen street
+T250	surname 2800 2807	Ainslie
+T251	POD_entry 2800 2807	Ainslie
+E52	POD_entry:T251 forename:T252 occupation:T253 address:T254 address2:T255
+T252	forename 2810 2815	James
+T253	occupation 2817 2830	coal merchant
+T254	address 2832 2848	34 Sheriflt brae
+T255	address 2858 2874	2 Old Bridge end
+T256	surname 2875 2882	Ainslie
+T257	POD_entry 2875 2882	Ainslie
+E53	POD_entry:T257 forename:T258 occupation:T259 address:T260
+T258	forename 2884 2888	John
+T259	occupation 2890 2906	furniture dealer
+T260	address 2908 2919	255 Cowgate
+T261	surname 2920 2927	Ainslie
+T262	POD_entry 2920 2927	Ainslie
+E54	POD_entry:T262 forename:T263 address:T264
+T263	forename 2929 2931	Wm
+T264	address 2956 2976	59 Lauris- ton place
+T265	surname 2977 2984	Ainslie
+T266	title 2986 2994	Hon. Mrs
+T267	address 2996 3015	15 Gloucester place
+T268	POD_entry 2977 2984	Ainslie
+E55	POD_entry:T268 title:T266 address:T267
+T269	surname 3016 3023	Ainslie
+T270	POD_entry 3016 3023	Ainslie
+E56	POD_entry:T270 title:T271 address:T272
+T271	title 3025 3028	Mrs
+T272	address 3030 3044	17 Keir street
+T273	surname 3045 3049	Aird
+T274	POD_entry 3045 3049	Aird
+E57	POD_entry:T274 forename:T275 occupation:T276 address:T277
+T275	forename 3052 3056	John
+T276	occupation 3058 3073	letter-carrier
+T277	address 3074 3090	3 Nottingham ter
+T278	surname 3092 3096	Aird
+T279	POD_entry 3092 3096	Aird
+E58	POD_entry:T279 forename:T280 address:T281
+T280	forename 3098 3104	Thomas
+T281	address 3106 3132	3 Saunders st. Stockbridge
+T282	surname 3133 3137	Aird
+T283	POD_entry 3133 3137	Aird
+E59	POD_entry:T283 title:T284 forename:T285 address:T286
+T284	title 3139 3142	Mrs
+T285	forename 3143 3145	W^
+T286	address 3146 3160	If ing's place
+T287	surname 3161 3165	Aird
+T288	POD_entry 3161 3165	Aird
+E60	POD_entry:T288 title:T289 address:T290
+T289	title 3167 3173	Misses
+T290	address 3175 3207	Spring valley house, Morningside
+T291	surname 3208 3212	Aire
+T292	POD_entry 3208 3212	Aire
+E61	POD_entry:T292 title:T293 address:T294
+T293	title 3214 3218	Miss
+T294	address 3220 3233	6 Springfield
+T295	surname 3234 3240	Airmet
+T296	POD_entry 3234 3240	Airmet
+E62	POD_entry:T296 forename:T297 occupation:T298 address:T299
+T297	forename 3242 3246	Jas.
+T298	occupation 3247 3263	earthenw. dealer
+T299	address 3265 3277	96 Pleasance
+T300	surname 3278 3283	Airth
+T301	POD_entry 3278 3283	Airth
+E63	POD_entry:T301 forename:T302 occupation:T303 address:T304
+T302	forename 3285 3287	J.
+T303	occupation 3294 3306	wine merchts
+T304	address 3308 3321	26 Quality st
+T305	surname 3323 3328	Airtb
+T306	POD_entry 3323 3328	Airtb
+E64	POD_entry:T306 title:T307 address:T308
+T307	title 3330 3333	Mrs
+T308	address 3335 3360	6 Hope street, Leith walk
+T309	surname 3361 3370	Aitchison
+T310	POD_entry 3361 3370	Aitchison
+E65	POD_entry:T310 occupation:T311 address:T312
+T311	occupation 3381 3411	confectioners to Her Ma- jesty
+T312	address 3413 3428	77 Queen street
+T313	surname 3429 3438	Aitchison
+T314	POD_entry 3429 3438	Aitchison
+E66	POD_entry:T314 forename:T315 occupation:T316 address:T317 address2:T318
+T315	forename 3440 3445	David
+T316	occupation 3447 3453	draper
+T317	address 3455 3473	22 and 23 Kirkgate
+T318	address 3483 3506	10 Glover street, Leith
+T319	surname 3507 3516	Aitchison
+T320	POD_entry 3507 3516	Aitchison
+E67	POD_entry:T320 forename:T321 occupation:T322 address:T323
+T321	forename 3518 3523	David
+T322	occupation 3525 3535	fish merch
+T323	address 3537 3550	146 Canongate
+T324	surname 3551 3560	Aitchison
+T325	POD_entry 3551 3560	Aitchison
+E68	POD_entry:T325 forename:T326 occupation:T327 address:T328
+T326	forename 3562 3568	George
+T327	occupation 3570 3575	baker
+T328	address 3577 3592	1 W^emyss place
+T329	surname 3593 3602	Aitchison
+T330	forename 3604 3608	Geo.
+T331	occupation 3609 3633	grocer and spirit dealer
+T332	address 3635 3653	35 Ptichmond place
+T333	POD_entry 3593 3602	Aitchison
+E69	POD_entry:T333 forename:T330 occupation:T331 address:T332
+T334	surname 3654 3663	Aitchison
+T335	POD_entry 3654 3663	Aitchison
+E70	POD_entry:T335 forename:T336 occupation:T337 address:T338 address2:T339
+T336	forename 3665 3670	James
+T337	occupation 3672 3706	watch and clock maker and jeweller
+T338	address 3708 3718	15 Bank st
+T339	address 3726 3741	47 Buccleuch st
+T340	surname 3743 3752	Aitchison
+T341	POD_entry 3743 3752	Aitchison
+E71	POD_entry:T341 forename:T342 occupation:T343 address:T344
+T342	forename 3754 3758	John
+T343	occupation 3766 3773	brewers
+T344	address 3775 3801	85 South back of Canongate
+T345	surname 3802 3811	Aitchison
+T346	POD_entry 3802 3811	Aitchison
+E72	POD_entry:T346 forename:T347 occupation:T348 address:T349
+T347	forename 3813 3819	Robert
+T348	occupation 3821 3830	cowfeeder
+T349	address 3832 3843	6 Potterrow
+T350	surname 3844 3853	Aitchison
+T351	POD_entry 3844 3853	Aitchison
+E73	POD_entry:T351 forename:T352 address:T353
+T352	forename 3855 3863	Thomas S
+T353	address 3865 3883	16 Archibald place
+T354	surname 3884 3893	Aitchison
+T355	POD_entry 3884 3893	Aitchison
+E74	POD_entry:T355 forename:T356 occupation:T357 address:T358
+T356	forename 3895 3904	Thomas S.
+T357	occupation 3905 3912	dentist
+T358	address 3914 3926	31 N. bridge
+T359	surname 3927 3936	Aitchison
+T360	POD_entry 3927 3936	Aitchison
+E75	POD_entry:T360 forename:T361 occupation:T362 address:T363
+T361	forename 3938 3942	Tho.
+T362	occupation 3943 3952	shoemaker
+T363	address 3954 3969	299 High street
+T364	surname 3970 3979	Aitchison
+T365	POD_entry 3970 3979	Aitchison
+E76	POD_entry:T365 forename:T366 address:T367
+T366	forename 3981 3993	William John
+T367	address 3995 4014	5 Bruntsfield place
+T368	surname 4015 4024	Aitchison
+T369	POD_entry 4015 4024	Aitchison
+E77	POD_entry:T369 title:T370 address:T371
+T370	title 4026 4029	Mrs
+T371	address 4031 4048	15 St John street
+T372	surname 4049 4058	Aitchison
+T373	POD_entry 4049 4058	Aitchison
+E78	POD_entry:T373 title:T374 address:T375
+T374	title 4060 4063	Mrs
+T375	address 4065 4083	92 Lauriston place
+T376	surname 4084 4093	Aitchison
+T377	POD_entry 4084 4093	Aitchison
+E79	POD_entry:T377 title:T378 occupation:T380 address:T381 address2:T382
+T378	title 4095 4100	I\Irs
+T379	forename 4101 4105	Jas.
+T380	occupation 4106 4112	draper
+T381	address 4114 4130	9 Spring gardens
+T382	address 4140 4167	19 North- West Circus place
+T383	surname 4168 4174	Aitken
+T384	surname 4179 4187	Campbell
+T385	POD_entry 4168 4174	Aitken
+E80	POD_entry:T385 surname:T384 occupation:T386 address:T387
+T386	occupation 4189 4203	wine merchants
+T387	address 4205 4226	1 1 St James'" square
+T388	surname 4227 4233	Aitken
+T389	POD_entry 4227 4233	Aitken
+E81	POD_entry:T389 occupation:T390 address:T391
+T390	occupation 4240 4256	firewood factory
+T391	address 4258 4276	67 Fountain bridge
+T392	surname 4277 4283	Aitken
+T393	occupation 4290 4304	coal merchants
+T394	address 4306 4320	67 Fountain br
+T395	POD_entry 4277 4283	Aitken
+E82	POD_entry:T395 occupation:T393 address:T394
+T396	surname 4322 4328	Aitken
+T397	POD_entry 4322 4328	Aitken
+E83	POD_entry:T397 surname:T398 occupation:T399 address:T400
+T398	surname 4331 4337	Wright
+T399	occupation 4339 4358	provision merchants
+T400	address 4360 4383	Char- lotte lane, Leith
+T401	surname 4384 4390	Aitken
+T402	POD_entry 4384 4390	Aitken
+E84	POD_entry:T402 surname:T403 occupation:T404 address:T405
+T403	surname 4392 4396	Gray
+T404	occupation 4404 4443	corn factors and com- mission merchants
+T405	address 4445 4462	21 Bernard street
+T406	surname 4463 4469	Aitken
+T407	POD_entry 4463 4469	Aitken
+E85	POD_entry:T407 title:T408 forename:T409 address:T410
+T408	title 4471 4475	Capt
+T409	forename 4477 4479	A.
+T410	address 4486 4504	22 Broughton place
+T411	surname 4505 4511	Aitken
+T412	POD_entry 4505 4511	Aitken
+E86	POD_entry:T412 forename:T413 surname:T414
+T413	forename 4513 4514	A
+T414	surname 4539 4554	19 Buccleuch pi
+T415	surname 4556 4562	Aitken
+T416	POD_entry 4556 4562	Aitken
+E87	POD_entry:T416 forename:T417 address:T418
+T417	forename 4564 4569	Alex.
+T418	address 4570 4584	5 Sylvan place
+T419	surname 4585 4591	Aitken
+T420	POD_entry 4585 4591	Aitken
+E88	POD_entry:T420 forename:T421 occupation:T422 address:T423
+T421	forename 4593 4597	Alex
+T422	occupation 4599 4609	coal agent
+T423	address 4611 4626	9 Port-Hamilton
