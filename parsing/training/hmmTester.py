@@ -57,7 +57,7 @@ for dirName in os.listdir(TESTINGFOLDER):
         if a[0] == "E":
             continue
 
-        key, tokenData, actualToken = a.strip().split("\t")
+        _, tokenData, actualToken = a.strip().split("\t")
         actualTag = tokenData.split()[0].upper()
         startIndex = tokenData.split()[1]
 

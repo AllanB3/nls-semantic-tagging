@@ -120,7 +120,7 @@ T99	POD_entry 1030 1047	Parliament square
 E21	POD_entry:T99
 T101	surname 1147 1150	Cay
 T102	POD_entry 1147 1150	Cay
-E22	POD_entry:T102 forename:T103 occupation:T104 address:T100
+E22	POD_entry:T102 forename:T103 occupation:T104
 T103	forename 1142 1146	John
 T104	occupation 1152 1161	collector
 T105	surname 1162 1169	Affleck

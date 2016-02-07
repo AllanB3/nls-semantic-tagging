@@ -239,7 +239,7 @@ T199	surname 2107 2112	Burns
 T200	forename 2114 2126	Charles R.A.
 T202	address 2128 2145	17 Marchmont road
 T203	POD_entry 2107 2112	Burns
-E40	POD_entry:T203 forename:T200 occupation:T201 address:T202
+E40	POD_entry:T203 forename:T200 address:T202
 T204	surname 2148 2153	Burns
 T205	forename 2155 2160	David
 T206	address 2162 2179	4 Bowhill terrace

@@ -38,9 +38,9 @@ class EntryExtractor:
 					continue
 
 			if not tag in entry:
-				entry[tag] = token
+				entry[tag] = token.lstrip().strip()
 			else:
-				entry[tag] = entry[tag] + ", "  + token
+				entry[tag] = entry[tag] + ", "  + token.lstrip().strip()
 
 			previousTag = tag
 
