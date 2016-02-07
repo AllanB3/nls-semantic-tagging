@@ -31,6 +31,10 @@ class hiddenMarkovModel:
 
     def tag(self, text):
         text = text.replace(" ; house", "")
+        text = text.replace("Miss ", "Miss, ")
+        text = text.replace("Mrs ", "Mrs, ")
+        text = text.replace("Mr ", "Mr, ")
+        text = text.replace("Ms ", "Ms, ")
         text = text.replace("\n", ",")
         tokens = text.split(",")
         tokensAndVectors = []
