@@ -1,0 +1,422 @@
+T1	surname 13 21	Campbell
+T2	title 23 27	Miss
+T3	forename 28 30	A.
+T4	address 32 51	98 Polwarth gardens
+T5	POD_entry 13 21	Campbell
+E1	POD_entry:T5 title:T2 forename:T3 address:T4
+T6	surname 52 60	Campbell
+T7	title 62 66	Miss
+T8	forename 67 72	A. M.
+T10	address 74 97	20 Colinton Mains green
+T11	POD_entry 52 60	Campbell
+E2	POD_entry:T11 title:T7 address:T10 forename:T8
+T9	surname 98 106	Campbell
+T12	title 108 112	Miss
+T13	forename 113 118	B. D.
+T14	address 120 137	110 Comiston road
+T15	POD_entry 98 106	Campbell
+E3	POD_entry:T15 title:T12 forename:T13 address:T14
+T16	surname 138 146	Campbell
+T17	title 148 152	Miss
+T18	forename 153 158	C. M.
+T19	address 160 177	15 Dunedin street
+T20	POD_entry 138 146	Campbell
+E4	POD_entry:T20 title:T17 forename:T18 address:T19
+T21	surname 178 186	Campbell
+T22	title 188 192	Miss
+T23	forename 193 198	Ethel
+T24	occupation 200 203	M.A.
+T25	address 206 220;221 225	37 Meadowhouse road
+T26	POD_entry 178 186	Campbell
+E5	POD_entry:T26 title:T22 forename:T23 occupation:T24 address:T25
+T27	surname 226 234	Campbell
+T28	title 236 240	Miss
+T29	forename 241 246	E. F.
+T30	address 248 262	24 Canaan lane
+T31	POD_entry 226 234	Campbell
+E6	POD_entry:T31 title:T28 forename:T29 address:T30
+T32	surname 263 271	Campbell
+T33	title 272 276	Miss
+T34	forename 277 282	E. V.
+T35	address 284 302	20 Fraser crescent
+T36	POD_entry 263 271	Campbell
+E7	POD_entry:T36 title:T33 forename:T34 address:T35
+T37	surname 303 311	Campbell
+T38	title 313 317	Miss
+T39	forename 318 323	F. C.
+T40	address 325 345	84 Haymarket terrace
+T41	POD_entry 303 311	Campbell
+E8	POD_entry:T41 title:T38 forename:T39 address:T40
+T42	surname 346 354	Campbell
+T43	title 356 360	Miss
+T44	forename 361 366	F. E.
+T45	address 368 391;392 408	41 Meggetland terrace ; Telephone, 62986
+T46	POD_entry 346 354	Campbell
+E9	POD_entry:T46 title:T43 forename:T44 address:T45
+T47	surname 409 417	Campbell
+T48	title 419 423	Miss
+T49	forename 424 436	Gladys A. M.
+T50	address 438 457	5 Eglinton crescent
+T51	POD_entry 409 417	Campbell
+E10	POD_entry:T51 title:T48 forename:T49 address:T50
+T52	surname 458 466	Campbell
+T53	title 468 472	Miss
+T54	forename 473 475	I.
+T55	address 477 502	3 Portland terrace, Leith
+T56	POD_entry 458 466	Campbell
+E11	POD_entry:T56 title:T53 forename:T54 address:T55
+T57	surname 503 511	Campbell
+T58	title 513 517	Miss
+T59	forename 518 523	Janet
+T60	surname 525 541	24 Raeburn place
+T61	POD_entry 503 511	Campbell
+E12	POD_entry:T61 title:T58 forename:T59 surname:T60
+T62	surname 542 550	Campbell
+T63	title 552 556	Miss
+T64	forename 557 563	Jessie
+T65	address 565 582	18 Carlton street
+T66	POD_entry 542 550	Campbell
+E13	POD_entry:T66 title:T63 forename:T64 address:T65
+T67	surname 583 591	Campbell
+T68	title 593 597	Miss
+T69	forename 598 600	J.
+T70	address 602 619	12 Atholl terrace
+T71	POD_entry 583 591	Campbell
+E14	POD_entry:T71 title:T68 forename:T69 address:T70
+T72	surname 620 628	Campbell
+T73	title 630 634	Miss
+T74	forename 635 637	J.
+T75	address 639 659	16 St Vincent street
+T76	POD_entry 620 628	Campbell
+E15	POD_entry:T76 title:T73 forename:T74 address:T75
+T77	surname 660 668	Campbell
+T78	title 670 674	Miss
+T79	forename 675 677	J.
+T80	address 679 695	8 Broughton road
+T81	POD_entry 660 668	Campbell
+E16	POD_entry:T81 title:T78 forename:T79 address:T80
+T82	surname 696 704	Campbell
+T83	title 706 710	Miss
+T84	forename 711 719	Margaret
+T85	address 721 740	37 Meadowhouse road
+T86	POD_entry 696 704	Campbell
+E17	POD_entry:T86 title:T83 forename:T84 address:T85
+T87	surname 741 749	Campbell
+T88	title 751 755	Miss
+T89	forename 756 763	Mary J.
+T90	address 765 786	5 Argyle Park terrace
+T91	POD_entry 741 749	Campbell
+E18	POD_entry:T91 title:T88 forename:T89 address:T90
+T92	surname 787 795	Campbell
+T93	title 797 801	Miss
+T94	forename 802 804	M.
+T95	occupation 806 816	dressmaker
+T96	address 818 831;832 837	13 Caledonian place
+T97	POD_entry 787 795	Campbell
+E19	POD_entry:T97 title:T93 forename:T94 occupation:T95 address:T96
+T98	surname 838 846	Campbell
+T99	title 848 852	Miss
+T100	forename 853 855	M.
+T101	occupation 857 866	newsagent
+T102	address 868 877;878 889	10 Comely Bank avenue
+T103	address 899 917	16 Learmonth grove
+T104	POD_entry 838 846	Campbell
+E20	POD_entry:T104 title:T99 forename:T100 occupation:T101 address:T102 address2:T103
+T105	surname 918 926	Campbell
+T106	title 928 932	Miss
+T107	forename 933 938	M. A.
+T108	address 940 956	155 Lothian road
+T109	POD_entry 918 926	Campbell
+E21	POD_entry:T109 title:T106 forename:T107 address:T108
+T110	surname 957 965	Campbell
+T111	title 967 971	Miss
+T112	forename 972 977	M. E.
+T113	address 979 999	56 Corstorphine road
+T114	POD_entry 957 965	Campbell
+E22	POD_entry:T114 title:T111 forename:T112 address:T113
+T115	surname 1000 1008	Campbell
+T116	title 1010 1014	Miss
+T117	forename 1015 1020	M. H.
+T118	address 1022 1041	24 Morningside road
+T119	POD_entry 1000 1008	Campbell
+E23	POD_entry:T119 title:T116 forename:T117 address:T118
+T120	surname 1042 1050	Campbell
+T121	title 1052 1056	Miss
+T122	forename 1057 1063	Nessie
+T123	address 1065 1088;1089 1094	130 High street, Porto- bello
+T124	POD_entry 1042 1050	Campbell
+E24	POD_entry:T124 title:T121 forename:T122 address:T123
+T125	surname 1095 1103	Campbell
+T126	title 1105 1109	Miss
+T127	forename 1110 1112	S.
+T128	occupation 1114 1139;1140 1148	Lixmount School for Girls and Boys
+T129	address 1150 1170	31 East Trinity road
+T130	POD_entry 1095 1103	Campbell
+E25	POD_entry:T130 title:T126 forename:T127 occupation:T128 address:T129
+T131	surname 1171 1179	Campbell
+T132	title 1181 1185	Miss
+T133	occupation 1187 1209	Maternity Nursing Home
+T134	address 1211 1212;1213 1229	5 Morningside park
+T135	POD_entry 1171 1179	Campbell
+E26	POD_entry:T135 title:T132 occupation:T133 address:T134
+T136	surname 1249 1257	Campbell
+T137	forename 1259 1263	Miss
+T138	address 1265 1287	32 St Leonard’s street
+T139	POD_entry 1249 1257	Campbell
+E27	POD_entry:T139 forename:T137 address:T138
+T140	surname 1288 1296	Campbell
+T141	title 1298 1302	Miss
+T142	address 1304 1324	11 Comely Bank grove
+T143	POD_entry 1288 1296	Campbell
+E28	POD_entry:T143 title:T141 address:T142
+T144	surname 1325 1333	Campbell
+T145	title 1335 1339	Miss
+T146	occupation 1341 1347	draper
+T147	address 1349 1364	7 4 Pitt street
+T148	address 1374 1389	24 Clerk street
+T149	POD_entry 1325 1333	Campbell
+E29	POD_entry:T149 title:T145 occupation:T146 address:T147 address2:T148
+T150	surname 1390 1398	Campbell
+T151	title 1400 1404	Miss
+T152	address 1406 1423	43 Falcon gardens
+T153	POD_entry 1390 1398	Campbell
+E30	POD_entry:T153 title:T151 address:T152
+T154	surname 1424 1432	Campbell
+T155	title 1434 1438	Miss
+T156	forename 1440 1449	Millearne
+T157	address 1451 1464	5 Napier road
+T158	POD_entry 1424 1432	Campbell
+E31	POD_entry:T158 title:T155 forename:T156 address:T157
+T159	surname 1465 1473	Campbell
+T160	title 1475 1479	Miss
+T161	address 1481 1497	31 Falcon avenue
+T162	POD_entry 1465 1473	Campbell
+E32	POD_entry:T162 title:T160 address:T161
+T163	surname 1498 1506	Campbell
+T164	forename 1508 1517	Christina
+T165	address 1519 1534	37 Minto street
+T166	POD_entry 1498 1506	Campbell
+E33	POD_entry:T166 forename:T164 address:T165
+T167	surname 1535 1543	Campbell
+T168	forename 1545 1560	Euphemia Gordon
+T169	address 1562 1577;1578 1583	11 Saughtonhall drive
+T170	POD_entry 1535 1543	Campbell
+E34	POD_entry:T170 forename:T168 address:T169
+T171	surname 1584 1592	Campbell
+T172	forename 1594 1603	Isabel M.
+T173	address 1605 1620	4 East Mayfield
+T174	POD_entry 1584 1592	Campbell
+E35	POD_entry:T174 forename:T172 address:T173
+T175	surname 1621 1629	Campbell
+T176	forename 1631 1636	Janet
+T177	address 1638 1666	29 Regent street, Portobello
+T178	POD_entry 1621 1629	Campbell
+E36	POD_entry:T178 forename:T176 address:T177
+T179	surname 1667 1675	Campbell
+T180	forename 1677 1680	May
+T181	address 1682 1707	17 South St James’ street
+T182	POD_entry 1667 1675	Campbell
+E37	POD_entry:T182 forename:T180 address:T181
+T183	surname 1870 1884	Campbell-Smith
+T184	title 1886 1890	Miss
+T185	address 1892 1912	66 Great King street
+T186	POD_entry 1870 1884	Campbell-Smith
+E38	POD_entry:T186 title:T184 address:T185
+T187	surname 1981 1988	Campion
+T188	title 1990 1993	Mrs
+T189	address 1995 2012	5 Bowhill terrace
+T190	surname 2013 2020	Campion
+T191	title 2022 2026	Miss
+T192	forename 2027 2029	L.
+T193	occupation 2031 2040	newsagent
+T194	address 2042 2059	47 Fountainbridge
+T195	surname 2613 2620	Canavan
+T196	forename 2622 2627	James
+T197	address 2629 2648	18 Balcarres street
+T198	POD_entry 2613 2620	Canavan
+E39	POD_entry:T198 forename:T196 address:T197
+T199	surname 2649 2656	Canavan
+T200	forename 2658 2660	T.
+T201	address 2662 2685	10 West Newington place
+T202	POD_entry 2649 2656	Canavan
+E40	POD_entry:T202 forename:T200 address:T201
+T203	surname 2886 2891	Canch
+T204	title 2893 2896	Mrs
+T205	forename 2897 2905	Madge M.
+T206	address 2907 2927;2928 2944	2 Randolph crescent; Telephone, 33271
+T207	POD_entry 2886 2891	Canch
+E41	POD_entry:T207 title:T204 forename:T205 address:T206
+T208	surname 2945 2952	Candler
+T209	forename 2954 2959	H. M.
+T210	address 2961 2990	66 Brunstane road, Portobello
+T211	POD_entry 2945 2952	Candler
+E42	POD_entry:T211 forename:T209 address:T210
+T212	surname 2991 2999	Candlish
+T213	forename 3001 3013	D. MacGregor
+T214	address 3015 3032;3033 3039	47 East Claremont street
+T215	POD_entry 2991 2999	Candlish
+E43	POD_entry:T215 forename:T213 address:T214
+T216	surname 3040 3048	Candlish
+T217	forename 3050 3054	Paul
+T218	address 3056 3087	23 Craig’s avenue, Corstorphine
+T219	POD_entry 3040 3048	Candlish
+E44	POD_entry:T219 forename:T217 address:T218
+T220	surname 3088 3096	Candlish
+T221	title 3098 3102	Miss
+T222	occupation 3104 3126	Maternity Nursing Home
+T223	address 3128 3130;3131 3166	71 Great King street; Telephone, 30917
+T224	POD_entry 3088 3096	Candlish
+E45	POD_entry:T224 title:T221 occupation:T222 address:T223
+T225	surname 3167 3173	Candow
+T226	forename 3175 3181	Robert
+T227	address 3183 3213	134 Paisley avenue, Portobello
+T228	POD_entry 3167 3173	Candow
+E46	POD_entry:T228 forename:T226 address:T227
+T229	surname 3214 3220	Candow
+T230	forename 3222 3228	Robert
+T231	address 3230 3245	9 Liberton brae
+T232	POD_entry 3214 3220	Candow
+E47	POD_entry:T232 forename:T230 address:T231
+T233	surname 3246 3250	Cane
+T234	forename 3252 3257	R. H.
+T235	address 3259 3280	Crofton, Kinnear road
+T236	POD_entry 3246 3250	Cane
+E48	POD_entry:T236 forename:T234 address:T235
+T237	surname 3281 3288	Cannell
+T238	forename 3290 3292	T.
+T239	address 3294 3315	30 Comely Bank avenue
+T240	POD_entry 3281 3288	Cannell
+E49	POD_entry:T240 forename:T238 address:T239
+T241	surname 3316 3323	Canning
+T242	forename 3325 3333	Alex. Y.
+T243	address 3335 3355	15 Longformacus road
+T244	POD_entry 3316 3323	Canning
+E50	POD_entry:T244 forename:T242 address:T243
+T245	surname 3356 3363	Canning
+T246	forename 3365 3372	Francis
+T247	occupation 3374 3381	chemist
+T248	address 3383 3399;3400 3410	332 High street, Portobello
+T249	POD_entry 3356 3363	Canning
+E51	POD_entry:T249 occupation2:T247 forename:T246 address:T248
+T250	surname 3441 3448	Canning
+T251	title 3450 3456	Misses
+T252	address 3458 3473	94 Lothian road
+T253	POD_entry 3441 3448	Canning
+E52	POD_entry:T253 title:T251 address:T252
+T254	surname 3521 3527	Cannon
+T255	forename 3529 3534	D. M.
+T256	address 3536 3552	56 Gardiner road
+T257	POD_entry 3521 3527	Cannon
+E53	POD_entry:T257 forename:T255 address:T256
+T258	surname 3553 3559	Cannon
+T259	title 3561 3565	Miss
+T260	address 3567 3584	3 Warriston place
+T261	POD_entry 3553 3559	Cannon
+E54	POD_entry:T261 title:T259 address:T260
+T262	surname 3832 3836	Cant
+T263	forename 3838 3843	Henry
+T264	address 3845 3864	62 Priestfield road
+T265	POD_entry 3832 3836	Cant
+E55	POD_entry:T265 forename:T263 address:T264
+T266	surname 3865 3869	CANT
+T267	forename 3871 3876	HENRY
+T268	occupation 3878 3902;3903 3907	S.S.C. (Andrew Gordon & Co.)
+T269	address 3909 3942	28 Queen street; Telephone, 23437
+T270	address 3952 3985;3986 4002	30 Clermiston road, Corstorphine; Telephone, 66522
+T271	POD_entry 2013 2020	Campion
+E56	POD_entry:T271 title:T191 forename:T192 occupation:T193 address:T194
+T272	POD_entry 1981 1988	Campion
+E57	POD_entry:T272 title:T188 address:T189
+T273	surname 4003 4007	Cant
+T274	forename 4009 4014	James
+T275	address 4016 4047	7 Vivian ter., Davidson’s mains
+T276	POD_entry 4003 4007	Cant
+E58	POD_entry:T276 forename:T274 address:T275
+T277	surname 4048 4052	Cant
+T278	forename 4054 4058	John
+T279	address 4060 4076	33 Barony street
+T280	POD_entry 4048 4052	Cant
+E59	POD_entry:T280 forename:T278 address:T279
+T281	surname 4077 4081	Cant
+T282	forename 4083 4094	J. Macphail
+T283	occupation 4096 4121;4122 4140	Assessor of Public Under- takings (Scotland)
+T284	address 4142 4163;4164 4176	20 Duke street; Tele- phone, 25452
+T285	address 4186 4207;4208 4244	Benarty, Bonaly road, Colinton ; Telephone, 87458 Colinton
+T286	POD_entry 4077 4081	Cant
+E60	POD_entry:T286 forename:T282 occupation:T283 address:T284 address2:T285
+T287	surname 4245 4249	Cant
+T288	forename 4251 4256	L. E.
+T289	address 4258 4279	61 Brunstane crescent
+T290	POD_entry 4245 4249	Cant
+E61	POD_entry:T290 forename:T288 address:T289
+T291	surname 4280 4284	Cant
+T292	forename 4286 4295	Thomas S.
+T293	address 4297 4324	Glebe road Cramond, Barnton
+T294	POD_entry 4280 4284	Cant
+E62	POD_entry:T294 forename:T292 address:T293
+T295	surname 4325 4329	Cant
+T296	forename 4331 4336	W. H.
+T297	occupation 4338 4367;4368 4375	electric light and power con- tractor
+T298	address 4377 4393	12 Chapel street
+T299	POD_entry 4325 4329	Cant
+E63	POD_entry:T299 forename:T296 occupation:T297 address:T298
+T300	surname 4394 4398	Cant
+T301	forename 4400 4405	W. W.
+T302	address 4407 4425	48 Craigmount view
+T303	POD_entry 4394 4398	Cant
+E64	POD_entry:T303 forename:T301 address:T302
+T304	surname 4426 4430	Cant
+T305	title 4432 4435	Mrs
+T306	address 4437 4456	8 Ardmillan terrace
+T307	POD_entry 4426 4430	Cant
+E65	POD_entry:T307 title:T305 address:T306
+T308	surname 4457 4461	Cant
+T309	title 4463 4469	Misses
+T310	address 4471 4501;4502 4516	16 Lockerby cottages, Lasswade road, Liberton
+T311	POD_entry 4457 4461	Cant
+E66	POD_entry:T311 title:T309 address:T310
+T312	surname 4517 4524	Cantlay
+T313	title 4526 4530	Miss
+T314	forename 4531 4533	H.
+T315	address 4535 4564;4565 4570	95 Moira terrace ; Telephone, 82380
+T316	POD_entry 4517 4524	Cantlay
+E67	POD_entry:T316 title:T313 address:T315 forename:T314
+T317	surname 4571 4578	Cantley
+T318	forename 4580 4588	James R.
+T319	occupation 4590 4597	painter
+T320	address 4599 4616	8 Comely Bank st.
+T321	POD_entry 4571 4578	Cantley
+E68	POD_entry:T321 forename:T318 occupation:T319 address:T320
+T322	surname 4617 4624	Cantley
+T323	forename 4626 4632	Wm. T.
+T324	address 4634 4650	6 Kenmure avenue
+T325	POD_entry 4617 4624	Cantley
+E69	POD_entry:T325 forename:T323 address:T324
+T326	surname 4844 4851	Capaldi
+T327	forename 4853 4859	Albert
+T328	occupation 4861 4878	fried fish dealer
+T329	address 4880 4892	51a Kirkgate
+T330	address 4902 4915	59 Ferry road
+T331	POD_entry 4844 4851	Capaldi
+E70	POD_entry:T331 forename:T327 occupation:T328 address:T329 address2:T330
+T332	surname 4916 4923	Capaldi
+T333	forename 4925 4932	Antonio
+T334	occupation 4934 4952	The Ice Cream Shop
+T335	address 4954 4962;4963 4978	15 Great Junction street
+T336	POD_entry 4916 4923	Capaldi
+E71	POD_entry:T336 forename:T333 occupation:T334 address:T335
+T337	surname 4979 4983	Cape
+T338	forename 4985 4989	John
+T339	address 4991 5012	42 Murrayfield avenue
+T340	POD_entry 4979 4983	Cape
+E72	POD_entry:T340 forename:T338 address:T339
+T341	surname 5013 5019	Capers
+T342	forename 5021 5030	Walter H.
+T343	address 5032 5049	29 Greenbank road
+T344	POD_entry 5013 5019	Capers
+E73	POD_entry:T344 forename:T342 address:T343
+T345	surname 5390 5396	Caplan
+T346	forename 5398 5403	Henry
+T347	occupation 5405 5425	medical practitioner
+T348	address 5427 5438;5439 5462	9 Buccleuch place; Telephone, 43902
+T349	surname 5472 5475;5476 5489	122 Mayfield road

@@ -1,0 +1,530 @@
+T1	surname 13 21	McWattie
+T2	forename 23 30	Geo. C.
+T3	address 32 48	43 Mayfield road
+T4	POD_entry 13 21	McWattie
+E1	POD_entry:T4 forename:T2 address:T3
+T5	surname 49 57	McWeenie
+T6	forename 59 61	B.
+T7	address 63 93	Flatshot cottage, Rediord road
+T8	POD_entry 49 57	McWeenie
+E2	POD_entry:T8 forename:T6 address:T7
+T9	surname 94 101	McWeeny
+T10	forename 103 107	Hugh
+T11	occupation 109 117	gardener
+T12	address 119 136;137 173	Queen’s Bay Lodge gate, Easter Duddingston, Portobello
+T13	POD_entry 94 101	McWeeny
+E3	POD_entry:T13 forename:T10 occupation:T11 address:T12
+T14	surname 174 183	McWhannel
+T15	forename 185 187	C.
+T16	occupation 189 217	confectioner and tobacconist
+T17	POD_entry 174 183	McWhannel
+E4	POD_entry:T17 forename:T15 occupation:T16 address:T18
+T18	address 219 234	26 Lorne street
+T19	surname 235 245	McWhannell
+T20	forename 247 256	Donald C.
+T21	address 258 275	5 Montpelier park
+T22	POD_entry 235 245	McWhannell
+E5	POD_entry:T22 forename:T20 address:T21
+T23	surname 276 286	McWhannell
+T24	forename 288 290	D.
+T25	address 292 315	7 West Montgomery place
+T26	POD_entry 276 286	McWhannell
+E6	POD_entry:T26 forename:T24 address:T25
+T27	surname 316 326	McWhannell
+T28	forename 328 333	G. G.
+T29	address 335 358;359 371	16 Royal circus ; Tele- phone, 21454
+T30	POD_entry 316 326	McWhannell
+E7	POD_entry:T30 forename:T28 address:T29
+T31	surname 372 382	McWhannell
+T32	forename 384 389	T. I.
+T33	address 391 413;414 430	13 Merchiston avenue ; Telephone, 55973
+T34	POD_entry 372 382	McWhannell
+E8	POD_entry:T34 forename:T32 address:T33
+T35	surname 431 442	Macwhannell
+T36	title 444 448	Miss
+T37	forename 449 451	M.
+T38	address 453 472	8 Strathfillan road
+T39	POD_entry 431 442	Macwhannell
+E9	POD_entry:T39 title:T36 forename:T37 address:T38
+T40	surname 473 482	McWhinnie
+T41	forename 484 490	Robert
+T42	address 492 505	3 High street
+T43	POD_entry 473 482	McWhinnie
+E10	POD_entry:T43 forename:T41 address:T42
+T44	surname 506 515	McWhinnie
+T45	forename 517 523	Robert
+T46	address 525 542	1 Cranston street
+T47	POD_entry 506 515	McWhinnie
+E11	POD_entry:T47 forename:T45 address:T46
+T48	surname 543 549	McWhir
+T49	title 551 554	Mrs
+T50	forename 555 560	M. H.
+T51	address 562 578	7 Albert terrace
+T52	POD_entry 543 549	McWhir
+E12	POD_entry:T52 title:T49 forename:T50 address:T51
+T53	surname 579 588	McWhirter
+T54	forename 590 596	Robert
+T55	occupation 597 602	M. A.
+T56	address 604 625;626 640	Fairclouch, 391Lanark road, Colinton
+T57	POD_entry 579 588	McWhirter
+E13	POD_entry:T57 forename:T54 occupation:T55 address:T56
+T58	surname 641 650	McWhirter
+T59	forename 652 658	Robert
+T60	occupation 660 664	M.D.
+T61	address 666 682;683 699	2 Orchard brae ; Telephone, 30050
+T62	POD_entry 641 650	McWhirter
+E14	POD_entry:T62 forename:T59 occupation:T60 address:T61
+T63	surname 700 709	McWhirter
+T64	title 711 714	Mrs
+T65	forename 715 717	M.
+T66	address 719 740	50 Craighouee gardens
+T67	POD_entry 700 709	McWhirter
+E15	POD_entry:T67 title:T64 forename:T65 address:T66
+T68	surname 741 750	McWhirter
+T69	title 752 756	Miss
+T70	forename 757 759	J.
+T71	occupation 761 770	baby wear
+T72	address 772 789	101a Colinton rd.
+T73	POD_entry 741 750	McWhirter
+E16	POD_entry:T73 title:T69 forename:T70 occupation:T71 address:T72
+T74	surname 790 799	McWhirter
+T75	forename 801 812	E. Patricia
+T76	occupation 814 834	medical practitioner
+T77	address 836 876	112 Newhaven rd.; Telephone, 35759 Leith
+T78	POD_entry 790 799	McWhirter
+E17	POD_entry:T78 forename:T75 occupation:T76 address:T77
+T79	surname 877 885	McWhynie
+T80	forename 887 890	Wm.
+T81	address 892 909	47 Loganlea place
+T82	POD_entry 877 885	McWhynie
+E18	POD_entry:T82 forename:T80 address:T81
+T83	surname 910 919	McWilliam
+T84	forename 921 935	George & James
+T85	occupation 937 951	coal merchants
+T86	address 953 988	47 Sciennes road ; Telephone, 42359
+T87	POD_entry 910 919	McWilliam
+E19	POD_entry:T87 forename:T84 occupation:T85 address:T86
+T88	surname 989 998	McWilliam
+T89	forename 1000 1009	Alexander
+T90	address 1011 1027	3 Falcon gardens
+T91	POD_entry 989 998	McWilliam
+E20	POD_entry:T91 forename:T89 address:T90
+T92	surname 1028 1037	McWilliam
+T93	forename 1039 1048	Alexander
+T94	occupation 1050 1070;1071 1076	wine and spirit mer- chant
+T95	address 1078 1111	159 Rose street; Telephone, 20311
+T96	POD_entry 1028 1037	McWilliam
+E21	POD_entry:T96 forename:T93 occupation:T94 address:T95
+T97	surname 1112 1121	McWilliam
+T98	forename 1123 1127	Hugh
+T99	address 1129 1148	21 Broughton street
+T100	POD_entry 1112 1121	McWilliam
+E22	POD_entry:T100 forename:T98 address:T99
+T101	surname 1149 1158	McWilliam
+T102	forename 1160 1174	John Alexander
+T103	occupation 1176 1193;1194 1237	L.R.I.B.A., char- tered and registered architect and surveyor
+T104	address 1239 1275	115 Hanover street; Telephone, 26340
+T105	address 1285 1301	45 Kirkhill road
+T106	POD_entry 1149 1158	McWilliam
+E23	POD_entry:T106 forename:T102 occupation:T103 address:T104 address2:T105
+T107	surname 1302 1311	McWilliam
+T108	forename 1313 1318	Peter
+T109	occupation 1320 1332	warehouseman
+T110	address 1334 1344;1345 1366	114 Milton road West, Portobello
+T111	POD_entry 1302 1311	McWilliam
+E24	POD_entry:T111 forename:T108 occupation:T109 address:T110
+T112	surname 1367 1376	McWilliam
+T113	forename 1378 1383	W. N.
+T114	address 1385 1408	Lenaderg, Barnshot road
+T115	POD_entry 1367 1376	McWilliam
+E25	POD_entry:T115 forename:T113 address:T114
+T116	surname 1409 1418	McWilliam
+T117	title 1420 1423	Mrs
+T118	forename 1424 1432	Isabella
+T119	address 1434 1452	9 West Savile road
+T120	POD_entry 1409 1418	McWilliam
+E26	POD_entry:T120 title:T117 forename:T118 address:T119
+T121	surname 1453 1462	McWilliam
+T122	title 1464 1467	Mrs
+T123	forename 1468 1475	Jean M.
+T124	address 1477 1494	43 Craiglea drive
+T125	POD_entry 1453 1462	McWilliam
+E27	POD_entry:T125 title:T122 forename:T123 address:T124
+T126	surname 1495 1504	McWilliam
+T127	title 1506 1509	Mrs
+T128	forename 1510 1517	Mary S.
+T129	address 1519 1537	15 Millar crescent
+T130	POD_entry 1495 1504	McWilliam
+E28	POD_entry:T130 title:T127 forename:T128 address:T129
+T131	surname 1538 1548	McWilliams
+T132	forename 1550 1555	H. R.
+T133	address 1557 1577	12 Hillside crescent
+T134	POD_entry 1538 1548	McWilliams
+E29	POD_entry:T134 forename:T132 address:T133
+T135	surname 1578 1588	McWilliams
+T136	forename 1590 1594	John
+T137	address 1596 1622	37 Bath street, Portobello
+T138	POD_entry 1578 1588	McWilliams
+E30	POD_entry:T138 forename:T136 address:T137
+T139	surname 1623 1633	McWilliams
+T140	forename 1635 1640	J. S.
+T141	address 1642 1660	44 Stewart terrace
+T142	POD_entry 1623 1633	McWilliams
+E31	POD_entry:T142 forename:T140 address:T141
+T143	surname 1661 1666	Mabon
+T144	forename 1668 1670	C.
+T145	address 1672 1699	114 High street, Portobello
+T146	POD_entry 1661 1666	Mabon
+E32	POD_entry:T146 forename:T144 address:T145
+T147	surname 1700 1705	Mabon
+T148	forename 1707 1712	R. M.
+T149	address 1714 1745;1746 1773	33 Brighton place, Portobello ; Telephone, 81433 Portobello
+T150	POD_entry 1700 1705	Mabon
+E33	POD_entry:T150 forename:T148 address:T149
+T151	surname 1774 1779	Mabon
+T152	forename 1781 1793	R. M., junr.
+T153	occupation 1795 1815	commercial traveller
+T154	address 1817 1834	40 Sighthill road
+T155	POD_entry 1774 1779	Mabon
+E34	POD_entry:T155 forename:T152 occupation:T153 address:T154
+T156	surname 1835 1840	Mabon
+T157	forename 1842 1847	W. K.
+T158	address 1849 1870	20 Heriothill terrace
+T159	POD_entry 1835 1840	Mabon
+E35	POD_entry:T159 forename:T157 address:T158
+T160	surname 1871 1876	Mabon
+T161	title 1878 1881	Mrs
+T162	forename 1882 1884	T.
+T163	address 1886 1905	23 Balcarres street
+T164	POD_entry 1871 1876	Mabon
+E36	POD_entry:T164 title:T161 forename:T162 address:T163
+T165	surname 1906 1911	Mabon
+T166	title 1913 1916	Mrs
+T167	address 1918 1937	11 Comiston gardens
+T168	POD_entry 1906 1911	Mabon
+E37	POD_entry:T168 title:T166 address:T167
+T169	surname 2019 2023	Mace
+T170	forename 2025 2030	J. B.
+T171	address 2032 2049	28 Macdowall road
+T172	POD_entry 2019 2023	Mace
+E38	POD_entry:T172 forename:T170 address:T171
+T173	surname 2100 2107	Machray
+T174	forename 2109 2116	Geo. F.
+T175	address 2118 2145;2146 2169	21 Restalrig avenue ; Tele- phone, 82055 Portobello
+T176	POD_entry 2100 2107	Machray
+E39	POD_entry:T176 forename:T174 address:T175
+T177	surname 2170 2176	Madden
+T178	forename 2178 2184	Joseph
+T179	address 2186 2202	10 Polwarth park
+T180	POD_entry 2170 2176	Madden
+E40	POD_entry:T180 forename:T178 address:T179
+T181	surname 2203 2209	Madden
+T182	forename 2211 2213	P.
+T183	address 2215 2231	17 Waverley park
+T184	POD_entry 2203 2209	Madden
+E41	POD_entry:T184 forename:T182 address:T183
+T185	surname 2232 2238	Madder
+T186	forename 2240 2250	James Gray
+T187	address 2252 2269;2270 2280	46 Durham avenue, Portobello
+T188	POD_entry 2232 2238	Madder
+E42	POD_entry:T188 forename:T186 address:T187
+T189	surname 2281 2286	Madge
+T190	forename 2288 2294	Alfred
+T191	address 2296 2320;2321 2329	Lewinton, Captains road, Liberton
+T192	POD_entry 2281 2286	Madge
+E43	POD_entry:T192 forename:T190 address:T191
+T193	surname 2330 2336	Madgin
+T194	forename 2338 2340	J.
+T195	occupation 2342 2356	boarding house
+T196	address 2358 2371	35 York place
+T197	POD_entry 2330 2336	Madgin
+E44	POD_entry:T197 forename:T194 occupation:T195 address:T196
+T198	surname 2372 2379	Madigan
+T199	forename 2381 2386	Peter
+T200	address 2388 2412	8 Hay drive, Craigmillar
+T201	POD_entry 2372 2379	Madigan
+E45	POD_entry:T201 forename:T199 address:T200 address2:T202
+T202	address 2413 2442	Madras Hall, 7 Craighall road
+T203	surname 2596 2601	Magee
+T204	forename 2603 2608	James
+T205	address 2610 2625	39 Loaning road
+T206	POD_entry 2596 2601	Magee
+E46	POD_entry:T206 forename:T204 address:T205
+T207	surname 2626 2632	Magnay
+T208	forename 2634 2640	Thomas
+T209	address 2642 2659	7 Sighthill drive
+T210	POD_entry 2626 2632	Magnay
+E47	POD_entry:T210 forename:T208 address:T209
+T211	surname 2815 2824	Magnusson
+T212	forename 2826 2832	Alfred
+T213	address 2834 2852	3 Dundonald street
+T214	POD_entry 2815 2824	Magnusson
+E48	POD_entry:T214 forename:T212 address:T213
+T215	surname 2853 2862	Magnusson
+T216	forename 2864 2875	Sigursteinn
+T217	address 2877 2889	5 Lygon road
+T218	POD_entry 2853 2862	Magnusson
+E49	POD_entry:T218 forename:T216 address:T217
+T219	surname 2890 2897	Magowan
+T220	title 2899 2902	Mrs
+T221	address 2904 2928	11 Craiglockhart terrace
+T222	POD_entry 2890 2897	Magowan
+E50	POD_entry:T222 title:T220 address:T221
+T223	surname 2929 2936	Magrill
+T224	forename 2938 2944	George
+T225	address 2946 2965	7 Strathfillan road
+T226	POD_entry 2929 2936	Magrill
+E51	POD_entry:T226 forename:T224 address:T225
+T227	surname 2966 2973	Maguire
+T228	forename 2975 2981	Daniel
+T229	address 2983 2998	4 Oxford street
+T230	POD_entry 2966 2973	Maguire
+E52	POD_entry:T230 forename:T228 address:T229
+T231	surname 2999 3006	Maguire
+T232	forename 3008 3013	James
+T233	address 3015 3037	2 East Cromwell street
+T234	POD_entry 2999 3006	Maguire
+E53	POD_entry:T234 forename:T232 address:T233
+T235	surname 3038 3045	Maguire
+T236	forename 3047 3052	James
+T237	address 3054 3077	9 Piershill square West
+T238	surname 3199 3206	Maguire
+T239	forename 3208 3215	John P.
+T240	address 3217 3240;3241 3276	Eday, Spylaw Bank road, Colinton; Telephone, 87134 Colinton
+T241	POD_entry 3199 3206	Maguire
+E54	POD_entry:T241 forename:T239 address:T240
+T242	surname 3277 3284	Maguire
+T243	forename 3286 3291	J. A.
+T244	address 3293 3323;3324 3345	Delmar, Hailes gardens ; Tele- phone, 87447 Colinton
+T245	POD_entry 3277 3284	Maguire
+E55	POD_entry:T245 forename:T243 address:T244
+T246	surname 3346 3353	Maguire
+T247	forename 3355 3364	Walter J.
+T248	address 3366 3385;3386 3402	Engadine, Westgarth avenue, Colinton
+T249	POD_entry 3346 3353	Maguire
+E56	POD_entry:T249 forename:T247 address:T248
+T250	surname 3403 3410	Maguire
+T251	title 3412 3415	Mrs
+T252	forename 3416 3421	Ellen
+T253	address 3423 3450;3451 3463	128 Craigleith road ; Tele- phone, 26531
+T254	POD_entry 3403 3410	Maguire
+E57	POD_entry:T254 title:T251 forename:T252 address:T253
+T255	surname 3464 3471	Maguire
+T256	title 3473 3476	Mrs
+T257	address 3478 3499	1 John’s place, Leith
+T258	POD_entry 3464 3471	Maguire
+E58	POD_entry:T258 title:T256 address:T257
+T259	surname 3500 3507	Mahaffy
+T260	forename 3509 3512	Wm.
+T261	address 3514 3543	Dunkeld lodge, 372 Ferry road
+T262	POD_entry 3500 3507	Mahaffy
+E59	POD_entry:T262 forename:T260 address:T261
+T263	surname 3544 3549	Maher
+T264	forename 3551 3553	D.
+T265	address 3555 3569	39 Jordan lane
+T266	POD_entry 3544 3549	Maher
+E60	POD_entry:T266 forename:T264 address:T265
+T267	surname 3570 3575	Maher
+T268	forename 3577 3582	Lucia
+T269	occupation 3584 3603	ladies’ hairdresser
+T270	address 3605 3620;3621 3637	40 Joppa road ; Telephone, 81507
+T271	POD_entry 3570 3575	Maher
+E61	POD_entry:T271 forename:T268 occupation:T269 address:T270
+T272	surname 3638 3645	Mahomet
+T273	forename 3647 3649	J.
+T274	address 3651 3664	46 March road
+T275	POD_entry 3638 3645	Mahomet
+E62	POD_entry:T275 forename:T273 address:T274
+T276	surname 3807 3815	Maidment
+T277	title 3817 3821	Miss
+T278	forename 3822 3824	C.
+T279	address 3826 3841	45 Causewayside
+T280	POD_entry 3807 3815	Maidment
+E63	POD_entry:T280 title:T277 forename:T278 address:T279
+T281	surname 3842 3847	Maile
+T282	forename 3849 3854	James
+T283	address 3856 3883;3884 3896	11 Cambridge gardens; Tele- phone, 36261
+T284	POD_entry 3842 3847	Maile
+E64	POD_entry:T284 forename:T282 address:T283
+T285	surname 3897 3903	Mailer
+T286	forename 3905 3910	James
+T287	address 3912 3928	5 Gardner street
+T288	POD_entry 3897 3903	Mailer
+E65	POD_entry:T288 forename:T286 address:T287
+T289	surname 3929 3935	Mailer
+T290	forename 3937 3939	J.
+T291	address 3941 3960	5 Livingstone place
+T292	POD_entry 3929 3935	Mailer
+E66	POD_entry:T292 forename:T290 address:T291
+T293	surname 3961 3967	Mailer
+T294	forename 3969 3978	Thomas H.
+T295	occupation 3980 3985	clerk
+T296	address 3987 4004	136 Albert street
+T297	POD_entry 3961 3967	Mailer
+E67	POD_entry:T297 forename:T294 occupation:T295 address:T296
+T298	surname 4005 4009	Main
+T299	forename 4011 4020	Alexander
+T300	occupation 4022 4048;4049 4060	M.A., B.Sc., Department of Agriculture
+T301	address 4062 4094	3 Relugas rd. ; Telephone, 41669
+T302	POD_entry 4005 4009	Main
+E68	POD_entry:T302 forename:T299 occupation:T300 address:T301
+T303	surname 4095 4099	Main
+T304	forename 4101 4110	Alexander
+T305	address 4112 4134	22 Warrender Park road
+T306	POD_entry 4095 4099	Main
+E69	POD_entry:T306 forename:T304 address:T305
+T307	surname 4135 4139	Main
+T308	forename 4141 4149	Alex. W.
+T309	occupation 4151 4171	commercial traveller
+T310	address 4173 4182;4183 4196	14 Craig- hall crescent
+T311	POD_entry 4135 4139	Main
+E70	POD_entry:T311 forename:T308 occupation:T309 address:T310
+T312	surname 4197 4201	Main
+T313	forename 4203 4205	A.
+T314	address 4207 4226	10 Plewlands avenue
+T315	POD_entry 4197 4201	Main
+E71	POD_entry:T315 forename:T313 address:T314
+T316	surname 4227 4231	Main
+T317	forename 4233 4238	A. G.
+T318	address 4240 4260	157 Morningside road
+T319	POD_entry 4227 4231	Main
+E72	POD_entry:T319 forename:T317 address:T318
+T320	surname 4261 4265	Main
+T321	forename 4267 4273	George
+T322	address 4275 4290	7 Hawthorn vale
+T323	POD_entry 4261 4265	Main
+E73	POD_entry:T323 forename:T321 address:T322
+T324	surname 4291 4295	Main
+T325	forename 4297 4303	George
+T326	address 4305 4324	7 Jessfield terrace
+T327	POD_entry 4291 4295	Main
+E74	POD_entry:T327 forename:T325 address:T326
+T328	surname 4325 4329	Main
+T329	forename 4331 4337	George
+T330	address 4339 4369	23 Longstone street, Slateford
+T331	POD_entry 4325 4329	Main
+E75	POD_entry:T331 forename:T329 address:T330
+T332	surname 4370 4374	Main
+T333	forename 4376 4381	Henry
+T334	occupation 4383 4410	china and hardware merchant
+T335	address 4412 4414;4415 4428	1a Chapel street
+T336	POD_entry 4370 4374	Main
+E76	POD_entry:T336 forename:T333 occupation:T334 address:T335
+T337	surname 4429 4433	Main
+T338	forename 4435 4440	H. C.
+T339	address 4442 4460	11 Broughton place
+T340	POD_entry 4429 4433	Main
+E77	POD_entry:T340 forename:T338 address:T339
+T341	surname 4461 4465	Main
+T342	forename 4467 4472	James
+T343	address 4474 4493	8 Spottiswoode road
+T344	POD_entry 4461 4465	Main
+E78	POD_entry:T344 forename:T342 address:T343
+T345	surname 4494 4498	Main
+T346	forename 4500 4508	James S.
+T347	address 4510 4528	33 Oxgangs terrace
+T348	POD_entry 4494 4498	Main
+E79	POD_entry:T348 forename:T346 address:T347
+T349	surname 4529 4533	Main
+T350	forename 4535 4545	John, jun.
+T351	address 4547 4568	42-7 Dumbiedykes road
+T352	POD_entry 4529 4533	Main
+E80	POD_entry:T352 forename:T350 address:T351
+T353	surname 4569 4573	Main
+T354	forename 4575 4582	John P.
+T355	address 4584 4605	10 Comely Green place
+T356	POD_entry 4569 4573	Main
+E81	POD_entry:T356 forename:T354 address:T355
+T357	surname 4606 4610	Main
+T358	forename 4612 4617	J. N.
+T359	address 4619 4642	26 Springvalley terrace
+T360	POD_entry 4606 4610	Main
+E82	POD_entry:T360 forename:T358 address:T359
+T361	surname 4643 4647	Main
+T362	forename 4649 4655	Robert
+T363	occupation 4657 4667	fishmonger
+T364	address 4669 4690;4691 4707	247 Morningside rd. ; Telephone, 51736
+T365	address 4717 4734	36 Newbattle ter.
+T366	POD_entry 4643 4647	Main
+E83	POD_entry:T366 forename:T362 occupation:T363 address:T364 address2:T365
+T367	surname 4735 4739	Main
+T368	forename 4741 4747	Robert
+T369	occupation 4749 4762	fish merchant
+T370	address 4764 4780;4781 4815	105 Main street, Newhaven; Telephone, 83384 Granton
+T372	POD_entry 4735 4739	Main
+E84	POD_entry:T372 forename:T368 occupation:T369 address:T370 address2:T371
+T371	address 4825 4859;4860 4865	144 Newhaven rd. ; Telephone 35398 Leith
+T373	surname 4866 4870	Main
+T374	forename 4872 4878	Robert
+T375	address 4880 4909;4910 4921	5 Dudley terrace ; Telephone, 36888 Leith
+T376	POD_entry 4866 4870	Main
+E85	POD_entry:T376 forename:T374 address:T375
+T377	surname 4922 4926	Main
+T378	forename 4928 4934	Thomas
+T379	address 4936 4957	26 Carrick Knowe hill
+T380	POD_entry 4922 4926	Main
+E86	POD_entry:T380 forename:T378 address:T379
+T381	surname 4958 4962	Main
+T382	forename 4964 4969	T. C.
+T383	address 4971 4988	40 Dalmeny street
+T384	POD_entry 4958 4962	Main
+E87	POD_entry:T384 forename:T382 address:T383
+T385	surname 4989 4993	Main
+T386	forename 4995 5002	William
+T387	occupation 5004 5012	tinsmith
+T388	address 5014 5033;5034 5046	98 West bow ; Tele- phone, 24384
+T389	address 5056 5071	6 Nelson street
+T390	POD_entry 4989 4993	Main
+E88	POD_entry:T390 forename:T386 occupation:T387 address:T388 address2:T389
+T391	surname 5072 5076	Main
+T392	forename 5078 5085	William
+T393	address 5087 5109	10 Colinton Mains loan
+T394	POD_entry 5072 5076	Main
+E89	POD_entry:T394 forename:T392 address:T393
+T395	surname 5110 5114	Main
+T396	forename 5116 5122	Wm. D.
+T397	address 5124 5143	11 Viewforth square
+T398	POD_entry 5110 5114	Main
+E90	POD_entry:T398 forename:T396 address:T397
+T399	surname 5144 5148	Main
+T400	forename 5150 5152	W.
+T401	address 5154 5168	13 Baird grove
+T402	POD_entry 5144 5148	Main
+E91	POD_entry:T402 forename:T400 address:T401
+T403	surname 5169 5173	Main
+T404	title 5175 5178	Mrs
+T405	forename 5179 5181	A.
+T406	occupation 5183 5197	boarding house
+T407	address 5199 5212	5 Duke street
+T408	POD_entry 5169 5173	Main
+E92	POD_entry:T408 title:T404 forename:T405 occupation:T406 address:T407
+T409	surname 5213 5217	Main
+T410	title 5219 5222	Mrs
+T411	forename 5223 5232	Charlotte
+T412	address 5234 5250	32 Gosford place
+T413	POD_entry 5213 5217	Main
+E93	POD_entry:T413 title:T410 forename:T411 address:T412
+T414	surname 5251 5255	Main
+T415	title 5257 5260	Mrs
+T416	forename 5261 5270	D. Duncan
+T417	address 5272 5293;5294 5323	Inverardoran lodge, 2 West Coates; Telephone, 61386
+T418	POD_entry 5251 5255	Main
+E94	POD_entry:T418 title:T415 forename:T416 address:T417
+T419	surname 5324 5328	Main
+T420	title 5330 5333	Mrs
+T421	forename 5334 5336	E.
+T422	address 5338 5357	9 Cambridge gardens
+T423	POD_entry 5324 5328	Main
+E95	POD_entry:T423 title:T420 forename:T421 address:T422
+T424	surname 5358 5362	Main
+T425	title 5364 5368	Mrs.
+T426	forename 5369 5370	L
+T427	address 5372 5393	121 Corstorphine road
+T428	POD_entry 5358 5362	Main
+E96	POD_entry:T428 title:T425 forename:T426 address:T427
+T429	surname 5394 5398	Main
+T430	title 5400 5403	Mrs
+T431	forename 5404 5406	M.
+T432	address 5408 5428	23 Hollybank terrace
+T433	POD_entry 5394 5398	Main
+E97	POD_entry:T433 title:T430 forename:T431 address:T432

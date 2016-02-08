@@ -4,7 +4,7 @@ from __future__ import division
 import sys
 import os
 
-TESTINGFOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hmmTest")
+TESTINGFOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), "hmmDevTest")
 
 from tabulate import tabulate
 
