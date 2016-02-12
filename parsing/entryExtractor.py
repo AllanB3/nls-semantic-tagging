@@ -51,15 +51,18 @@ class EntryExtractor:
 		g = rdflib.Graph()
 		schema = rdflib.Namespace("http://schema.org/")
 		person = rdflib.Namespace("http://schema.org/Person#")
+		dcat = rdflib.Namespace("https://www.w3.org/ns/dcat#")
+		dct = rdflib.Namespace("http://purl.org/dc/terms/")
+
+		# TODO: generalise this
+		uri = pathlib.Path(os.path.abspath(os.path.join(os.path.dirname(__file__),
+														"../database/{0}.ttl".format(recordYear)))).as_uri()
 
 		try:
 			data = open("../{0}.ttl".format(recordYear), "r").read()
 			g.load(data)
 		except FileNotFoundError:
-			pass
-
-		uri = pathlib.Path(os.path.abspath(os.path.join(os.path.dirname(__file__),
-														"../database/{0}.ttl".format(recordYear)))).as_uri()
+			g.add((rdflib.URIRef(uri), RDF.type, dcat.Catalog))
 
 		idNumber = 0
 		for r in records:
@@ -81,6 +84,9 @@ class EntryExtractor:
 					raise ValueError("{0} is not a valid key".format(key))
 
 				g.add((identifier, relation, rdflib.Literal(value)))
+
+			g.add((identifier, person.additionalType, dcat.CatalogRecord))
+			g.add((identifier, dct.issued, rdflib.Literal(recordYear)))
 
 		g.serialize(uri, format="turtle")
 
