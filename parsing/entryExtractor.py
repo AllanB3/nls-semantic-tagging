@@ -89,3 +89,12 @@ if __name__ == "__main__":
 	e = EntryExtractor()
 	entries = e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page")
 	e.addRecordsToDatabase(entries, "1911")
+
+	entries = e.extractFeatures("training/hmmDevTest/1851-52-p43/83072360.8.xml", "page")
+	e.addRecordsToDatabase(entries, "1851")
+
+	entries = e.extractFeatures("training/hmmDevTest/1940-41-p110/1940-41-p110.xml", "page")
+	e.addRecordsToDatabase(entries, "1940")
+
+	entries = e.extractFeatures("training/hmmDevTest/1940-41-p365/1940-41-p365.xml", "page")
+	e.addRecordsToDatabase(entries, "1940")
