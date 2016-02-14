@@ -56,12 +56,16 @@ class DatabaseQuerier:
 
         queryResult = self.graph.query(query)
         formattedResult = []
+        fields = ["surname", "forename", "title", "occupation", "address", "year"]
 
         for record in queryResult:
-            formattedRecord = ()
-            for field in record:
+            formattedRecord = []
+            for i, field in enumerate(record):
                 if field is not None:
-                    formattedRecord += (field.value,)
+                    formattedRecord.append((fields[i], field.value))
+                else:
+                    formattedRecord.append((fields[i], None))
+
             formattedResult.append(formattedRecord)
 
         return formattedResult
