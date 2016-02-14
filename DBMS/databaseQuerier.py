@@ -14,7 +14,6 @@ class DatabaseQuerier:
             filePath = os.path.abspath(os.path.join(DATABASE, fileName))
             self.graph.parse(filePath, format="turtle")
 
-    # TODO: fix syntax error with query
     def query(self, surname=None, forename=None, title=None, occupation=None, address=None, year=None):
         prefixes = "PREFIX ns1: <http://schema.org/Person#>\n" \
                    "PREFIX ns2: <http://purl.org/dc/terms/>\n" \
