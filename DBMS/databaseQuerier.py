@@ -3,16 +3,13 @@
 import os
 import rdflib
 
-DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"))
+DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database/data.ttl"))
 
 class DatabaseQuerier:
 
-    def __init__(self, databaseDirectory=DATABASE):
+    def __init__(self, database=DATABASE):
         self.graph = rdflib.Graph()
-
-        for fileName in os.listdir(databaseDirectory):
-            filePath = os.path.abspath(os.path.join(DATABASE, fileName))
-            self.graph.parse(filePath, format="turtle")
+        self.graph.parse(database, format="turtle")
 
     def query(self, surname=None, forename=None, title=None, occupation=None, address=None, year=None):
         prefixes = "PREFIX ns1: <http://schema.org/Person#>\n" \
