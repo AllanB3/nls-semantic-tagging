@@ -7,6 +7,8 @@ from rdflib.namespace import RDF
 import pathlib
 import os
 import hashlib
+import urllib.request
+import xml.etree.ElementTree as ET
 
 class EntryExtractor:
 
@@ -54,6 +56,7 @@ class EntryExtractor:
         person = rdflib.Namespace("http://schema.org/Person#")
         dcat = rdflib.Namespace("https://www.w3.org/ns/dcat#")
         dct = rdflib.Namespace("http://purl.org/dc/terms/")
+        geoCoordinates = rdflib.Namespace("http://schema.org/GeoCoordinates#")
 
         # TODO: generalise this
         uri = pathlib.Path(os.path.abspath(os.path.join(os.path.dirname(__file__),
@@ -86,6 +89,27 @@ class EntryExtractor:
                     raise ValueError("{0} is not a valid key".format(key))
 
                 g.add((identifier, relation, rdflib.Literal(value)))
+
+            openStreetMapData = urllib.request.urlopen("http://nominatim.openstreetmap.org/search?format=xml&polygon=1"
+                                                       "&q={0}".format(r["ADDRESS"].replace(" ", "+").encode("utf-8")) +
+                                                       ",+edinburgh")
+            responseTree = ET.fromstring(openStreetMapData.read())
+
+            try:
+                addressData = responseTree[0]
+                latitude = ""
+                longitude = ""
+
+                for key, value in addressData.attrib.items():
+                    if key == "lat" and value != "":
+                        latitude = value
+                    elif key == "lon" and value != "":
+                        longitude = value
+
+                g.add((identifier, geoCoordinates.latitude, rdflib.Literal(latitude)))
+                g.add((identifier, geoCoordinates.longitude, rdflib.Literal(longitude)))
+            except IndexError:
+                pass
 
             g.add((identifier, person.additionalType, dcat.CatalogRecord))
             g.add((identifier, dct.issued, rdflib.Literal(recordYear)))

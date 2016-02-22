@@ -13,20 +13,23 @@ class DatabaseQuerier:
 
     def query(self, surname=None, forename=None, title=None, occupation=None, address=None, year=None):
         prefixes = "PREFIX ns1: <http://schema.org/Person#>\n" \
-                   "PREFIX ns2: <http://purl.org/dc/terms/>\n" \
+                   "PREFIX ns2: <http://schema.org/GeoCoordinates#>\n" \
+                   "PREFIX ns3: <http://purl.org/dc/terms/>\n" \
                    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" \
                    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" \
                    "PREFIX xml: <http://www.w3.org/XML/1998/namespace>\n" \
                    "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n"
 
-        selectStatement = "SELECT ?surname ?forename ?title ?occupation ?address ?year\n"
+        selectStatement = "SELECT ?surname ?forename ?title ?occupation ?address ?lat ?lon ?year\n"
         whereStatement = "WHERE {\n" \
                          "  ?d ns1:familyName ?surname .\n" \
                          "  OPTIONAL { ?d ns1:givenName ?forename . }\n" \
                          "  OPTIONAL { ?d ns1:honorificPrefix ?title . }\n" \
                          "  OPTIONAL { ?d ns1:jobTitle ?occupation . }\n" \
                          "  OPTIONAL { ?d ns1:address ?address . }\n" \
-                         "  ?d ns2:issued ?year .\n"
+                         "  OPTIONAL { ?d ns2:latitude ?lat . }\n"\
+                         "  OPTIONAL { ?d ns2:longitude ?lon . }\n"\
+                         "  ?d ns3:issued ?year .\n"
 
         if surname is not None:
             whereStatement += "  ?d ns1:familyName \"{0}\" .\n".format(surname)
@@ -52,7 +55,7 @@ class DatabaseQuerier:
 
         queryResult = self.graph.query(query)
         formattedResult = []
-        fields = ["surname", "forename", "title", "occupation", "address", "year"]
+        fields = ["surname", "forename", "title", "occupation", "address", "latitude", "longitude", "year"]
 
         for record in queryResult:
             formattedRecord = []
