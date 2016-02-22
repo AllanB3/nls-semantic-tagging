@@ -11,7 +11,8 @@ class DatabaseQuerier:
         self.graph = rdflib.Graph()
         self.graph.parse(database, format="turtle")
 
-    def query(self, surname=None, forename=None, title=None, occupation=None, address=None, year=None):
+    def query(self, surname=None, forename=None, title=None, occupation=None, address=None, latitude=None,
+              longitude=None, year=None):
         prefixes = "PREFIX ns1: <http://schema.org/Person#>\n" \
                    "PREFIX ns2: <http://schema.org/GeoCoordinates#>\n" \
                    "PREFIX ns3: <http://purl.org/dc/terms/>\n" \
@@ -46,8 +47,14 @@ class DatabaseQuerier:
         if address is not None:
             whereStatement += " ?d ns1:address \"{0}\" .\n".format(address)
 
+        if latitude is not None:
+            whereStatement += " ?d ns2:latitude \"{0}\" .\n".format(latitude)
+
+        if longitude is not None:
+            whereStatement += " ?d ns2:longitude \"{0}\" .\n".format(longitude)
+
         if year is not None:
-            whereStatement += " ?d ns2:issued \"{0}\" .\n".format(year)
+            whereStatement += " ?d ns3:issued \"{0}\" .\n".format(year)
 
         whereStatement += "}"
 
@@ -71,7 +78,44 @@ class DatabaseQuerier:
 
 if __name__ == "__main__":
     d = DatabaseQuerier()
-    results = d.query(surname="Abernethy")
 
+    print("SURNAME:")
+    results = d.query(surname="Abernethy")
+    for r in results:
+        print(r)
+    print("")
+
+    print("FORENAME:")
+    results = d.query(forename="Scott")
+    for r in results:
+        print(r)
+    print("")
+
+    print("TITLE:")
+    results = d.query(title="Miss")
+    for r in results:
+        print(r)
+    print("")
+
+    print("OCCUPATION:")
+    results = d.query(occupation="watchmaker")
+    for r in results:
+        print(r)
+    print("")
+
+    print("ADDRESS:")
+    results = d.query(address="90 Kirkgate")
+    for r in results:
+        print(r)
+    print("")
+
+    print("COORDS:")
+    results = d.query(latitude="55.9128487", longitude="-3.1615066")
+    for r in results:
+        print(r)
+    print("")
+
+    print("YEAR:")
+    results = d.query(year="1851")
     for r in results:
         print(r)
