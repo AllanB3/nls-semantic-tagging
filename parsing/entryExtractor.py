@@ -71,9 +71,15 @@ class EntryExtractor:
             if not ("SURNAME" in r and "ADDRESS" in r):
                 continue
 
-            recordData = "".join(value for key, value in r.items())
+            recordData = "".join(value for key, value in r.items()) + str(recordYear)
             identifier = rdflib.URIRef("{0}#{1}".format(uri, hashlib.md5(recordData.encode("utf-8")).hexdigest()))
             g.add((identifier, RDF.type, schema.Person))
+
+            bkv = "".join(l for l in r["SURNAME"].upper() if l.isalpha())[:3]
+
+            for word in r["ADDRESS"].split():
+                bkv += "".join(l for l in word.upper() if l.isalpha() or l.isdigit())[:3]
+
             for key, value in r.items():
                 if key == "SURNAME":
                     relation = person.familyName
