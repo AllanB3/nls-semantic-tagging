@@ -9,6 +9,14 @@ import os
 import hashlib
 import urllib.request
 import xml.etree.ElementTree as ET
+from collections import defaultdict
+import pyparsing
+
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS")))
+from databaseQuerier import *
+
+DATABASE = pathlib.PurePath(os.path.abspath(os.path.join(os.path.dirname(__file__), "../database")))
 
 class EntryExtractor:
 
@@ -30,12 +38,12 @@ class EntryExtractor:
 
         entries = []
         nextTags = {"SURNAME": ["FORENAME", "TITLE"], "FORENAME": ["OCCUPATION", "ADDRESS"], "TITLE": ["FORENAME", "OCCUPATION", "ADDRESS"], "OCCUPATION": ["OCCUPATION", "ADDRESS"], "ADDRESS": ["ADDRESS"]}
-        entry = {}
+        entry = defaultdict(lambda: None)
         previousTag = "SURNAME"
         for token, tag in tokensAndTags:
             if not tag in nextTags[previousTag]:
                 entries.append(entry)
-                entry = {}
+                entry = defaultdict(lambda: None)
 
                 if not tag == "SURNAME":
                     continue
@@ -59,11 +67,13 @@ class EntryExtractor:
         geoCoordinates = rdflib.Namespace("http://schema.org/GeoCoordinates#")
 
         # TODO: generalise this
-        uri = pathlib.Path(os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                                        "../database/data.ttl"))).as_uri()
-        
+        uri = DATABASE.joinpath("data.ttl").as_uri()
+
+        databaseExists = False
         try:
             g.parse("../database/data.ttl", format="turtle")
+            databaseExists = True
+            databaseQuerier = DatabaseQuerier()
         except FileNotFoundError:
             pass
 
@@ -71,7 +81,17 @@ class EntryExtractor:
             if not ("SURNAME" in r and "ADDRESS" in r):
                 continue
 
-            recordData = "".join(value for key, value in r.items()) + str(recordYear)
+            if databaseExists:
+                try:
+                    existingRecords = databaseQuerier.query(surname=r["SURNAME"], forename=r["FORENAME"], title=r["TITLE"],
+                                          occupation=r["OCCUPATION"], address=r["ADDRESS"], year=recordYear)
+                except pyparsing.ParseException:
+                    continue
+
+                if len(existingRecords) > 0:
+                    continue
+
+            recordData = "".join(value for key, value in r.items() if value is not None) + str(recordYear)
             identifier = rdflib.URIRef("{0}#{1}".format(uri, hashlib.md5(recordData.encode("utf-8")).hexdigest()))
             g.add((identifier, RDF.type, schema.Person))
 
