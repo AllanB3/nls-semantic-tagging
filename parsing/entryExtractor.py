@@ -66,12 +66,11 @@ class EntryExtractor:
         dct = rdflib.Namespace("http://purl.org/dc/terms/")
         geoCoordinates = rdflib.Namespace("http://schema.org/GeoCoordinates#")
 
-        # TODO: generalise this
         uri = DATABASE.joinpath("data.ttl").as_uri()
 
         databaseExists = False
         try:
-            g.parse("../database/data.ttl", format="turtle")
+            g.parse(DATABASE.joinpath("data.ttl").__str__(), format="turtle")
             databaseExists = True
             databaseQuerier = DatabaseQuerier()
         except FileNotFoundError:
