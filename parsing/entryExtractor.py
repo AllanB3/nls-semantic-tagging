@@ -3,7 +3,7 @@
 from hiddenMarkovModel import *
 from xmlParser import *
 import rdflib
-from rdflib.namespace import RDF
+from rdflib.namespace import RDF, OWL, RDFS
 import pathlib
 import os
 import hashlib
@@ -65,6 +65,7 @@ class EntryExtractor:
         dcat = rdflib.Namespace("https://www.w3.org/ns/dcat#")
         dct = rdflib.Namespace("http://purl.org/dc/terms/")
         geoCoordinates = rdflib.Namespace("http://schema.org/GeoCoordinates#")
+        postOfficeRecordSchema = rdflib.Namespace(DATABASE.joinpath("postOfficeRecord.owl#").as_uri())
 
         uri = DATABASE.joinpath("data.ttl").as_uri()
 
@@ -74,7 +75,23 @@ class EntryExtractor:
             databaseExists = True
             databaseQuerier = DatabaseQuerier()
         except FileNotFoundError:
-            pass
+            schemaGraph = rdflib.Graph()
+
+            schemaURI = DATABASE.joinpath("postOfficeRecord.owl").as_uri()
+            schemaGraph.add((rdflib.URIRef(schemaURI), RDF.type, OWL.ontology))
+
+            postOfficeRecord = rdflib.URIRef(schemaURI + "#PostOfficeRecord")
+            schemaGraph.add((postOfficeRecord, RDF.type, OWL.Class))
+            schemaGraph.add((postOfficeRecord, RDFS.subClassOf, dcat.CatalogRecord))
+
+            blockKeyValue = rdflib.URIRef(schemaURI + "#blockKeyValue")
+            schemaGraph.add((blockKeyValue, RDF.type, RDF.Property))
+            schemaGraph.add((blockKeyValue, RDFS.comment, rdflib.Literal("A block key value for comparing the record to"
+                                                                    " similar records during data deduplication/record"
+                                                                    " linkage.")))
+            schemaGraph.add((blockKeyValue, RDFS.label, rdflib.Literal("Block key value")))
+
+            schemaGraph.serialize(schemaURI, format="turtle")
 
         for r in records:
             if not ("SURNAME" in r and "ADDRESS" in r):
@@ -83,7 +100,7 @@ class EntryExtractor:
             if databaseExists:
                 try:
                     existingRecords = databaseQuerier.query(surname=r["SURNAME"], forename=r["FORENAME"], title=r["TITLE"],
-                                          occupation=r["OCCUPATION"], address=r["ADDRESS"], year=recordYear)
+                                                            occupation=r["OCCUPATION"], address=r["ADDRESS"], year=recordYear)
                 except pyparsing.ParseException:
                     continue
 
@@ -92,12 +109,16 @@ class EntryExtractor:
 
             recordData = "".join(value for key, value in r.items() if value is not None) + str(recordYear)
             identifier = rdflib.URIRef("{0}#{1}".format(uri, hashlib.md5(recordData.encode("utf-8")).hexdigest()))
+
+            g.add((identifier, person.additionalType, postOfficeRecordSchema.PostOfficeRecord))
+            g.add((identifier, dct.issued, rdflib.Literal(recordYear)))
             g.add((identifier, RDF.type, schema.Person))
 
             bkv = "".join(l for l in r["SURNAME"].upper() if l.isalpha())[:3]
-
             for word in r["ADDRESS"].split():
                 bkv += "".join(l for l in word.upper() if l.isalpha() or l.isdigit())[:3]
+
+            g.add((identifier, postOfficeRecordSchema.blockKeyValue, rdflib.Literal(bkv)))
 
             for key, value in r.items():
                 if key == "SURNAME":
@@ -135,9 +156,6 @@ class EntryExtractor:
                 g.add((identifier, geoCoordinates.longitude, rdflib.Literal(longitude)))
             except IndexError:
                 pass
-
-            g.add((identifier, person.additionalType, dcat.CatalogRecord))
-            g.add((identifier, dct.issued, rdflib.Literal(recordYear)))
 
         g.serialize(uri, format="turtle")
 
