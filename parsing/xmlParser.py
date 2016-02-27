@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 import xml.etree.ElementTree as ET
-import sys
-import os
-import importlib
 
 class xmlParser:
 
@@ -38,7 +35,7 @@ class xmlParser:
 
         return text
 
-    def parseNLSPage(selfself, xml):
+    def parseNLSPage(self, xml):
         tree = ET.parse(xml)
         document = tree.getroot()
         text = ""

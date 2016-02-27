@@ -71,12 +71,12 @@ class DatabaseQuerier:
         fields = ["surname", "forename", "title", "occupation", "address", "latitude", "longitude", "year", "bkv"]
 
         for record in queryResult:
-            formattedRecord = []
+            formattedRecord = {}
             for i, field in enumerate(record):
                 if field is not None:
-                    formattedRecord.append((fields[i], field.value))
+                    formattedRecord[fields[i]] = field.value
                 else:
-                    formattedRecord.append((fields[i], None))
+                    formattedRecord[fields[i]] = "None"
 
             formattedResult.append(formattedRecord)
 

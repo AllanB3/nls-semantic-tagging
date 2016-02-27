@@ -37,7 +37,10 @@ class EntryExtractor:
         tokensAndTags = self.hiddenMarkovModel.tag(text)
 
         entries = []
-        nextTags = {"SURNAME": ["FORENAME", "TITLE"], "FORENAME": ["OCCUPATION", "ADDRESS"], "TITLE": ["FORENAME", "OCCUPATION", "ADDRESS"], "OCCUPATION": ["OCCUPATION", "ADDRESS"], "ADDRESS": ["ADDRESS"]}
+        nextTags = {"SURNAME": ["FORENAME", "TITLE"], "FORENAME": ["OCCUPATION", "ADDRESS"],
+                    "TITLE": ["FORENAME", "OCCUPATION", "ADDRESS"], "OCCUPATION": ["OCCUPATION", "ADDRESS"],
+                    "ADDRESS": ["ADDRESS"]}
+
         entry = defaultdict(lambda: None)
         previousTag = "SURNAME"
         for token, tag in tokensAndTags:
@@ -162,14 +165,22 @@ class EntryExtractor:
 if __name__ == "__main__":
     e = EntryExtractor()
 
-    entries = e.extractFeatures("training/hmmDevTest/1911-12-p96/84311938.8.xml", "page")
-    e.addRecordsToDatabase(entries, "1911")
+    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1895"))):
+        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1895/" + fileName, "page")
+        e.addRecordsToDatabase(entries, "1895")
 
-    entries = e.extractFeatures("training/hmmDevTest/1851-52-p43/83072360.8.xml", "page")
-    e.addRecordsToDatabase(entries, "1851")
+    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1896"))):
+        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1896/" + fileName, "page")
+        e.addRecordsToDatabase(entries, "1896")
 
-    entries = e.extractFeatures("training/hmmDevTest/1940-41-p110/1940-41-p110.xml", "page")
-    e.addRecordsToDatabase(entries, "1940")
+    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1897"))):
+        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1897/" + fileName, "page")
+        e.addRecordsToDatabase(entries, "1897")
 
-    entries = e.extractFeatures("training/hmmDevTest/1940-41-p365/1940-41-p365.xml", "page")
-    e.addRecordsToDatabase(entries, "1940")
+    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1898"))):
+        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1898/" + fileName, "page")
+        e.addRecordsToDatabase(entries, "1898")
+
+    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1899"))):
+        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1899/" + fileName, "page")
+        e.addRecordsToDatabase(entries, "1899")

@@ -1,0 +1,14 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///home/allan/Documents/University/Fourth-Year/PROJ/nls-semantic-tagging/database/postOfficeRecord.owl> a <http://www.w3.org/2002/07/owl#ontology> .
+
+<file:///home/allan/Documents/University/Fourth-Year/PROJ/nls-semantic-tagging/database/postOfficeRecord.owl#PostOfficeRecord> a <http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:subClassOf <https://www.w3.org/ns/dcat#CatalogRecord> .
+
+<file:///home/allan/Documents/University/Fourth-Year/PROJ/nls-semantic-tagging/database/postOfficeRecord.owl#blockKeyValue> a rdf:Property ;
+    rdfs:label "Block key value" ;
+    rdfs:comment "A block key value for comparing the record to similar records during data deduplication/record linkage." .
+
