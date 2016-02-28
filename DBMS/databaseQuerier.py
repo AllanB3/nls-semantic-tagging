@@ -17,7 +17,7 @@ class DatabaseQuerier:
                    "PREFIX geo: <http://schema.org/GeoCoordinates#>\n" \
                    "PREFIX dcat: <http://purl.org/dc/terms/>\n" \
                    "PREFIX pod: <file:///home/allan/Documents/University/Fourth-Year/PROJ/nls-semantic-tagging/" \
-                   "database/postOfficeRecord.owl%23>\n" \
+                   "database/postOfficeRecord.ttl%23>\n" \
                    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" \
                    "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" \
                    "PREFIX xml: <http://www.w3.org/XML/1998/namespace>\n" \

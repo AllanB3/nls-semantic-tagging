@@ -68,7 +68,7 @@ class EntryExtractor:
         dcat = rdflib.Namespace("https://www.w3.org/ns/dcat#")
         dct = rdflib.Namespace("http://purl.org/dc/terms/")
         geoCoordinates = rdflib.Namespace("http://schema.org/GeoCoordinates#")
-        postOfficeRecordSchema = rdflib.Namespace(DATABASE.joinpath("postOfficeRecord.owl#").as_uri())
+        postOfficeRecordSchema = rdflib.Namespace(DATABASE.joinpath("postOfficeRecord.ttl#").as_uri())
 
         uri = DATABASE.joinpath("data.ttl").as_uri()
 
@@ -80,7 +80,7 @@ class EntryExtractor:
         except FileNotFoundError:
             schemaGraph = rdflib.Graph()
 
-            schemaURI = DATABASE.joinpath("postOfficeRecord.owl").as_uri()
+            schemaURI = DATABASE.joinpath("postOfficeRecord.ttl").as_uri()
             schemaGraph.add((rdflib.URIRef(schemaURI), RDF.type, OWL.ontology))
 
             postOfficeRecord = rdflib.URIRef(schemaURI + "#PostOfficeRecord")
