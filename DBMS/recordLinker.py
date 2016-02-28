@@ -35,6 +35,8 @@ class RecordLinker:
 
         for r in records:
             rString = "".join(value + " " for value in r.values())
+            if rString in records:
+                continue
             matches[rString] = self.findMatches(r)
 
         return matches
@@ -43,5 +45,10 @@ if __name__ == "__main__":
     recordLinker = RecordLinker()
     results = recordLinker.findAllMatches()
 
-    for r in results:
-        print(r)
+    for key, value in results.items():
+        print(key + ":")
+
+        for v in value:
+            print(value)
+
+        print("")
