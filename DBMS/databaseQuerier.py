@@ -86,13 +86,13 @@ if __name__ == "__main__":
     d = DatabaseQuerier()
 
     print("SURNAME:")
-    results = d.query(surname="Abernethy")
+    results = d.query(surname="Young")
     for r in results:
         print(r)
     print("")
 
     print("FORENAME:")
-    results = d.query(forename="Scott")
+    results = d.query(forename="Robert")
     for r in results:
         print(r)
     print("")
@@ -104,28 +104,28 @@ if __name__ == "__main__":
     print("")
 
     print("OCCUPATION:")
-    results = d.query(occupation="watchmaker")
+    results = d.query(occupation="grocer and spirit merchant")
     for r in results:
         print(r)
     print("")
 
     print("ADDRESS:")
-    results = d.query(address="90 Kirkgate")
+    results = d.query(address="2 Caledonian crescent")
     for r in results:
         print(r)
     print("")
 
     print("YEAR:")
-    results = d.query(latitude="55.9128487", longitude="-3.1615066")
+    results = d.query(latitude="55.9425151", longitude="-3.2179476")
     for r in results:
         print(r)
 
-    results = d.query(year="1851")
+    results = d.query(year="1899")
     for r in results:
         print(r)
     print("")
 
     print("BKV:")
-    results = d.query(bkv="ABE90KIR")
+    results = d.query(bkv="YOU35")
     for r in results:
         print(r)

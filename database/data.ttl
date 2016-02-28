@@ -1,6 +1,6 @@
 @prefix ns1: <http://schema.org/Person#> .
 @prefix ns2: <http://schema.org/GeoCoordinates#> .
-@prefix ns3: <file:///home/allan/Documents/University/Fourth-Year/PROJ/nls-semantic-tagging/database/postOfficeRecord.owl%23> .
+@prefix ns3: <file:///home/allan/Documents/University/Fourth-Year/PROJ/nls-semantic-tagging/database/postOfficeRecord.ttl%23> .
 @prefix ns4: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
