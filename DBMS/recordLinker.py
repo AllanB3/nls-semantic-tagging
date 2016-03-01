@@ -4,6 +4,7 @@ import pathlib
 import os
 import rdflib
 from databaseQuerier import *
+import tabulate
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"))
 
@@ -22,6 +23,9 @@ class RecordLinker:
         matchingRecords = [record]
 
         for r in results:
+            if r == record:
+                continue
+
             if r["surname"] == record["surname"] and r["forename"] == record["forename"] \
                and r["title"] == record["title"] and r["occupation"] == record["occupation"] \
                and r["address"] == record["address"]:
@@ -34,21 +38,28 @@ class RecordLinker:
         matches = {}
 
         for r in records:
-            rString = "".join(value + " " for value in r.values())
-            if rString in records:
+            rString = str(r)
+            if rString in matches:
                 continue
+
             matches[rString] = self.findMatches(r)
 
         return matches
 
 if __name__ == "__main__":
+    table = [["SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS", "YEARS"]]
+
     recordLinker = RecordLinker()
     results = recordLinker.findAllMatches()
 
     for key, value in results.items():
-        print(key + ":")
+        result = eval(key)
+        resultData = [result["surname"], result["forename"], result["title"], result["occupation"], result["address"],
+                      result["year"]]
 
         for v in value:
-            print(value)
+            resultData[-1] += ", {0}".format(v["year"])
 
-        print("")
+        table.append(resultData)
+
+    print(tabulate(table))
