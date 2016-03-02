@@ -4,7 +4,7 @@ import pathlib
 import os
 import rdflib
 from databaseQuerier import *
-import tabulate
+from tabulate import tabulate
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"))
 
