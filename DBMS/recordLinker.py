@@ -23,9 +23,6 @@ class RecordLinker:
         matchingRecords = [record]
 
         for r in results:
-            if r == record:
-                continue
-
             if r["surname"] == record["surname"] and r["forename"] == record["forename"] \
                and r["title"] == record["title"] and r["occupation"] == record["occupation"] \
                and r["address"] == record["address"]:
@@ -43,6 +40,7 @@ class RecordLinker:
                 continue
 
             matches[rString] = self.findMatches(r)
+            print(matches[rString])
 
         return matches
 
