@@ -40,7 +40,6 @@ class RecordLinker:
                 continue
 
             matches[rString] = self.findMatches(r)
-            print(matches[rString])
 
         return matches
 
