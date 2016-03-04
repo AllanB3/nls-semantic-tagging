@@ -5,6 +5,7 @@ import os
 import rdflib
 from databaseQuerier import *
 from tabulate import tabulate
+import sys
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"))
 
@@ -39,7 +40,18 @@ class RecordLinker:
             if rString in matches:
                 continue
 
+            print("SURNAME: {0}".format(r["surname"]))
+            print("FORENAME: {0}".format(r["forename"]))
+            print("TITLE: {0}".format(r["title"]))
+            print("OCCUPATION: {0}".format(r["occupation"]))
+            print("ADDRESS: {0}".format(r["address"]))
+
             matches[rString] = self.findMatches(r)
+            sys.stdout.write("YEARS: {0}".format(r["year"]))
+
+            for m in matches[rString]:
+                sys.stdout.write(", {0}".format(m["year"]))
+            print("\n")
 
         return matches
 
