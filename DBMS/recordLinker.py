@@ -40,11 +40,11 @@ class RecordLinker:
             if rString in matches:
                 continue
 
-            print("SURNAME: {0}".format(r["surname"]))
-            print("FORENAME: {0}".format(r["forename"]))
-            print("TITLE: {0}".format(r["title"]))
-            print("OCCUPATION: {0}".format(r["occupation"]))
-            print("ADDRESS: {0}".format(r["address"]))
+            print("SURNAME: {0}".format(r["surname"].encode("utf-8")))
+            print("FORENAME: {0}".format(r["forename"].encode("utf-8")))
+            print("TITLE: {0}".format(r["title"].encode("utf-8")))
+            print("OCCUPATION: {0}".format(r["occupation"].encode("utf-8")))
+            print("ADDRESS: {0}".format(r["address"].encode("utf-8")))
 
             matches[rString] = self.findMatches(r)
             sys.stdout.write("YEARS: {0}".format(r["year"]))
