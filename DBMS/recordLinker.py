@@ -6,6 +6,7 @@ import rdflib
 from databaseQuerier import *
 from tabulate import tabulate
 import sys
+import editdistance
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"))
 
@@ -24,9 +25,11 @@ class RecordLinker:
         matchingRecords = [record]
 
         for r in results:
-            if r["surname"] == record["surname"] and r["forename"] == record["forename"] \
-               and r["title"] == record["title"] and r["occupation"] == record["occupation"] \
-               and r["address"] == record["address"]:
+            if int(editdistance.eval(r["surname"], record["surname"])) < 2 \
+               and int(editdistance.eval(r["forename"], record["forename"])) < 2 \
+               and int(editdistance.eval(r["title"], record["title"])) < 2 \
+               and int(editdistance.eval(r["occupation"], record["occupation"])) < 2 \
+               and int(editdistance.eval(r["address"], record["address"])) < 2:
                 matchingRecords.append(r)
 
         return matchingRecords
