@@ -9,6 +9,23 @@ import editdistance
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"))
 
+"""
+Class for linking records pertaining to the same individual.
+
+To link all records in a database:
+    from recordLinker import *
+    linker = RecordLinker()
+    linker.findAllMatches()
+
+Can also be called from the command line:
+    python3 recordLinker.py
+
+Can also be used to find matches for a single record:
+    linker.findMatches(r)
+where r is the record to find matches for.
+
+:param database: Path to database
+"""
 class RecordLinker:
 
     def __init__(self, database=DATABASE):
@@ -17,6 +34,12 @@ class RecordLinker:
         self.graph.parse(self.databaseURI, format="turtle")
         self.querier = DatabaseQuerier(os.path.abspath(os.path.join(database, "data.ttl")))
 
+    """
+    Method for finding matches for a single record.
+
+    :param record: Record to find matches for
+    :return: A list of dictionaries with each dictionary pertaining to a matching record
+    """
     def findMatches(self, record):
         bkv = record["bkv"]
 
@@ -33,6 +56,9 @@ class RecordLinker:
 
         return matchingRecords
 
+    """
+    Method for matching records across the entire database.
+    """
     def findAllMatches(self):
         schema = rdflib.Namespace("http://schema.org/")
         records = self.querier.query()

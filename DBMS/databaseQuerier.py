@@ -6,12 +6,40 @@ import optparse
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database/data.ttl"))
 
+"""
+Class for querying database.
+
+To search for people called "John Smith", first create a DatabaseQuerier object like so:
+    from databaseQuerier import *
+    querier = DatabaseQuerier()
+and then call:
+    querier.query(surname="Smith", forename="John")
+
+Can also be called from the command line:
+    python3 databaseQuerier.py -s Smith -f John
+
+:param database: Path to database
+"""
 class DatabaseQuerier:
 
     def __init__(self, database=DATABASE):
         self.graph = rdflib.Graph()
         self.graph.parse(database, format="turtle")
 
+    """
+    Method for querying database.
+
+    :param surname: Surname to search database on (defaults to None)
+    :param forename: Forename to search database on (defaults to None)
+    :param title: Title to search database on (defaults to None)
+    :param occupation: Occupation to search database on (defaults to None)
+    :param address: Address to search database on (defaults to None)
+    :param latitude: Latitude to search database on (defaults to None)
+    :param longitude: Longitude to search database on (defaults to None)
+    :param year: Year to search database on (defaults to None)
+    :param bkv: Block key value to search database on (defaults to None)
+    :return: A list of dictionaries with each dictionary pertaining to a record
+    """
     def query(self, surname=None, forename=None, title=None, occupation=None, address=None, latitude=None,
               longitude=None, year=None, bkv=None):
         prefixes = "PREFIX person: <http://schema.org/Person#>\n" \
