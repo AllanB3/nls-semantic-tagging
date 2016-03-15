@@ -42,7 +42,6 @@ class RecordLinker:
 
             for m in matches:
                 self.graph.add((rdflib.URIRef(r["uri"]), schema.sameAs, rdflib.URIRef(m["uri"])))
-                print("DONE")
 
         self.graph.serialize(self.databaseURI, format="turtle")
 
