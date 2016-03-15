@@ -2,6 +2,7 @@
 
 import os
 import rdflib
+import optparse
 
 DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database/data.ttl"))
 
@@ -69,7 +70,8 @@ class DatabaseQuerier:
         queryResult = self.graph.query(query)
 
         formattedResult = []
-        fields = ["uri", "surname", "forename", "title", "occupation", "address", "latitude", "longitude", "year", "bkv"]
+        fields = ["uri", "surname", "forename", "title", "occupation", "address", "latitude", "longitude", "year",
+                  "bkv"]
 
         for record in queryResult:
             formattedRecord = {}
@@ -85,3 +87,25 @@ class DatabaseQuerier:
             formattedResult.append(formattedRecord)
 
         return formattedResult
+
+if __name__ == "__main__":
+    querier = DatabaseQuerier()
+
+    optparser = optparse.OptionParser()
+    optparser.add_option("-s", "--surname", dest="surname", default=None, help="Surname to search database by.")
+    optparser.add_option("-f", "--forename", dest="forename", default=None, help="Forename to search database by.")
+    optparser.add_option("-t", "--title", dest="title", default=None, help="Title to search database by.")
+    optparser.add_option("-j", "--job", dest="occupation", default=None, help="Occupation to search database by.")
+    optparser.add_option("-a", "--address", dest="address", default=None, help="Address to search database by.")
+    optparser.add_option("-l", "--lat", dest="latitude", default=None, help="Latitude to search database by.")
+    optparser.add_option("-o", "--lon", dest="longitude", default=None, help="Longitude to search database by.")
+    optparser.add_option("-y", "--year", dest="year", default=None, help="Year to search database by.")
+    optparser.add_option("-b", "--bkv", dest="bkv", default=None, help="Block key value to search database by.")
+    (opts, _) = optparser.parse_args()
+
+    results = querier.query(surname=opts.surname, forename=opts.forename, title=opts.title, occupation=opts.occupation,
+                            address=opts.address, latitude=opts.latitude, longitude=opts.longitude, year=opts.year,
+                            bkv=opts.bkv)
+
+    for r in results:
+        print(r)
