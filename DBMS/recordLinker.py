@@ -46,9 +46,9 @@ class RecordLinker:
         self.graph.serialize(self.databaseURI, format="turtle")
 
 if __name__ == "__main__":
-    if sys.argv[1]:
+    try:
         linker = RecordLinker(sys.argv[1])
-    else:
+    except IndexError:
         linker = RecordLinker()
 
     linker.findAllMatches()
