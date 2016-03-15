@@ -23,7 +23,7 @@ class DatabaseQuerier:
                    "PREFIX xml: <http://www.w3.org/XML/1998/namespace>\n" \
                    "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n"
 
-        selectStatement = "SELECT ?surname ?forename ?title ?occupation ?address ?lat ?lon ?year ?bkv\n"
+        selectStatement = "SELECT ?d ?surname ?forename ?title ?occupation ?address ?lat ?lon ?year ?bkv\n"
         whereStatement = "WHERE {\n" \
                          "  ?d person:familyName ?surname .\n" \
                          "  OPTIONAL { ?d person:givenName ?forename . }\n" \
@@ -67,65 +67,21 @@ class DatabaseQuerier:
         query = prefixes + selectStatement + whereStatement
 
         queryResult = self.graph.query(query)
+
         formattedResult = []
-        fields = ["surname", "forename", "title", "occupation", "address", "latitude", "longitude", "year", "bkv"]
+        fields = ["uri", "surname", "forename", "title", "occupation", "address", "latitude", "longitude", "year", "bkv"]
 
         for record in queryResult:
             formattedRecord = {}
             for i, field in enumerate(record):
                 if field is not None:
-                    formattedRecord[fields[i]] = field.value
+                    try:
+                        formattedRecord[fields[i]] = field.value
+                    except AttributeError:
+                        formattedRecord[fields[i]] = str(field)
                 else:
                     formattedRecord[fields[i]] = "None"
 
             formattedResult.append(formattedRecord)
 
         return formattedResult
-
-if __name__ == "__main__":
-    d = DatabaseQuerier()
-
-    print("SURNAME:")
-    results = d.query(surname="Young")
-    for r in results:
-        print(r)
-    print("")
-
-    print("FORENAME:")
-    results = d.query(forename="Robert")
-    for r in results:
-        print(r)
-    print("")
-
-    print("TITLE:")
-    results = d.query(title="Miss")
-    for r in results:
-        print(r)
-    print("")
-
-    print("OCCUPATION:")
-    results = d.query(occupation="grocer and spirit merchant")
-    for r in results:
-        print(r)
-    print("")
-
-    print("ADDRESS:")
-    results = d.query(address="2 Caledonian crescent")
-    for r in results:
-        print(r)
-    print("")
-
-    print("YEAR:")
-    results = d.query(latitude="55.9425151", longitude="-3.2179476")
-    for r in results:
-        print(r)
-
-    results = d.query(year="1899")
-    for r in results:
-        print(r)
-    print("")
-
-    print("BKV:")
-    results = d.query(bkv="YOU35")
-    for r in results:
-        print(r)

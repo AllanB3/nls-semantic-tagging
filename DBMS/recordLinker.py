@@ -4,7 +4,6 @@ import pathlib
 import os
 import rdflib
 from databaseQuerier import *
-from tabulate import tabulate
 import sys
 import editdistance
 
@@ -13,9 +12,9 @@ DATABASE = os.path.abspath(os.path.join(os.path.dirname(__file__), "../database"
 class RecordLinker:
 
     def __init__(self, database=DATABASE):
-        databaseURI = pathlib.PurePath(database).joinpath("data.ttl").as_uri()
+        self.databaseURI = pathlib.PurePath(database).joinpath("data.ttl").as_uri()
         self.graph = rdflib.Graph()
-        self.graph.parse(databaseURI, format="turtle")
+        self.graph.parse(self.databaseURI, format="turtle")
         self.querier = DatabaseQuerier(os.path.abspath(os.path.join(database, "data.ttl")))
 
     def findMatches(self, record):
@@ -35,43 +34,21 @@ class RecordLinker:
         return matchingRecords
 
     def findAllMatches(self):
+        schema = rdflib.Namespace("http://schema.org/")
         records = self.querier.query()
-        matches = {}
 
         for r in records:
-            rString = str(r)
-            if rString in matches:
-                continue
+            matches = self.findMatches(r)
 
-            print("SURNAME: {0}".format(r["surname"].encode("utf-8")))
-            print("FORENAME: {0}".format(r["forename"].encode("utf-8")))
-            print("TITLE: {0}".format(r["title"].encode("utf-8")))
-            print("OCCUPATION: {0}".format(r["occupation"].encode("utf-8")))
-            print("ADDRESS: {0}".format(r["address"].encode("utf-8")))
+            for m in matches:
+                self.graph.add((r["uri"], schema.sameAs, m["uri"]))
 
-            matches[rString] = self.findMatches(r)
-            sys.stdout.write("YEARS: {0}".format(r["year"]))
-
-            for m in matches[rString]:
-                sys.stdout.write(", {0}".format(m["year"]))
-            print("\n")
-
-        return matches
+        self.graph.serialize(self.databaseURI, format="turtle")
 
 if __name__ == "__main__":
-    table = [["SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS", "YEARS"]]
+    if sys.argv[1]:
+        linker = RecordLinker(sys.argv[1])
+    else:
+        linker = RecordLinker()
 
-    recordLinker = RecordLinker()
-    results = recordLinker.findAllMatches()
-
-    for key, value in results.items():
-        result = eval(key)
-        resultData = [result["surname"], result["forename"], result["title"], result["occupation"], result["address"],
-                      result["year"]]
-
-        for v in value:
-            resultData[-1] += ", {0}".format(v["year"])
-
-        table.append(resultData)
-
-    print(tabulate(table))
+    linker.findAllMatches()
