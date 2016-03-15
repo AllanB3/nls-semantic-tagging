@@ -29,7 +29,7 @@ confusionMatrix = {
 }
 
 hmm = hiddenMarkovModel()
-x = xmlParser()
+x = XMLParser()
 
 for dirName in os.listdir(TESTINGFOLDER):
     dirPath = os.path.abspath(os.path.join(TESTINGFOLDER, dirName))

@@ -170,7 +170,7 @@ class hiddenMarkovModel:
 if __name__ == "__main__":
     h = hiddenMarkovModel()
 
-    x = xmlParser()
+    x = XMLParser()
     text = x.parseNLSPage("training/hmmDevTest/1851-52-p43/83072360.8.xml")
 
     for token in h.tag(text):

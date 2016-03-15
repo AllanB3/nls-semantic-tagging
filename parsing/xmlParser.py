@@ -2,12 +2,13 @@
 
 import xml.etree.ElementTree as ET
 
-class xmlParser:
+class XMLParser:
 
     def __init__(self):
         pass
 
-    def parseOCR(self, xml):
+    @staticmethod
+    def parseOCR(xml):
         tree = ET.parse(xml)
         document = tree.getroot()
         text = ""
@@ -21,7 +22,8 @@ class xmlParser:
 
         return text
 
-    def parseNLSDirectory(self, xml):
+    @staticmethod
+    def parseNLSDirectory(xml):
         tree = ET.parse(xml)
         document = tree.getroot()
         text = ""
@@ -35,7 +37,8 @@ class xmlParser:
 
         return text
 
-    def parseNLSPage(self, xml):
+    @staticmethod
+    def parseNLSPage(xml):
         tree = ET.parse(xml)
         document = tree.getroot()
         text = ""
@@ -45,3 +48,13 @@ class xmlParser:
                 text += line.text + "\n"
 
         return text
+
+    def parse(self, source, xml):
+        if source == "ocr":
+            return self.parseOCR(xml)
+        elif source == "page":
+            return self.parseNLSPage(xml)
+        elif source == "directory":
+            return  self.parseNLSDirectory(xml)
+        else:
+            raise IOError("source must equal \"ocr\", \"directory\" or \"page\"")

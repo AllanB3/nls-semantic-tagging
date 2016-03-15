@@ -17,7 +17,7 @@ class featureExtractor:
     def __init__(self, trainingFolder, outputPath):
         self.trainingFolder = trainingFolder
         self.outputPath = outputPath
-        self.xmlparser = xmlParser()
+        self.xmlparser = XMLParser()
 
     def extractFeatures(self):
         tagsAndVectors = []

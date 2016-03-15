@@ -21,18 +21,20 @@ DATABASE = pathlib.PurePath(os.path.abspath(os.path.join(os.path.dirname(__file_
 class EntryExtractor:
 
     def __init__(self):
-        self.xmlParser = xmlParser()
+        self.xmlParser = XMLParser()
         self.hiddenMarkovModel = hiddenMarkovModel()
 
     def extractFeatures(self, filePath, source):
-        if source == "ocr":
-            text = self.xmlParser.parseOCR(filePath)
-        elif source == "page":
-            text = self.xmlParser.parseNLSPage(filePath)
-        elif source == "directory":
-            text = self.xmlParser.parseNLSDirectory(filePath)
-        else:
-            raise IOError("source must equal \"ocr\", \"directory\" or \"page\"")
+        try:
+            if source == "ocr":
+                text = self.xmlParser.parse(source, filePath)
+            elif source == "page":
+                text = self.xmlParser.parse(source, filePath)
+            elif source == "directory":
+                text = self.xmlParser.parse(source, filePath)
+        except IOError as i:
+            print(str(i))
+            return None
 
         tokensAndTags = self.hiddenMarkovModel.tag(text)
 
@@ -162,25 +164,24 @@ class EntryExtractor:
 
         g.serialize(uri, format="turtle")
 
+    def extractRecords(self, filePath, source, recordYear):
+        entries = self.extractFeatures(filePath, source)
+        self.addRecordsToDatabase(entries, recordYear)
+
 if __name__ == "__main__":
     e = EntryExtractor()
 
     for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1895"))):
-        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1895/" + fileName, "page")
-        e.addRecordsToDatabase(entries, "1895")
+        e.extractRecords("../DBMS/deduplicationDevTest/1895/" + fileName, "page", "1895")
 
     for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1896"))):
-        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1896/" + fileName, "page")
-        e.addRecordsToDatabase(entries, "1896")
+        e.extractRecords("../DBMS/deduplicationDevTest/1896/" + fileName, "page", "1896")
 
     for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1897"))):
-        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1897/" + fileName, "page")
-        e.addRecordsToDatabase(entries, "1897")
+        e.extractRecords("../DBMS/deduplicationDevTest/1897/" + fileName, "page", "1897")
 
     for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1898"))):
-        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1898/" + fileName, "page")
-        e.addRecordsToDatabase(entries, "1898")
+        e.extractRecords("../DBMS/deduplicationDevTest/1898/" + fileName, "page", "1898")
 
     for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1899"))):
-        entries = e.extractFeatures("../DBMS/deduplicationDevTest/1899/" + fileName, "page")
-        e.addRecordsToDatabase(entries, "1899")
+        e.extractRecords("../DBMS/deduplicationDevTest/1899/" + fileName, "page", "1899")
