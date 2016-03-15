@@ -4,7 +4,7 @@ cp $@ segmentation
 cd segmentation
 
 echo "Convert PDF into PPM..."
-pdftoppm -f $2 -l $3 -r 400 $1
+pdftoppm -f $2 -l $3 -r 400 $1 SPOD
 echo "Done"
 
 echo "Convert PPM into TIF..."
