@@ -19,6 +19,13 @@ import hashlib
 
 PUNCTUATION = set(string.punctuation)
 
+"""
+Class for modelling a hidden Markov model used to tag text transcripts of Post Office directories given an ARFF training
+file and a lexicon for dictionary lookup.
+
+:param trainingData: /path/to/ARFF/training/file
+:param lexicon: /path/to/lexicon/for/dictionary/lookup
+"""
 class hiddenMarkovModel:
 
     def __init__(self, trainingData=TRAININGFOLDER+"/training.arff", lexicon=TRAININGFOLDER+"/classifierTraining.txt"):
@@ -29,6 +36,13 @@ class hiddenMarkovModel:
         self.states = ["SURNAME", "FORENAME", "TITLE", "OCCUPATION", "ADDRESS"]
         self._train()
 
+    """
+    Wrapper for Viterbi algorith for tagging text. Also performs heuristic clean up of text and extracts feature
+    vectors.
+
+    :param text: String of text to be tagged
+    :return: A list of (token, tag) tuples
+    """
     def tag(self, text):
         text = text.replace(" ; house", "")
         text = text.replace("Miss ", "Miss, ")
@@ -48,6 +62,9 @@ class hiddenMarkovModel:
 
         return self._viterbi(tokensAndVectors)
 
+    """
+    Private method for training HMM.
+    """
     def _train(self):
         self.sensorModel = tokenClassifier(self.trainingData)
 
@@ -61,6 +78,12 @@ class hiddenMarkovModel:
         transitionFreqDist = ConditionalFreqDist(transitions)
         self.transitionModel = ConditionalProbDist(transitionFreqDist, LidstoneProbDist, 0.01, bins=3125)
 
+    """
+    Method for using Viterbi algorithm to tag tokens by their feature vectors.
+
+    :param tokensAndVectors: A list of (token,feature vector) tuples
+    :return: A list of (token, tag) tuples
+    """
     def _viterbi(self, tokensAndVectors):
         viterbi = []
         backpointers = []
@@ -166,12 +189,3 @@ class hiddenMarkovModel:
             tokenIndex += 1
 
         return tags
-
-if __name__ == "__main__":
-    h = hiddenMarkovModel()
-
-    x = XMLParser()
-    text = x.parseNLSPage("training/hmmDevTest/1851-52-p43/83072360.8.xml")
-
-    for token in h.tag(text):
-        print(token)

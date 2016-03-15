@@ -47,7 +47,7 @@ for dirName in os.listdir(TESTINGFOLDER):
     if xmlFile == "" or annFile == "":
         raise IOError("Test folder must have an XML file of the page from the NLS and a corresponding brat ann file.")
 
-    text = x.parseNLSPage(xmlFile)
+    text = x._parseNLSPage(xmlFile)
     classifiedTags = hmm.tag(text)
 
     annFileText = open(annFile, "r").read().splitlines()

@@ -9,6 +9,11 @@ sys.path.append(TRAININGFOLDER)
 
 from arffParser import *
 
+"""
+Class which uses a Bernoulli naive Bayes classifier which is used for the sensor model of the hidden Markov model.
+
+:param traningFile: Path to ARFF training file
+"""
 class tokenClassifier:
 
     def __init__(self, trainingFile):
@@ -16,6 +21,12 @@ class tokenClassifier:
         self.nb = BernoulliNB()
         self._train()
 
+    """
+    Method which classifies a single token as a surname, forename, title, occupation, or address.
+
+    :param vector: Feature vector of token to be classified
+    :return: Predicted class of feature vector
+    """
     def classify(self, vector):
         vectorArray = numpy.array(vector).astype(numpy.int)
         predictedClass = self.nb.predict(vectorArray.reshape(1, -1))
@@ -31,12 +42,21 @@ class tokenClassifier:
         elif predictedClass == 5:
             return "ADDRESS"
 
+    """
+    Method which returns the log probabilities of a single token being in each class.
+
+    :param vector: Feature vector of token
+    :return: A list of the probabilities of being a surname, forename, title, occupation or address respectively
+    """
     def logProbabilities(self, vector):
         vectorArray = numpy.array(vector).astype(numpy.int)
         probabilities = self.nb.predict_log_proba(vectorArray.reshape(1, -1)).tolist()[0]
 
         return probabilities
 
+    """
+    A private method for training the naive Bayes classifier.
+    """
     def _train(self):
         dataset = arffParser.parseFile(self.trainingFile)
 
@@ -63,8 +83,3 @@ class tokenClassifier:
         trainingValues = numpy.array(trainingValues).astype(numpy.int)
         trainingClasses = numpy.array(trainingClasses).astype(numpy.int)
         self.nb.fit(trainingValues, trainingClasses)
-
-if __name__ == "__main__":
-    training = os.path.abspath(os.path.join(TRAININGFOLDER, "training.arff"))
-    c = tokenClassifier(training)
-    print(c.classify([0,0,0,0,0,0,6,1,0,0,0,0]))

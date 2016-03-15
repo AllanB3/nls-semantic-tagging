@@ -18,12 +18,29 @@ from databaseQuerier import *
 
 DATABASE = pathlib.PurePath(os.path.abspath(os.path.join(os.path.dirname(__file__), "../database")))
 
+"""
+Class for extracting records from XML transcripts and writing them to the database. To extract records from a directory
+and add them to the database:
+    from entryExtractor import *
+    extractor = EntryExtractor()
+    extractor.extractRecords(/path/to/xml, source, year)
+
+Can also be run from the command line:
+    python3 entryExtractor.py /path/to/XML/transcript source year
+"""
 class EntryExtractor:
 
     def __init__(self):
         self.xmlParser = XMLParser()
         self.hiddenMarkovModel = hiddenMarkovModel()
 
+    """
+    Class for extracting records from an XML transcript
+
+    :param filePath: /path/to/xml
+    :param source: Source of XML transcript
+    :return: A list of dictionaries with each dictionary pertaining to a record extracted from the transcript
+    """
     def extractFeatures(self, filePath, source):
         try:
             if source == "ocr":
@@ -62,6 +79,12 @@ class EntryExtractor:
 
         return entries
 
+    """
+    Class for writing records to the database. Will create a new dataase if none present.
+
+    :param records: A list of dictionaries with each dictionary pertaining to a record extracted from a directory
+    :param recordYear: Year in which the directory was produced
+    """
     @staticmethod
     def addRecordsToDatabase(records, recordYear):
         g = rdflib.Graph()
@@ -164,24 +187,17 @@ class EntryExtractor:
 
         g.serialize(uri, format="turtle")
 
+    """
+    A class for extracting records from a transcript and adding them to the database.
+
+    :param filePath: /path/to/xml
+    :param source: Source of XML file
+    :param recordYear: Year in which directory was produced
+    """
     def extractRecords(self, filePath, source, recordYear):
         entries = self.extractFeatures(filePath, source)
         self.addRecordsToDatabase(entries, recordYear)
 
 if __name__ == "__main__":
     e = EntryExtractor()
-
-    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1895"))):
-        e.extractRecords("../DBMS/deduplicationDevTest/1895/" + fileName, "page", "1895")
-
-    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1896"))):
-        e.extractRecords("../DBMS/deduplicationDevTest/1896/" + fileName, "page", "1896")
-
-    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1897"))):
-        e.extractRecords("../DBMS/deduplicationDevTest/1897/" + fileName, "page", "1897")
-
-    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1898"))):
-        e.extractRecords("../DBMS/deduplicationDevTest/1898/" + fileName, "page", "1898")
-
-    for fileName in os.listdir(os.path.abspath(os.path.join(os.path.dirname(__file__), "../DBMS/deduplicationDevTest/1899"))):
-        e.extractRecords("../DBMS/deduplicationDevTest/1899/" + fileName, "page", "1899")
+    e.extractRecords(sys.argv[1], sys.argv[2], sys.argv[3])

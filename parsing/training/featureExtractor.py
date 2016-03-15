@@ -10,15 +10,39 @@ import hashlib
 path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(1, path)
 
+TRAINING_FOLDER = "training"
+ARFF_FILE = "training.arf"
+
 from xmlParser import *
 
-class featureExtractor:
+"""
+Class for extracting features from training transcripts or BRAT annotations. At present does not handle NLS directory
+transcripts.
 
-    def __init__(self, trainingFolder, outputPath):
+Annotated tokens in XML must be of the form:
+    (token [TAG])
+
+To use:
+    from featureExtractor import *
+    extractor = FeatureExtractor()
+    extractor.extractFeatures()
+
+Can also be run from the command line:
+    python3 featureExtractor.py
+
+:param trainingFolder: Directory of training transcripts/BRAT annotations.
+:param outputPath: Path to ARFF training file
+"""
+class FeatureExtractor:
+
+    def __init__(self, trainingFolder=TRAINING_FOLDER, outputPath=ARFF_FILE):
         self.trainingFolder = trainingFolder
         self.outputPath = outputPath
         self.xmlparser = XMLParser()
 
+    """
+    A method which extracts features from our training transcripts/BRAT annotations.
+    """
     def extractFeatures(self):
         tagsAndVectors = []
 
@@ -26,11 +50,11 @@ class featureExtractor:
             filePath = os.path.abspath(os.path.join(self.trainingFolder, fileName))
 
             if fileName[-3:] == "xml":
-                # TODO: have this handle single pages from NLS
+                # TODO: have this handle whole directories from NLS
                 if fileName[:4] == "SPOD":
-                    trainingValues = self.xmlparser.parseOCR(filePath)
+                    trainingValues = self.xmlparser.parse("ocr", filePath)
                 else:
-                    trainingValues = self.xmlparser.parseNLSDirectory(filePath)
+                    trainingValues = self.xmlparser.parse("page", filePath)
 
                 annotations = re.finditer(r"\([A-Z|a-z|\d|\s|\n|\.|\-|,]*(\s*\n*)\[[A-Z|_]*\]\)", trainingValues, re.M)
                 matches = []
@@ -184,7 +208,5 @@ class featureExtractor:
             arffWriter.write(data)
 
 if __name__ == "__main__":
-    f = featureExtractor("training", "training.arff")
-    f.extractFeatures()
-    f = featureExtractor("tokenClassifierDevTest", "testing.arff")
+    f = FeatureExtractor()
     f.extractFeatures()
