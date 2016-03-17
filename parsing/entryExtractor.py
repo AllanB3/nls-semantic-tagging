@@ -139,6 +139,7 @@ class EntryExtractor:
             identifier = rdflib.URIRef("{0}#{1}".format(uri, hashlib.md5(recordData.encode("utf-8")).hexdigest()))
 
             g.add((identifier, person.additionalType, postOfficeRecordSchema.PostOfficeRecord))
+            g.add((identifier, person.additionalType, schema.GeoCoordinates))
             g.add((identifier, dct.issued, rdflib.Literal(recordYear)))
             g.add((identifier, RDF.type, schema.Person))
 
