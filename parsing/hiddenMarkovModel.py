@@ -37,7 +37,7 @@ class hiddenMarkovModel:
         self._train()
 
     """
-    Wrapper for Viterbi algorith for tagging text. Also performs heuristic clean up of text and extracts feature
+    Wrapper for Viterbi algorithm for tagging text. Also performs heuristic clean up of text and extracts feature
     vectors.
 
     :param text: String of text to be tagged
