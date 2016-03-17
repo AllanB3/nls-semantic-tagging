@@ -103,4 +103,4 @@ class XMLParser:
 
 if __name__ == "__main__":
     xmlParser = XMLParser()
-    xmlParser.parse(sys.argv[1], sys.argv[2])
+    print(xmlParser.parse(sys.argv[1], sys.argv[2]))
