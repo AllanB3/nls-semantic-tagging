@@ -16,7 +16,7 @@ and then call:
     parser.parse(source, /path/to/xml)
 
 Can also be write text transcript to a file via the command line:
-    python3 xmlParser.py /path/to/xml /path/to/output
+    python3 xmlParser.py source /path/to/xml
 """
 class XMLParser:
 
